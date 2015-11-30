@@ -16,6 +16,8 @@ public class MenuControlleur implements KeyListener, ActionListener{
         modele = new MenuModele();
         menuVue = mVue;
         optionMenu = oVue;
+        optionMenu.setKeyListener(this);
+        optionMenu.setActionListener(this);
     }
 
     public void setKeyUp() {
