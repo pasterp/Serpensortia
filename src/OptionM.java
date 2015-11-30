@@ -12,5 +12,6 @@ public class OptionM extends MenuVue {
     public JButton right;
 
     public JButton retour;
+
     }
 }
