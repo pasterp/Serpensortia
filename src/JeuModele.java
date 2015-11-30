@@ -10,11 +10,16 @@ public class JeuModele {
     private ArrayList<Fruit> fruits;
 
     public JeuModele(){
-
+        grille = new Grille(50);
+        serpents = new ArrayList<Serpent>(2);
+        fruits = new ArrayList<Fruit>();
     }
 
     public boolean isOver(){
         return false;
     }
 
+    public static void main(String[] argv){
+        System.out.println(""+Fruit.randomFruit().getScore());
+    }
 }
