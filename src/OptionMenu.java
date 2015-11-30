@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyListener;
 
 /**
  * Created by lorchie on 30/11/15.
@@ -82,6 +84,16 @@ public class OptionMenu extends JFrame {
         setContentPane(ptout);
     }
 
+    public void setKeyListener(KeyListener kl){
+        this.addKeyListener(kl);
+    }
+
 
 }
+
+
+
+
+
+
 
