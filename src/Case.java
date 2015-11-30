@@ -4,9 +4,13 @@ import java.awt.*;
  * Created by pphelipo on 30/11/15.
  */
 public class Case {
-    private boolean passable;
-    private int score;
-    Image texture;
+    protected boolean passable;
+    protected int score;
+    protected Image texture;
+
+    public Case(){
+
+    }
 
     public int getScore(){
         return score;
