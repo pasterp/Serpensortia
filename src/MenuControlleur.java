@@ -13,89 +13,25 @@ public class MenuControlleur{
     public MenuControlleur(MenuVue vue){
         modele = new MenuModele();
         menuVue = vue;
+        menuVue.setKeyListener(this);
     }
 
-    public void setKeyUp() {
+    public void setKeys(){
         KeyListener kl = new KeyListener() {
             @Override
-            public void keyTyped(KeyEvent e) {}
+            public void keyTyped(KeyEvent e) {
 
-            @Override
-            public void keyPressed(KeyEvent e) {
-                modele.setKeyUp(e.getKeyCode());
             }
 
             @Override
-            public void keyReleased(KeyEvent e) {}
-        };
-        menuVue.setKeyListener(kl);
-    }
-
-    public void setKeyDown(){
-        KeyListener kl = new KeyListener() {
-            @Override
-            public void keyTyped(KeyEvent e) {}
-
-            @Override
             public void keyPressed(KeyEvent e) {
-                modele.setKeyDown(e.getKeyCode());
+
             }
 
             @Override
-            public void keyReleased(KeyEvent e) {}
-        };
-        menuVue.setKeyListener(kl);
-    }
+            public void keyReleased(KeyEvent e) {
 
-    public void setKeyRight(){
-        KeyListener kl = new KeyListener() {
-            @Override
-            public void keyTyped(KeyEvent e) {}
-
-            @Override
-            public void keyPressed(KeyEvent e) {
-                modele.setKeyRight(e.getKeyCode());
             }
-
-            @Override
-            public void keyReleased(KeyEvent e) {}
         };
-        menuVue.setKeyListener(kl);
-    }
-
-    public void setKeyLeft(){
-        KeyListener kl = new KeyListener() {
-            @Override
-            public void keyTyped(KeyEvent e) {}
-
-            @Override
-            public void keyPressed(KeyEvent e) {
-                modele.setKeyLeft(e.getKeyCode());
-            }
-
-            @Override
-            public void keyReleased(KeyEvent e) {}
-        };
-        menuVue.setKeyListener(kl);
-    }
-
-    public void setKeyPause(){
-        KeyListener kl = new KeyListener() {
-            @Override
-            public void keyTyped(KeyEvent e) {}
-
-            @Override
-            public void keyPressed(KeyEvent e) {
-                modele.setKeyPause(e.getKeyCode());
-            }
-
-            @Override
-            public void keyReleased(KeyEvent e) {}
-        };
-        menuVue.setKeyListener(kl);
-    }
-
-    public void setGridSize(int size){
-        modele.setGridSize(size);
     }
 }
