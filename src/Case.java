@@ -9,17 +9,16 @@ public class Case {
     protected boolean passable;
     protected int score;
     protected Image texture;
-    int x,y;
+    private int x,y;
 
     public Case(){
-        passable = true;
-        score = 2;
-        texture =  new ImageIcon("case.png").getImage().getScaledInstance(16, 16, Image.SCALE_DEFAULT);
-        x=0;
-        y=0;
+        this(0,0);
     }
 
     public Case(int x, int y){
+        passable = true;
+        score = 2;
+        texture =  new ImageIcon("case.png").getImage().getScaledInstance(16, 16, Image.SCALE_DEFAULT);
         this.x = x;
         this.y = y;
     }
@@ -34,5 +33,13 @@ public class Case {
 
     public Image getImage(){
         return texture;
+    }
+
+    public int getX(){
+        return x;
+    }
+
+    public int getY(){
+        return y;
     }
 }
