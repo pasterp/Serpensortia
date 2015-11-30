@@ -10,6 +10,7 @@ Z = 90
 Q = 81
 S = 83
 D = 68
+E = 69
  */
 
 public class MenuModele {
@@ -18,12 +19,16 @@ public class MenuModele {
     private int keyDown;
     private int keyLeft;
     private int keyRight;
+    private int gridSize;
+    private int keyPause;
 
     public MenuModele(){
         keyUp = 90;
         keyDown = 83;
         keyLeft = 81;
         keyRight = 68;
+        keyPause = 69;
+        gridSize = 50;
     }
 
     public int getKeyUp(){
@@ -54,8 +59,23 @@ public class MenuModele {
         keyLeft = key;
     }
 
-    public void keyRight(int key){
+    public void setKeyRight(int key){
         keyRight = key;
     }
 
+    public int getGridSize(){
+        return gridSize;
+    }
+
+    public void setGridSize(int size){
+        gridSize = size;
+    }
+
+    public int getKeyPause(){
+        return keyPause;
+    }
+
+    public void setKeyPause(int key){
+        keyPause = key;
+    }
 }
