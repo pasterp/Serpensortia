@@ -10,11 +10,12 @@ public class MenuControlleur implements KeyListener, ActionListener{
 
     MenuModele modele;
     MenuVue menuVue;
+    OptionMenu optionMenu;
 
-
-    public MenuControlleur(MenuVue vue){
+    public MenuControlleur(MenuVue mVue, OptionMenu oVue){
         modele = new MenuModele();
-        menuVue = vue;
+        menuVue = mVue;
+        optionMenu = oVue;
     }
 
     public void setKeyUp() {
@@ -103,21 +104,21 @@ public class MenuControlleur implements KeyListener, ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-//        if (e.getSource() == menuVue.up){
-//            System.out.println("Appuyez sur la touche pour HAUT");
-//            setKeyUp();
-//        }else if (e.getSource() == menuVue.down){
-//            System.out.println("Appuyez sur la touche pour BAS");
-//            setKeyDown();
-//        }else if (e.getSource() == menuVue.left){
-//            System.out.println("Appuyez sur la touche pour GAUCHE");
-//            setKeyLeft();
-//        }else if (e.getSource() == menuVue.right){
-//            System.out.println("Appuyez sur la touche pour DROITE");
-//            setKeyRight();
-//        }else if (e.getSource() == menuVue.listeTaille){
-//            setGridSize(Integer.parseInt(menuVue.listeTaille.getText()));
-//        }
+        if (e.getSource() == optionMenu.up){
+            System.out.println("Appuyez sur la touche pour HAUT");
+            setKeyUp();
+        }else if (e.getSource() == optionMenu.down){
+            System.out.println("Appuyez sur la touche pour BAS");
+            setKeyDown();
+        }else if (e.getSource() == optionMenu.left){
+            System.out.println("Appuyez sur la touche pour GAUCHE");
+            setKeyLeft();
+        }else if (e.getSource() == optionMenu.right){
+            System.out.println("Appuyez sur la touche pour DROITE");
+            setKeyRight();
+        }else if (e.getSource() == optionMenu.listeTaille){
+            setGridSize((Integer) optionMenu.listeTaille.getSelectedItem());
+        }
     }
 
     @Override
