@@ -17,16 +17,16 @@ public class MenuVue extends JFrame{
         pack();
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
     }
 
     private void initAttribut() {
 
     }
-    private void creerWidget() {
-    }
 
     private void addWidget() {
+    }
+
+    private void creerWidget() {
     }
 
     public void setKeyListener(KeyListener kl){

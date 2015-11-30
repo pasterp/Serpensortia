@@ -88,6 +88,13 @@ public class OptionMenu extends JFrame {
         this.addKeyListener(kl);
     }
 
+    public void setActionListener(ActionListener al){
+        up.addActionListener(al);
+        down.addActionListener(al);
+        left.addActionListener(al);
+        right.addActionListener(al);
+
+    }
 
 }
 
