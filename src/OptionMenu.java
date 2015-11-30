@@ -93,6 +93,7 @@ public class OptionMenu extends JFrame {
         down.addActionListener(al);
         left.addActionListener(al);
         right.addActionListener(al);
+        pause.addActionListener(al);
 
     }
 
