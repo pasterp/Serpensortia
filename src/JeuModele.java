@@ -5,23 +5,55 @@ import java.util.Random;
  * Created by pphelipo on 30/11/15.
  */
 public class JeuModele {
-    private final int taille = 50;
+    private int taille;
     private Grille grille;
     private ArrayList<Serpent> serpents;
     private ArrayList<Fruit> fruits;
 
-    public JeuModele(){
-        grille = new Grille(50);
+    public JeuModele(int t){
+        taille = t;
+        grille = new Grille(taille);
         serpents = new ArrayList<Serpent>(2);
         fruits = new ArrayList<Fruit>();
         int[] coord = this.getCoordLibre();
         fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        coord = this.getCoordLibre();
+        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        coord = this.getCoordLibre();
+        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        coord = this.getCoordLibre();
+        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        coord = this.getCoordLibre();
+        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        coord = this.getCoordLibre();
+        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        coord = this.getCoordLibre();
+        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        coord = this.getCoordLibre();
+        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        coord = this.getCoordLibre();
+        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        coord = this.getCoordLibre();
+        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        coord = this.getCoordLibre();
+        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        coord = this.getCoordLibre();
+        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        coord = this.getCoordLibre();
+        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        coord = this.getCoordLibre();
+        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        coord = this.getCoordLibre();
+        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        coord = this.getCoordLibre();
+        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        afficherGrille();
     }
 
     public void afficherGrille(){
         Case[][] grid = grille.getGrid();
-        for (int i=0; i<50; i++){
-            for (int j=0; j<50; j++){
+        for (int i=0; i<taille; i++){
+            for (int j=0; j<taille; j++){
                 boolean found=false;
                 for (Fruit f : fruits){
                     if (f.getX() == j && f.getY() == i){
@@ -39,15 +71,14 @@ public class JeuModele {
     public int getTaille(){
         return taille;
     }
+
     public Case[][] getGrille(){
         Case[][] grid = grille.getGrid();
-        for (int i=0; i<50; i++){
-            for (int j=0; j<50; j++){
-                boolean found=false;
+        for (int i=0; i<taille; i++){
+            for (int j=0; j<taille; j++){
                 for (Fruit f : fruits){
                     if (f.getX() == j && f.getY() == i){
                         grid[i][j] = f;
-                        found=true;
                     }
                 }
             }
@@ -69,7 +100,7 @@ public class JeuModele {
     }
 
     public static void main(String[] argv){
-        JeuModele jeuModele = new JeuModele();
+        JeuModele jeuModele = new JeuModele(15);
         jeuModele.afficherGrille();
     }
 }

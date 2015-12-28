@@ -12,7 +12,7 @@ public class Fruit extends Case{
         super(_x, _y);
         this.passable=true;
         this.score=typeFruit;
-        texture =  new ImageIcon(nomFichier).getImage().getScaledInstance(16, 16, Image.SCALE_DEFAULT);
+        texture =  new ImageIcon(nomFichier).getImage().getScaledInstance(32, 32, Image.SCALE_DEFAULT);
     }
 
     public static Fruit randomFruit(int _x, int _y){
@@ -20,7 +20,7 @@ public class Fruit extends Case{
         ArrayList<Integer> scores = new ArrayList<Integer>(Arrays.asList(25, 35, 50, 75));
         int i = new Random().nextInt(4);
 
-        return new Fruit(_x, _y, scores.get(i), noms.get(i)+".png");
+        return new Fruit(_x, _y, scores.get(i), "./img/"+noms.get(i)+".png");
     }
 
 
