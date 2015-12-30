@@ -9,17 +9,19 @@ public class JeuVue extends JPanel{
 
     public JeuVue(){
         super();
-        modele = new JeuModele(30);
+        modele = new JeuModele(15);
         setPreferredSize(new Dimension(modele.getTaille()*32, modele.getTaille()*32));
     }
+
 
     public void paintComponent(Graphics g) {
         Case[][] grid = modele.getGrille();
         for (int i=0; i < grid.length; i++){
             for (int j=0; j < grid.length; j++){
-                g.drawImage(grid[i][j].getImage(), j*32, i*32, null);
+                g.drawImage(grid[i][j].getImage(), j * 32, i * 32, null);
             }
         }
+//        g.drawImage(new ImageIcon("./img/snake_head_up.png").getImage().getScaledInstance(32,32,Image.SCALE_FAST), 1, 1, null);
     }
 
 

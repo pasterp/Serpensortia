@@ -9,7 +9,7 @@ public class Case {
     protected boolean passable;
     protected int score;
     protected Image texture;
-    private int x,y;
+    protected int x,y;
 
     public Case(){
         this(0,0);

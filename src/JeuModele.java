@@ -48,6 +48,8 @@ public class JeuModele {
         coord = this.getCoordLibre();
         fruits.add(Fruit.randomFruit(coord[0],coord[1]));
         afficherGrille();
+
+        serpents.add(new Serpent(5, 5, 1));
     }
 
     public void afficherGrille(){
@@ -55,8 +57,17 @@ public class JeuModele {
         for (int i=0; i<taille; i++){
             for (int j=0; j<taille; j++){
                 boolean found=false;
+                for (Serpent s : serpents){
+                    //Parcourir les coordonnées du corps du serpent
+                    for(Integer[] c : s.getCoords()){
+                        if (j == c[0] && i == c[1]){
+                            System.out.print('$');
+                            found=true;
+                        }
+                    }
+                }
                 for (Fruit f : fruits){
-                    if (f.getX() == j && f.getY() == i){
+                    if (f.getX() == j && f.getY() == i && !found){
                         System.out.print("*");
                         found=true;
                     }
@@ -76,9 +87,20 @@ public class JeuModele {
         Case[][] grid = grille.getGrid();
         for (int i=0; i<taille; i++){
             for (int j=0; j<taille; j++){
-                for (Fruit f : fruits){
-                    if (f.getX() == j && f.getY() == i){
-                        grid[i][j] = f;
+                boolean found = false;
+                for (Serpent s : serpents){
+                    for(Integer[] c : s.getCoords()){
+                        if (j == c[0] && i == c[1]){
+                            grid[i][j] = s.getPartie(j,i);
+                            found = false;
+                        }
+                    }
+                }
+                if (!found) {
+                    for (Fruit f : fruits) {
+                        if (f.getX() == j && f.getY() == i) {
+                            grid[i][j] = f;
+                        }
                     }
                 }
             }
@@ -91,8 +113,17 @@ public class JeuModele {
         do {
             coord[0] = new Random().nextInt(taille);
             coord[1] = new Random().nextInt(taille);
-        }while(!grille.getGrid()[coord[0]][coord[1]].isPassable());
+        }while(!grille.getGrid()[coord[0]][coord[1]].isPassable()||isSerpent(coord[0], coord[1]));
         return coord;
+    }
+
+    public boolean isSerpent(int x, int y){
+        for (Serpent s : serpents)
+            for (Integer[] c : s.getCoords()){
+                if (x == c[0] && y == c[1])
+                    return true;
+            }
+        return false;
     }
 
     public boolean isOver(){

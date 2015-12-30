@@ -5,22 +5,38 @@ import java.util.ArrayList;
  */
 public class Serpent {
     ArrayList<Mur> unSerpent;
-    public int dirX,dirY;
 
-
-    public Serpent(){
-        super();
+    public Serpent(int x, int y, int dir){
         unSerpent = new ArrayList();
-        dirX=1;
-        dirY=0;
-        Mur tete= new TeteSerpent(dirX,dirY);
-        unSerpent.add(0,tete);
+        unSerpent.add(new TeteSerpent(x,y,dir));
 
-        for (int corps=1; corps<3;corps++){
-            Mur corpsSerpent=new CorpsSerpent(dirX,dirY);
-            unSerpent.add(corps, corpsSerpent);
+        //TODO : Changer la direction selon la direction du serpent
+        for (int i=1; i<3;i++){
+            unSerpent.add(new CorpsSerpent(x-i, y, dir));
         }
-        Mur queueSerpent = new QueueSerpent(dirX,dirY);
-        unSerpent.add(unSerpent.size(),queueSerpent);
+        unSerpent.add(new QueueSerpent(x-3, y, dir));
+    }
+
+    public Serpent(int x, int y){
+        this(x, y, 0);
+    }
+
+    public ArrayList<Integer[]> getCoords(){
+        ArrayList<Integer[]> coords = new ArrayList<Integer[]>();
+        for (Mur part : unSerpent){
+            Integer[] coord = new Integer[2];
+            coord[0] = part.getX();
+            coord[1] = part.getY();
+            coords.add(coord);
+        }
+        return coords;
+    }
+
+    public Mur getPartie(int x, int y){
+        for (Mur p : unSerpent){
+            if (p.getY() == y && p.getX() == x)
+                return p;
+        }
+        return null;
     }
 }
