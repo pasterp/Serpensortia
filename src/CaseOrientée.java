@@ -38,18 +38,17 @@ public class CaseOrientée extends Mur {
 
     @Override
     public Image getImage() {
-        System.out.println("Override (direction "+direction+")");
         if (direction == 0){
-            return images[0].getScaledInstance(32, 32, Image.SCALE_FAST);
+            return images[0];
         }
         else if (direction == 1) {
-            return images[1].getScaledInstance(32, 32, Image.SCALE_FAST);
+            return images[1];
         }
         else if (direction == 2){
-            return images[2].getScaledInstance(32, 32, Image.SCALE_FAST);
+            return images[2];
         }
         else if (direction == 3){
-            return images[3].getScaledInstance(32, 32, Image.SCALE_FAST);
+            return images[3];
         }else{
             throw(new RuntimeException("Direction invalide"));
         }

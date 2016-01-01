@@ -8,6 +8,6 @@ public class Mur extends Case{
     public Mur(){
         super();
         this.passable = false;
-        texture =  new ImageIcon("./img/mur.png").getImage().getScaledInstance(32, 32, Image.SCALE_DEFAULT);
+        texture =  new ImageIcon("./img/mur.png").getImage();
     }
 }

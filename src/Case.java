@@ -18,7 +18,7 @@ public class Case {
     public Case(int x, int y){
         passable = true;
         score = 2;
-        texture =  new ImageIcon("./img/case.png").getImage().getScaledInstance(32, 32, Image.SCALE_DEFAULT);
+        texture =  new ImageIcon("./img/case.png").getImage();
         this.x = x;
         this.y = y;
     }

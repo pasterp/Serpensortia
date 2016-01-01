@@ -49,7 +49,7 @@ public class JeuModele {
         fruits.add(Fruit.randomFruit(coord[0],coord[1]));
         afficherGrille();
 
-        serpents.add(new Serpent(5, 5, 1));
+        serpents.add(new Serpent(5, 5, 0));
     }
 
     public void afficherGrille(){
