@@ -14,6 +14,10 @@ public class JeuModele {
         taille = t;
         grille = new Grille(taille);
         serpents = new ArrayList<Serpent>(2);
+        serpents.add(new Serpent(5, 5, 0));
+        serpents.add(new Serpent(10, 5, 3));
+        serpents.add(new Serpent(t-5, t-5, 2));
+        serpents.add(new Serpent(t-10, t-5, 1));
         fruits = new ArrayList<Fruit>();
         int[] coord = this.getCoordLibre();
         fruits.add(Fruit.randomFruit(coord[0],coord[1]));
@@ -46,10 +50,9 @@ public class JeuModele {
         coord = this.getCoordLibre();
         fruits.add(Fruit.randomFruit(coord[0],coord[1]));
         coord = this.getCoordLibre();
-        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        fruits.add(Fruit.randomFruit(coord[0], coord[1]));
         afficherGrille();
 
-        serpents.add(new Serpent(5, 5, 0));
     }
 
     public void afficherGrille(){

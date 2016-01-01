@@ -10,11 +10,38 @@ public class Serpent {
         unSerpent = new ArrayList();
         unSerpent.add(new TeteSerpent(x,y,dir));
 
-        //TODO : Changer la direction selon la direction du serpent
         for (int i=1; i<3;i++){
-            unSerpent.add(new CorpsSerpent(x-i, y, dir));
+            switch (dir){
+                case 0:
+                    unSerpent.add(new CorpsSerpent(x-i, y, dir));
+                    break;
+                case 1:
+                    unSerpent.add(new CorpsSerpent(x, y-i, dir));
+                    break;
+                case 2:
+                    unSerpent.add(new CorpsSerpent(x+i, y, dir));
+                    break;
+                case 3:
+                    unSerpent.add(new CorpsSerpent(x, y+i, dir));
+                    break;
+            }
+
         }
-        unSerpent.add(new QueueSerpent(x-3, y, dir));
+        switch (dir){
+            case 0:
+                unSerpent.add(new QueueSerpent(x-3, y, dir));
+                break;
+            case 1:
+                unSerpent.add(new QueueSerpent(x, y-3, dir));
+                break;
+            case 2:
+                unSerpent.add(new QueueSerpent(x+3, y, dir));
+                break;
+            case 3:
+                unSerpent.add(new QueueSerpent(x, y+3, dir));
+                break;
+        }
+
     }
 
     public Serpent(int x, int y){

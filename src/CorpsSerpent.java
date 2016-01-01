@@ -7,10 +7,14 @@ import java.awt.*;
 public class CorpsSerpent extends CaseOrientée {
     public CorpsSerpent(int x, int y, int dir){
         super(x, y, dir);
+        setBas(new ImageIcon("./img/corps.png"));
+        setDroite(new ImageIcon("./img/corps.png"));
+        setGauche(new ImageIcon("./img/corps.png"));
+        setHaut(new ImageIcon("./img/corps.png"));
     }
 
     public CorpsSerpent(int x, int y){
-        this(x,y,0);
+        this(x, y, 0);
     }
 
 }
