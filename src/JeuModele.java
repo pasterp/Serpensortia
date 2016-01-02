@@ -16,8 +16,15 @@ public class JeuModele {
         serpents = new ArrayList<Serpent>(2);
         serpents.add(new Serpent(5, 5, 0));
         serpents.add(new Serpent(10, 5, 3));
-        serpents.add(new Serpent(t-5, t-5, 2));
-        serpents.add(new Serpent(t-10, t-5, 1));
+        serpents.add(new Serpent(t - 5, t - 5, 2));
+        serpents.add(new Serpent(t - 10, t - 5, 1));
+
+        serpents.get(2).feedMe(50);
+        serpents.get(2).avancer();
+        serpents.get(2).avancer();
+        serpents.get(2).avancer();
+        serpents.get(2).avancer();
+
         fruits = new ArrayList<Fruit>();
         int[] coord = this.getCoordLibre();
         fruits.add(Fruit.randomFruit(coord[0],coord[1]));

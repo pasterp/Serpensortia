@@ -17,4 +17,7 @@ public class CorpsSerpent extends CaseOrientée {
         this(x, y, 0);
     }
 
+    public CorpsSerpent(CorpsSerpent corpsSerpent) {
+        this(corpsSerpent.getX(), corpsSerpent.getY(), corpsSerpent.direction);
+    }
 }

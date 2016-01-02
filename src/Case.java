@@ -11,6 +11,14 @@ public class Case {
     protected Image texture;
     protected int x,y;
 
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
     public Case(){
         this(0,0);
     }

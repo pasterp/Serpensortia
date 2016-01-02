@@ -8,17 +8,24 @@ public class CaseOrientée extends Mur {
     protected int direction;
     Image[] images;
 
+    public void setDirection(int direction) {
+        this.direction = direction;
+    }
+
     public CaseOrientée(int x, int y, int dir){
         super();
         direction = dir;
         this.x=x;
         this.y=y;
+
         images= new Image[4];
         images[0] = new ImageIcon("./img/error.png").getImage();
         images[1] = new ImageIcon("./img/error.png").getImage();
         images[2] = new ImageIcon("./img/error.png").getImage();
         images[3] = new ImageIcon("./img/error.png").getImage();
     }
+
+    public int getDirection(){return direction;}
 
     public void setDroite(ImageIcon i){
         images[0]=i.getImage();
