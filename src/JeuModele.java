@@ -22,36 +22,10 @@ public class JeuModele {
         fruits = new ArrayList<Fruit>();
         int[] coord = this.getCoordLibre();
         fruits.add(Fruit.randomFruit(coord[0],coord[1]));
-        coord = this.getCoordLibre();
-        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
-        coord = this.getCoordLibre();
-        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
-        coord = this.getCoordLibre();
-        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
-        coord = this.getCoordLibre();
-        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
-        coord = this.getCoordLibre();
-        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
-        coord = this.getCoordLibre();
-        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
-        coord = this.getCoordLibre();
-        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
-        coord = this.getCoordLibre();
-        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
-        coord = this.getCoordLibre();
-        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
-        coord = this.getCoordLibre();
-        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
-        coord = this.getCoordLibre();
-        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
-        coord = this.getCoordLibre();
-        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
-        coord = this.getCoordLibre();
-        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
-        coord = this.getCoordLibre();
-        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
-        coord = this.getCoordLibre();
-        fruits.add(Fruit.randomFruit(coord[0], coord[1]));
+        for (int x = 0; x < 45; x++){
+            coord = this.getCoordLibre();
+            fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        }
         afficherGrille();
 
     }
@@ -111,7 +85,6 @@ public class JeuModele {
                 }
             }
         }
-        afficherGrille();
         return grid;
     }
 

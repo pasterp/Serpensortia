@@ -1,3 +1,6 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -7,11 +10,26 @@ import java.awt.event.KeyListener;
 public class JeuControlleur implements KeyListener {
     JeuModele jeuModele;
     JeuVue jeuVue;
+    boolean pause;
+    private Timer timer;
 
     public JeuControlleur(JeuModele jm){
+        pause = true;
         jeuModele = jm;
         jeuVue = new JeuVue(jm);
         System.out.println("Initialisation Controlleur...");
+
+        timer = new Timer(500, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                if (!pause){
+                    jeuModele.prochainMouvement();
+                    jeuVue.repaint();
+                }else{
+                    timer.stop();
+                }
+            }
+        });
     }
 
     public JeuVue getVue(){
@@ -38,14 +56,28 @@ public class JeuControlleur implements KeyListener {
             case KeyEvent.VK_RIGHT:
                 jeuModele.tournerSerpent(0, 0);
                 break;
+            case KeyEvent.VK_Z:
+                jeuModele.tournerSerpent(1, 3);
+                break;
+            case KeyEvent.VK_Q:
+                jeuModele.tournerSerpent(1, 2);
+                break;
+            case KeyEvent.VK_S:
+                jeuModele.tournerSerpent(1, 1);
+                break;
+            case KeyEvent.VK_D:
+                jeuModele.tournerSerpent(1, 0);
+                break;
+            case KeyEvent.VK_P:
+                pause = !pause;
+                timer.start();
+                break;
             case KeyEvent.VK_R:
                 System.out.println("Prochain mouvement forcé");
                 jeuModele.prochainMouvement();
                 jeuVue.repaint();
                 break;
         }
-        jeuModele.prochainMouvement();
-        jeuVue.repaint();
     }
 
     @Override

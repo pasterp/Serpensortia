@@ -5,7 +5,7 @@ import javax.swing.*;
  */
 public class Application {
     public static void main(String[] argv){
-        JeuModele jeuModele = new JeuModele(15);
+        JeuModele jeuModele = new JeuModele(25);
         JeuControlleur jc = new JeuControlleur(jeuModele);
         JFrame frame = new JFrame("Jeu -- v0.2");
         frame.add(jc.getVue());
