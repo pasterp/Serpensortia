@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="746c272b-f8b9-4e82-b0d6-709ef30b5116" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application.java" afterPath="$PROJECT_DIR$/src/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JeuControlleur.java" afterPath="$PROJECT_DIR$/src/JeuControlleur.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Grille.java" afterPath="$PROJECT_DIR$/src/Grille.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JeuModele.java" afterPath="$PROJECT_DIR$/src/JeuModele.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JeuVue.java" afterPath="$PROJECT_DIR$/src/JeuVue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Serpent.java" afterPath="$PROJECT_DIR$/src/Serpent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Serpensortia.iws" />
@@ -33,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/src/Serpent.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="141" column="36" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
+              <caret line="129" column="9" selection-start-line="129" selection-start-column="9" selection-end-line="129" selection-end-column="9" />
               <folding>
                 <element signature="e#1344#1345#0" expanded="true" />
                 <element signature="e#1373#1374#0" expanded="true" />
@@ -63,20 +61,42 @@
         <entry file="file://$PROJECT_DIR$/src/JeuVue.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JeuModele.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JeuModele.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JeuModele.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9191375">
-              <caret line="195" column="26" selection-start-line="195" selection-start-column="26" selection-end-line="195" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
               <folding>
                 <element signature="e#3152#3153#0" expanded="true" />
                 <element signature="e#3181#3182#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Grille.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Grille.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.67654985">
+              <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Case.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Case.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,18 +146,18 @@
       <list>
         <option value="$PROJECT_DIR$/src/MenuControlleur.java" />
         <option value="$PROJECT_DIR$/src/Mur.java" />
-        <option value="$PROJECT_DIR$/src/Grille.java" />
         <option value="$PROJECT_DIR$/src/Fruit.java" />
         <option value="$PROJECT_DIR$/src/TeteSerpent.java" />
         <option value="$PROJECT_DIR$/src/QueueSerpent.java" />
         <option value="$PROJECT_DIR$/src/CorpsSerpent.java" />
-        <option value="$PROJECT_DIR$/src/Case.java" />
         <option value="$PROJECT_DIR$/src/CaseOrientée.java" />
         <option value="$PROJECT_DIR$/src/Application.java" />
-        <option value="$PROJECT_DIR$/src/JeuVue.java" />
-        <option value="$PROJECT_DIR$/src/Serpent.java" />
         <option value="$PROJECT_DIR$/src/JeuControlleur.java" />
+        <option value="$PROJECT_DIR$/src/Serpent.java" />
+        <option value="$PROJECT_DIR$/src/JeuVue.java" />
         <option value="$PROJECT_DIR$/src/JeuModele.java" />
+        <option value="$PROJECT_DIR$/src/Case.java" />
+        <option value="$PROJECT_DIR$/src/Grille.java" />
       </list>
     </option>
   </component>
@@ -469,7 +489,7 @@
       <workItem from="1451733774872" duration="4156000" />
       <workItem from="1451815896437" duration="2475000" />
       <workItem from="1451826079151" duration="642000" />
-      <workItem from="1451845184211" duration="1753000" />
+      <workItem from="1451845184211" duration="3073000" />
     </task>
     <task id="LOCAL-00001" summary="Application commit lol">
       <created>1448885462635</created>
@@ -531,11 +551,17 @@
       <option name="project" value="LOCAL" />
       <updated>1451738147867</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Ca bouge mais probleme de textures et mort sur certains mouvements :'(">
+      <created>1451846980038</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1451846980038</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42567000" />
+    <option name="totallyTimeSpent" value="43887000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -567,7 +593,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24622357" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3277027" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3277027" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -598,7 +624,8 @@
     <MESSAGE value="Random code lol&#10;" />
     <MESSAGE value="Serpent added (vue &amp; modele)" />
     <MESSAGE value="Mouvement serpent (avancer) &amp; grandir [ok]" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mouvement serpent (avancer) &amp; grandir [ok]" />
+    <MESSAGE value="Ca bouge mais probleme de textures et mort sur certains mouvements :'(" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ca bouge mais probleme de textures et mort sur certains mouvements :'(" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -959,14 +986,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Grille.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Fruit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -996,20 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Case.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38938054">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#281#282#0" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-            <element signature="e#364#365#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CaseOrientée.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1036,10 +1041,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/JeuControlleur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Serpent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="141" column="36" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
+          <caret line="129" column="9" selection-start-line="129" selection-start-column="9" selection-end-line="129" selection-end-column="9" />
           <folding>
             <element signature="e#1344#1345#0" expanded="true" />
             <element signature="e#1373#1374#0" expanded="true" />
@@ -1054,29 +1069,37 @@
     <entry file="file://$PROJECT_DIR$/src/JeuVue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JeuControlleur.java">
+    <entry file="file://$PROJECT_DIR$/src/JeuModele.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding>
+            <element signature="e#3152#3153#0" expanded="true" />
+            <element signature="e#3181#3182#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Case.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JeuModele.java">
+    <entry file="file://$PROJECT_DIR$/src/Grille.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9191375">
-          <caret line="195" column="26" selection-start-line="195" selection-start-column="26" selection-end-line="195" selection-end-column="26" />
-          <folding>
-            <element signature="e#3152#3153#0" expanded="true" />
-            <element signature="e#3181#3182#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.67654985">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -111,6 +111,7 @@ public class JeuModele {
                 }
             }
         }
+        afficherGrille();
         return grid;
     }
 
@@ -208,19 +209,15 @@ public class JeuModele {
                 switch (s.getDirection()) {
                     case 0:
                         deplacementPossible = g[coord[0] + 1][coord[1]].isPassable() && !isSerpent(coord[0] + 1, coord[1]);
-                        System.out.println(""+(coord[0] + 1)+" "+coord[1]);
                         break;
                     case 1:
                         deplacementPossible = g[coord[0]][coord[1] + 1].isPassable() && !isSerpent(coord[0], coord[1] + 1);
-                        System.out.println(""+(coord[0] )+" "+(coord[1]+ 1));
                         break;
                     case 2:
                         deplacementPossible = g[coord[0] - 1][coord[1]].isPassable() && !isSerpent(coord[0] - 1, coord[1]);
-                        System.out.println(""+(coord[0] -1)+" "+coord[1]);
                         break;
                     case 3:
                         deplacementPossible = g[coord[0]][coord[1] - 1].isPassable() && !isSerpent(coord[0], coord[1] - 1);
-                        System.out.println(""+(coord[0] )+" "+(coord[1]- 1));
                         break;
                 }
                 if (deplacementPossible) {

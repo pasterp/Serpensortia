@@ -20,7 +20,6 @@ public class JeuVue extends JPanel{
         for (int i=0; i < grid.length; i++){
             for (int j=0; j < grid.length; j++){
                 g.drawImage(grid[i][j].getImage(), j * 32, i * 32, null);
-//                g.drawRect(i * 32, j * 32, 32, 32); TODO: enlever le debug
             }
         }
     }
