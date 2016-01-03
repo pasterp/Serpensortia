@@ -5,9 +5,11 @@ import java.util.ArrayList;
  */
 public class Serpent {
     ArrayList<CaseOrientée> unSerpent;
-
+    int score;
 
     public Serpent(int x, int y, int dir){
+        score = 0;
+
         unSerpent = new ArrayList();
         unSerpent.add(new TeteSerpent(x,y,dir));
 
@@ -76,6 +78,20 @@ public class Serpent {
 
     }
 
+    public void changerDirection(int dir){
+        unSerpent.get(0).setDirection(dir);
+    }
+    public int getDirection(){
+        return unSerpent.get(0).getDirection();
+    }
+
+    public int[] getHeadCoord(){
+        int[] coord = new int[2];
+        coord[0] = unSerpent.get(0).getX();
+        coord[1] = unSerpent.get(0).getY();
+        return coord;
+    }
+
     public void avancer(){
         int x=0, y=0, dir=0, tmp;
         for (CaseOrientée c : unSerpent){
@@ -112,5 +128,17 @@ public class Serpent {
                 dir = tmp;
             }
         }
+    }
+
+    /**
+     * Methode détruisant tout le serpent mais sauvegardant tout de meme le score !
+     */
+    public void die() {
+        unSerpent.clear();
+        System.out.println("Serpent mort x_x");
+    }
+
+    public boolean isAlive(){
+        return (unSerpent.size()>0);
     }
 }

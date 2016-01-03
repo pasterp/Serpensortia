@@ -11,19 +11,13 @@ public class JeuModele {
     private ArrayList<Fruit> fruits;
 
     public JeuModele(int t){
+        System.out.println("Initialisation Modèle...");
         taille = t;
         grille = new Grille(taille);
         serpents = new ArrayList<Serpent>(2);
-        serpents.add(new Serpent(5, 5, 0));
-        serpents.add(new Serpent(10, 5, 3));
-        serpents.add(new Serpent(t - 5, t - 5, 2));
-        serpents.add(new Serpent(t - 10, t - 5, 1));
 
-        serpents.get(2).feedMe(50);
-        serpents.get(2).avancer();
-        serpents.get(2).avancer();
-        serpents.get(2).avancer();
-        serpents.get(2).avancer();
+        serpents.add(new Serpent(5, 5, 0));
+        serpents.add(new Serpent(t - 5, t - 5, 2));
 
         fruits = new ArrayList<Fruit>();
         int[] coord = this.getCoordLibre();
@@ -99,10 +93,12 @@ public class JeuModele {
             for (int j=0; j<taille; j++){
                 boolean found = false;
                 for (Serpent s : serpents){
-                    for(Integer[] c : s.getCoords()){
-                        if (j == c[0] && i == c[1]){
-                            grid[i][j] = s.getPartie(j,i);
-                            found = false;
+                    if (s.isAlive()) {
+                        for (Integer[] c : s.getCoords()) {
+                            if (j == c[0] && i == c[1]) {
+                                grid[i][j] = s.getPartie(j, i);
+                                found = false;
+                            }
                         }
                     }
                 }
@@ -136,12 +132,104 @@ public class JeuModele {
         return false;
     }
 
-    public boolean isOver(){
-        return false;
+    public void checkFruit(){
+        for (int i=0; i<fruits.size(); i++){
+            Fruit f = fruits.get(i);
+            for (Serpent s : serpents){
+                if (s.isAlive()){
+                    int[] c = s.getHeadCoord();
+                    if (c[0] == f.getX() && c[1] == f.getY()){
+                        //Miam
+                        s.feedMe(f.getScore());
+                        fruits.remove(f);
+                        break;
+                    }
+                }
+            }
+        }
     }
 
-    public static void main(String[] argv){
-        JeuModele jeuModele = new JeuModele(15);
-        jeuModele.afficherGrille();
+    public boolean isOver(){
+        boolean over = false;
+        for (Serpent s: serpents){
+            if (!s.isAlive())
+                over = true;
+        }
+        return over;
+    }
+
+    public void tournerSerpent(int serpent, int direction){
+        Serpent s = serpents.get(serpent);
+        if (s.isAlive()){
+            switch (s.getDirection()){
+                case 0:
+                    switch (direction){
+                        case 1:
+                        case 3:
+                        case 0:
+                            s.changerDirection(direction);
+                    }
+                    break;
+                case 1:
+                    switch (direction){
+                        case 1:
+                        case 2:
+                        case 0:
+                            s.changerDirection(direction);
+                    }
+                    break;
+                case 2:
+                    switch (direction){
+                        case 1:
+                        case 2:
+                        case 3:
+                            s.changerDirection(direction);
+                    }
+                    break;
+                case 3:
+                    switch (direction){
+                        case 3:
+                        case 2:
+                        case 0:
+                            s.changerDirection(direction);
+                    }
+                    break;
+            }
+        }
+    }
+
+    public void prochainMouvement(){
+        //TODO : Vérifier si les serpents peuvent avancer et avancer si c'est le cas, le supprimer sinon
+        for (Serpent s: serpents){
+            if (s.isAlive()) {
+                Case[][] g = grille.getGrid();
+                int[] coord = s.getHeadCoord();
+                boolean deplacementPossible = false;
+                switch (s.getDirection()) {
+                    case 0:
+                        deplacementPossible = g[coord[0] + 1][coord[1]].isPassable() && !isSerpent(coord[0] + 1, coord[1]);
+                        System.out.println(""+(coord[0] + 1)+" "+coord[1]);
+                        break;
+                    case 1:
+                        deplacementPossible = g[coord[0]][coord[1] + 1].isPassable() && !isSerpent(coord[0], coord[1] + 1);
+                        System.out.println(""+(coord[0] )+" "+(coord[1]+ 1));
+                        break;
+                    case 2:
+                        deplacementPossible = g[coord[0] - 1][coord[1]].isPassable() && !isSerpent(coord[0] - 1, coord[1]);
+                        System.out.println(""+(coord[0] -1)+" "+coord[1]);
+                        break;
+                    case 3:
+                        deplacementPossible = g[coord[0]][coord[1] - 1].isPassable() && !isSerpent(coord[0], coord[1] - 1);
+                        System.out.println(""+(coord[0] )+" "+(coord[1]- 1));
+                        break;
+                }
+                if (deplacementPossible) {
+                    s.avancer();
+                } else {
+                    s.die();
+                }
+            }
+        }
+        checkFruit(); //On mange les fruits
     }
 }

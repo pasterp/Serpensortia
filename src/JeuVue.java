@@ -7,9 +7,10 @@ import java.awt.*;
 public class JeuVue extends JPanel{
     JeuModele modele;
 
-    public JeuVue(){
+    public JeuVue(JeuModele jm){
         super();
-        modele = new JeuModele(15);
+        System.out.println("Initialisation Vue...");
+        modele = jm;
         setPreferredSize(new Dimension(modele.getTaille()*32, modele.getTaille()*32));
     }
 
@@ -22,17 +23,5 @@ public class JeuVue extends JPanel{
 //                g.drawRect(i * 32, j * 32, 32, 32); TODO: enlever le debug
             }
         }
-    }
-
-
-    public static void main(String[] argv){
-        JeuVue jeuVue = new JeuVue();
-        JFrame window = new JFrame("DEBUG!");
-        window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        window.add(jeuVue);
-        window.setContentPane(jeuVue);
-        window.pack();
-        window.setVisible(true);
-        window.repaint();
     }
 }
