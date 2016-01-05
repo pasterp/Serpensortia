@@ -20,11 +20,8 @@ public class JeuModele {
         serpents.add(new Serpent(t - 5, t - 5, 2));
 
         fruits = new ArrayList<Fruit>();
-        int[] coord = this.getCoordLibre();
-        fruits.add(Fruit.randomFruit(coord[0],coord[1]));
-        for (int x = 0; x < 45; x++){
-            coord = this.getCoordLibre();
-            fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        while(fruits.size()<4){
+            genererFruit();
         }
         afficherGrille();
 
@@ -116,6 +113,7 @@ public class JeuModele {
                         //Miam
                         s.feedMe(f.getScore());
                         fruits.remove(f);
+                        genererFruit();
                         break;
                     }
                 }
@@ -201,5 +199,12 @@ public class JeuModele {
             }
         }
         checkFruit(); //On mange les fruits
+    }
+
+    public void genererFruit(){
+        if(fruits.size()<4){
+            int[] coord = this.getCoordLibre();
+            fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+        }
     }
 }
