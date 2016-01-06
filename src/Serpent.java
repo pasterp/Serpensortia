@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class Serpent {
     ArrayList<CaseOrientée> unSerpent;
     int score;
+    boolean bouge;
 
     public Serpent(int x, int y, int dir){
         score = 0;
@@ -51,6 +52,10 @@ public class Serpent {
         this(x, y, 0);
     }
 
+    public boolean isBouge() {
+        return bouge;
+    }
+
     public ArrayList<Integer[]> getCoords(){
         ArrayList<Integer[]> coords = new ArrayList<Integer[]>();
         for (CaseOrientée part : unSerpent){
@@ -70,7 +75,9 @@ public class Serpent {
         return null;
     }
 
-    public void feedMe(int score){
+    public void feedMe(int score){ //TODO: Modulo score
+        this.score+=score;
+
         CaseOrientée queue = unSerpent.get(unSerpent.size() - 1);
         unSerpent.remove(unSerpent.size()-1);
         unSerpent.add(new CorpsSerpent((CorpsSerpent) unSerpent.get(unSerpent.size() - 1)));
@@ -79,7 +86,9 @@ public class Serpent {
     }
 
     public void changerDirection(int dir){
-        unSerpent.get(0).setDirection(dir);
+        if (!bouge)
+            unSerpent.get(0).setDirection(dir);
+        bouge = true;
     }
     public int getDirection(){
         return unSerpent.get(0).getDirection();
@@ -127,6 +136,7 @@ public class Serpent {
                 c.setDirection(dir);
                 dir = tmp;
             }
+            bouge = false;
         }
     }
 
@@ -135,7 +145,7 @@ public class Serpent {
      */
     public void die() {
         unSerpent.clear();
-        System.out.println("Serpent mort x_x");
+        System.out.println("Serpent mort x_x\nScore :"+score);
     }
 
     public boolean isAlive(){

@@ -5,6 +5,8 @@ import java.util.Random;
  * Created by pphelipo on 30/11/15.
  */
 public class JeuModele {
+    private final static int NB_FRUITS = 6;
+
     private int taille;
     private Grille grille;
     private ArrayList<Serpent> serpents;
@@ -20,8 +22,7 @@ public class JeuModele {
         serpents.add(new Serpent(t - 5, t - 5, 2));
 
         fruits = new ArrayList<Fruit>();
-        while(fruits.size()<4){
-            genererFruit();
+        while(genererFruit()){
         }
         afficherGrille();
 
@@ -113,7 +114,6 @@ public class JeuModele {
                         //Miam
                         s.feedMe(f.getScore());
                         fruits.remove(f);
-                        genererFruit();
                         break;
                     }
                 }
@@ -170,8 +170,7 @@ public class JeuModele {
         }
     }
 
-    public void prochainMouvement(){
-        //TODO : Vérifier si les serpents peuvent avancer et avancer si c'est le cas, le supprimer sinon
+    public boolean prochainMouvement(){
         for (Serpent s: serpents){
             if (s.isAlive()) {
                 Case[][] g = grille.getGrid();
@@ -199,12 +198,15 @@ public class JeuModele {
             }
         }
         checkFruit(); //On mange les fruits
+        return genererFruit();
     }
 
-    public void genererFruit(){
-        if(fruits.size()<4){
+    public boolean genererFruit(){
+        if(fruits.size()<NB_FRUITS){
             int[] coord = this.getCoordLibre();
             fruits.add(Fruit.randomFruit(coord[0],coord[1]));
+            return true;
         }
+        return false;
     }
 }
