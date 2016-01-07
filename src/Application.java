@@ -19,10 +19,10 @@ public class Application {
  * public class Application extends JPanel {
 
  public static void main(String[] args) {
- Model model = new Model();
- Fenetre f=new Fenetre(model);
- ControlLabel controlLabel = new ControlLabel(f, model);
- f.setControlLabel(controlLabel);
+ ModelMenu modelMenu = new ModelMenu();
+ FenetreMenu f=new FenetreMenu(modelMenu);
+ ControlLabelMenu controlLabelMenu = new ControlLabelMenu(f, modelMenu);
+ f.setControlLabelMenu(controlLabelMenu);
  }
  }
  */
