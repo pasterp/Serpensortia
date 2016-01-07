@@ -101,7 +101,7 @@ public class Serpent {
         return coord;
     }
 
-    public void avancer(){
+    public void avancer(){//TODO: Modulo taille grille
         int x=0, y=0, dir=0, tmp;
         for (CaseOrientée c : unSerpent){
             if (c instanceof TeteSerpent){

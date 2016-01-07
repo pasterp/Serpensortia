@@ -5,7 +5,7 @@ public class Grille {
     private Case[][] grid;
     private int taille;
 
-    public Grille(int t){
+    public Grille(int t){ //TODO : Make me rectangle
         this.grid = new Case[t][t];
         taille = t;
         for(int i=0; i<t; i++){
