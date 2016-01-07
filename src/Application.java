@@ -4,7 +4,7 @@ import javax.swing.*;
  * Created by pphelipo on 30/11/15.
  */
 public class Application {
-    public static void main(String[] argv){
+    public static void main(String[] argv) {
         JeuModele jeuModele = new JeuModele(25);
         JeuControlleur jc = new JeuControlleur(jeuModele);
         JFrame frame = new JFrame("Jeu -- v0.3 beta");
@@ -15,3 +15,15 @@ public class Application {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
+/**
+ * public class Application extends JPanel {
+
+ public static void main(String[] args) {
+ Model model = new Model();
+ Fenetre f=new Fenetre(model);
+ ControlLabel controlLabel = new ControlLabel(f, model);
+ f.setControlLabel(controlLabel);
+ }
+ }
+ */
+
