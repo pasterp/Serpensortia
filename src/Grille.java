@@ -10,7 +10,7 @@ public class Grille {
         taille = t;
         for(int i=0; i<t; i++){
             for(int j=0; j<t; j++) {
-                if(j==0 || i==0 || i==t-1 || j==t-1){
+                if(j==0 || i==0 || i==t-1 || j==t-1){//TODO: Let me pass
                     grid[i][j] = new Mur();
                 }
                 else {

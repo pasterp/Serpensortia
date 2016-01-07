@@ -75,14 +75,14 @@ public class Serpent {
         return null;
     }
 
-    public void feedMe(int score){ //TODO: Modulo score
+    public void feedMe(int score){
         this.score+=score;
-
-        CaseOrientée queue = unSerpent.get(unSerpent.size() - 1);
-        unSerpent.remove(unSerpent.size()-1);
-        unSerpent.add(new CorpsSerpent((CorpsSerpent) unSerpent.get(unSerpent.size() - 1)));
-        unSerpent.add(queue);
-
+        for (int i =0; i < score/25; i++){
+            CaseOrientée queue = unSerpent.get(unSerpent.size() - 1);
+            unSerpent.remove(unSerpent.size()-1);
+            unSerpent.add(new CorpsSerpent((CorpsSerpent) unSerpent.get(unSerpent.size() - 1)));
+            unSerpent.add(queue);
+        }
     }
 
     public void changerDirection(int dir){
