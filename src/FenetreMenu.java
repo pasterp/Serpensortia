@@ -119,6 +119,11 @@ public class FenetreMenu extends JFrame {
         fondEcran = new FondEcran();
         fondEcran.setLayout(new BorderLayout());
         creerMenuBar();
+        JeuModele jeuModele = new JeuModele(20);
+        JeuControlleur jc = new JeuControlleur(jeuModele);
+        fondEcran.add(jc.getVue());
+        this.addKeyListener(jc);
+        fondEcran.setVisible(true);
         retourPage();
         fondEcran.add(pRetour,BorderLayout.WEST);
 
@@ -224,7 +229,7 @@ public class FenetreMenu extends JFrame {
         fondEcranBouton.add(pOpt,BorderLayout.CENTER);
     }
 
-    public void setControlLabel(MouseListener label) {
+    public void setControlLabelMenu (MouseListener label) {
         jouer.addMouseListener(label);
         score.addMouseListener(label);
         option.addMouseListener(label);

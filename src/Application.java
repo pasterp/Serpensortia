@@ -3,7 +3,10 @@ import javax.swing.*;
 /**
  * Created by pphelipo on 30/11/15.
  */
+/**
+
 public class Application {
+
     public static void main(String[] argv) {
         JeuModele jeuModele = new JeuModele(25);
         JeuControlleur jc = new JeuControlleur(jeuModele);
@@ -15,8 +18,8 @@ public class Application {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
-/**
- * public class Application extends JPanel {
+     */
+public class Application extends JPanel {
 
  public static void main(String[] args) {
  ModelMenu modelMenu = new ModelMenu();
@@ -25,5 +28,4 @@ public class Application {
  f.setControlLabelMenu(controlLabelMenu);
  }
  }
- */
 
