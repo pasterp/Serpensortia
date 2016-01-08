@@ -14,8 +14,8 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 
 public class FenetreMenu extends JFrame {
-    Image imageFond = Toolkit.getDefaultToolkit().getImage("/home/mahatehotia/Documents/menu/porte.jpg");;
-    Image imageFondOpt = Toolkit.getDefaultToolkit().getImage("/home/mahatehotia/Documents/menu/parchemin.png");;
+    Image imageFond = Toolkit.getDefaultToolkit().getImage("img/porte.jpg");;
+    Image imageFondOpt = Toolkit.getDefaultToolkit().getImage("img/parchemin.png");;
     JMenuBar menuBar;
     JMenu mOption;
     JMenuItem iNew, iScores;
@@ -39,31 +39,31 @@ public class FenetreMenu extends JFrame {
 
     public void initAttribut()
     {
-        jouer= new JLabel(new ImageIcon("/home/mahatehotia/Documents/menu/jouer.png"));
+        jouer= new JLabel(new ImageIcon("img/jouer.png"));
         jouer.setBorder(null);
         jouer.setOpaque(false);
 
-        score=new JLabel(new ImageIcon("/home/mahatehotia/Documents/menu/score.png"));
+        score=new JLabel(new ImageIcon("img/score.png"));
         score.setBorder(null);
         score.setOpaque(false);
 
-        option=new JLabel(new ImageIcon("/home/mahatehotia/Documents/menu/option.png"));
+        option=new JLabel(new ImageIcon("img/option.png"));
         option.setBorder(null);
         option.setOpaque(false);
 
-        credit=new JLabel(new ImageIcon("/home/mahatehotia/Documents/menu/credit.png"));
+        credit=new JLabel(new ImageIcon("img/credit.png"));
         credit.setBorder(null);
         credit.setOpaque(false);
 
-        retour=new JLabel(new ImageIcon("/home/mahatehotia/Documents/menu/retour.png"));
+        retour=new JLabel(new ImageIcon("img/retour.png"));
         retour.setBorder(null);
         retour.setOpaque(false);
 
-        serpent1=new JLabel(new ImageIcon("/home/mahatehotia/Documents/menu/serpentRouge.png"));
+        serpent1=new JLabel(new ImageIcon("img/serpentRouge.png"));
         serpent1.setBorder(null);
         serpent1.setOpaque(false);
 
-        serpent2=new JLabel(new ImageIcon("/home/mahatehotia/Documents/menu/serpentVert.png"));
+        serpent2=new JLabel(new ImageIcon("img/serpentVert.png"));
         serpent2.setBorder(null);
         serpent2.setOpaque(false);
 

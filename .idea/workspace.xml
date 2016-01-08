@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="746c272b-f8b9-4e82-b0d6-709ef30b5116" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FenetreMenu.java" afterPath="$PROJECT_DIR$/src/FenetreMenu.java" />
     </list>
     <ignored path="Serpensortia.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,10 +60,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JeuModele.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JeuModele.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JeuModele.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="6.3112392">
+            <state vertical-scroll-proportion="-84.42857">
               <caret line="200" column="10" selection-start-line="200" selection-start-column="8" selection-end-line="200" selection-end-column="10" />
               <folding />
             </state>
@@ -89,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FenetreMenu.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FenetreMenu.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FenetreMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.8089006">
+              <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -145,6 +146,7 @@
         <option value="$PROJECT_DIR$/src/Grille.java" />
         <option value="$PROJECT_DIR$/src/JeuModele.java" />
         <option value="$PROJECT_DIR$/src/Serpent.java" />
+        <option value="$PROJECT_DIR$/src/FenetreMenu.java" />
       </list>
     </option>
   </component>
@@ -539,7 +541,7 @@
       <workItem from="1452178855967" duration="690000" />
       <workItem from="1452253773669" duration="1062000" />
       <workItem from="1452260200317" duration="42000" />
-      <workItem from="1452286981261" duration="410000" />
+      <workItem from="1452286981261" duration="614000" />
     </task>
     <task id="LOCAL-00001" summary="Application commit lol">
       <created>1448885462635</created>
@@ -631,11 +633,17 @@
       <option name="project" value="LOCAL" />
       <updated>1452287473827</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="score&#10;Timer &#10;Gen Fruits">
+      <created>1452287487151</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1452287487151</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53116000" />
+    <option name="totallyTimeSpent" value="53320000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1087,16 +1095,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FenetreMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/JeuVue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1107,9 +1105,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JeuModele.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="6.3112392">
+        <state vertical-scroll-proportion="-84.42857">
           <caret line="200" column="10" selection-start-line="200" selection-start-column="8" selection-end-line="200" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FenetreMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8089006">
+          <caret line="65" column="46" selection-start-line="65" selection-start-column="46" selection-end-line="65" selection-end-column="46" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
