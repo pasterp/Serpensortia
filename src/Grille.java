@@ -11,7 +11,12 @@ public class Grille {
         for(int i=0; i<t; i++){
             for(int j=0; j<t; j++) {
                 if(j==0 || i==0 || i==t-1 || j==t-1){//TODO: Let me pass
-                    grid[i][j] = new Mur();
+                    if( i == taille/2 || j == taille/2){
+                        grid[i][j] = new Case();
+                    }
+                    else {
+                        grid[i][j] = new Mur();
+                    }
                 }
                 else {
                     grid[i][j]=new Case();
