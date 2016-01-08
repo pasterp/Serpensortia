@@ -209,4 +209,8 @@ public class JeuModele {
         }
         return false;
     }
+
+    public int getScore(int i){
+        return serpents.get(i).score;
+    }
 }
