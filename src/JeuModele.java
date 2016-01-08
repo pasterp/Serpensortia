@@ -18,8 +18,8 @@ public class JeuModele {
         grille = new Grille(taille);
         serpents = new ArrayList<Serpent>(2);
 
-        serpents.add(new Serpent(5, 5, 0));
-        serpents.add(new Serpent(t - 5, t - 5, 2));
+        serpents.add(new Serpent(5, 5, 0, taille));
+        serpents.add(new Serpent(t - 5, t - 5, 2, taille));
 
         fruits = new ArrayList<Fruit>();
         while(genererFruit()){

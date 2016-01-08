@@ -5,12 +5,12 @@ import java.util.ArrayList;
  */
 public class Serpent {
     ArrayList<CaseOrientée> unSerpent;
-    int score;
+    int score,tailleGrille;
     boolean bouge;
 
-    public Serpent(int x, int y, int dir){
+    public Serpent(int x, int y, int dir, int t){
         score = 0;
-
+        tailleGrille = t;
         unSerpent = new ArrayList();
         unSerpent.add(new TeteSerpent(x,y,dir));
 
@@ -48,8 +48,8 @@ public class Serpent {
 
     }
 
-    public Serpent(int x, int y){
-        this(x, y, 0);
+    public Serpent(int x, int y, int t){
+        this(x, y, 0, t);
     }
 
     public boolean isBouge() {
@@ -111,16 +111,16 @@ public class Serpent {
                 //C'est la tete on ne fait qu'avancer dans la bonne direction
                 switch (c.getDirection()){
                     case 0:
-                        c.setX(c.getX() + 1);
+                        c.setX((c.getX() + 1 >= tailleGrille-1) ? 0 : c.getX() + 1);
                         break;
                     case 1:
-                        c.setY(c.getY()+1);
+                        c.setY((c.getY() + 1 >= tailleGrille-1) ? 0 : c.getY() + 1);
                         break;
                     case 2:
-                        c.setX(c.getX()-1);
+                        c.setX((c.getX()-1 <= 0) ? tailleGrille : c.getX() - 1);
                         break;
                     case 3:
-                        c.setY(c.getY()-1);
+                        c.setY((c.getY()-1 <= 0) ? tailleGrille : c.getY() - 1);
                         break;
                 }
             }
