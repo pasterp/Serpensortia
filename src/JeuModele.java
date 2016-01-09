@@ -19,7 +19,7 @@ public class JeuModele {
         serpents = new ArrayList<Serpent>(2);
 
         serpents.add(new Serpent(5, 5, 0, taille));
-        serpents.add(new SerpentAI(t - 5, t - 5, 2, taille));
+        serpents.add(new SerpentAI(taille - 5, taille - 5, 2, taille));
 
         fruits = new ArrayList<Fruit>();
         while(genererFruit()){
@@ -213,6 +213,16 @@ public class JeuModele {
             return true;
         }
         return false;
+    }
+
+    public void réinit(){
+        this.serpents.removeAll(serpents);
+        this.serpents.add(new Serpent(5, 5, 0, taille));
+        this.serpents.add(new SerpentAI(taille - 5, taille - 5, 2, taille));
+        this.fruits.removeAll(fruits);
+        while(genererFruit()){
+        }
+        afficherGrille();
     }
 
     public int getScore(int i){
