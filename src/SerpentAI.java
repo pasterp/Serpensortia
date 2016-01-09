@@ -14,34 +14,38 @@ public class SerpentAI extends Serpent {
 
     }
 
-    public void getTarget(ArrayList<Fruit> fruits){
+    public void getTarget(ArrayList<Fruit> fruits, JeuModele jm){
         System.out.println("Looking for a new target...");
         int distance;
         for (Fruit f: fruits){
             distance = Math.abs((f.getX() - getHeadCoord()[0]) + (f.getY() - getHeadCoord()[1]));
             if (targetDistance > distance){
-                setTarget(f, distance);
+                setTarget(f, distance, jm);
                 System.out.println("Target selected...");
             }
         }
     }
 
-    public void setTarget(Fruit f, int d) {
+    public void setTarget(Fruit f, int d, JeuModele jm) {
         targetX = f.getX();
         targetY = f.getY();
         targetDistance = d;
-        autoSetDirection();
+        autoSetDirection(jm);
     }
 
-    public void autoSetDirection(){
+    public void autoSetDirection(JeuModele jm){
         System.out.println("Refreshing direction...");
-        if (targetX > getHeadCoord()[0])
+        if (targetX > getHeadCoord()[0] && jm.getGrille()[getHeadCoord()[0] + 1][getHeadCoord()[1]].isPassable()
+                && !jm.isSerpent(getHeadCoord()[0] + 1, getHeadCoord()[1]))
             changerDirection(0);
-        else if (targetX < getHeadCoord()[0])
+        else if (targetX < getHeadCoord()[0] && jm.getGrille()[getHeadCoord()[0] - 1][getHeadCoord()[1]].isPassable()
+                && !jm.isSerpent(getHeadCoord()[0] - 1, getHeadCoord()[1]))
             changerDirection(2);
-        else if (targetY > getHeadCoord()[1])
+        else if (targetY > getHeadCoord()[1] && jm.getGrille()[getHeadCoord()[0]][getHeadCoord()[1] + 1].isPassable()
+                && !jm.isSerpent(getHeadCoord()[0], getHeadCoord()[1] + 1))
             changerDirection(1);
-        else
+        else if (targetY <  getHeadCoord()[1] && jm.getGrille()[getHeadCoord()[0]][getHeadCoord()[1] - 1].isPassable()
+                && !jm.isSerpent(getHeadCoord()[0], getHeadCoord()[1] - 1))
             changerDirection(3);
     }
 }

@@ -24,7 +24,7 @@ public class JeuModele {
         fruits = new ArrayList<Fruit>();
         while(genererFruit()){
         }
-        ((SerpentAI)serpents.get(1)).getTarget(fruits);
+        ((SerpentAI)serpents.get(1)).getTarget(fruits, this);
         afficherGrille();
 
     }
@@ -115,7 +115,7 @@ public class JeuModele {
                         //Miam
                         s.feedMe(f.getScore());
                         if (s instanceof SerpentAI)
-                            ((SerpentAI)s).getTarget(fruits);
+                            ((SerpentAI)s).getTarget(fruits, this);
                         fruits.remove(f);
                         break;
                     }
@@ -195,7 +195,7 @@ public class JeuModele {
                 }
                 if (deplacementPossible) {
                     if (s instanceof SerpentAI)
-                    ((SerpentAI)s).autoSetDirection();
+                    ((SerpentAI)s).autoSetDirection(this);
                     s.avancer();
                 } else {
                     s.die();

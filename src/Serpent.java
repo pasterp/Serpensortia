@@ -151,4 +151,8 @@ public class Serpent {
     public boolean isAlive(){
         return (unSerpent.size()>0);
     }
+
+    public ArrayList<CaseOrientée> getUnSerpent(){
+        return unSerpent;
+    }
 }
