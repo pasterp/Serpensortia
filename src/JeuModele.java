@@ -194,6 +194,8 @@ public class JeuModele {
                         break;
                 }
                 if (deplacementPossible) {
+                    if (s instanceof SerpentAI)
+                    ((SerpentAI)s).autoSetDirection();
                     s.avancer();
                 } else {
                     s.die();

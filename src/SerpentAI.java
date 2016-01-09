@@ -21,6 +21,7 @@ public class SerpentAI extends Serpent {
             distance = Math.abs((f.getX() - getHeadCoord()[0]) + (f.getY() - getHeadCoord()[1]));
             if (targetDistance > distance){
                 setTarget(f, distance);
+                System.out.println("Target selected...");
             }
         }
     }
@@ -33,6 +34,7 @@ public class SerpentAI extends Serpent {
     }
 
     public void autoSetDirection(){
+        System.out.println("Refreshing direction...");
         if (targetX > getHeadCoord()[0])
             changerDirection(0);
         else if (targetX < getHeadCoord()[0])
