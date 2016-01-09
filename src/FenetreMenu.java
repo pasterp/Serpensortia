@@ -16,11 +16,12 @@ import javax.swing.*;
 public class FenetreMenu extends JFrame {
     Image imageFond = Toolkit.getDefaultToolkit().getImage("img/porte.jpg");;
     Image imageFondOpt = Toolkit.getDefaultToolkit().getImage("img/parchemin.png");;
+    Image imageTabScore = Toolkit.getDefaultToolkit().getImage("img/tableauScore.png");;
     JMenuBar menuBar;
     JMenu mOption;
     JMenuItem iNew, iScores;
-    JLabel jouer, score, option,credit,background,retour,jBas,jHaut,jGauche,jDroite,jPause,serpent1,serpent2;
-    JPanel pRetour;
+    JLabel jouer, score, option,credit,background,retour,jBas,jHaut,jGauche,jDroite,jPause,serpent1,serpent2,tableauScore;
+    JPanel pRetour, menuJeu;
     ModelMenu modelMenu;
     FondEcran fondEcran;
     FondEcranBouton fondEcranBouton;
@@ -66,6 +67,11 @@ public class FenetreMenu extends JFrame {
         serpent2=new JLabel(new ImageIcon("img/serpentVert.png"));
         serpent2.setBorder(null);
         serpent2.setOpaque(false);
+
+        ImageIcon tabScore = new ImageIcon(new ImageIcon("img/parchemin.png").getImage().getScaledInstance(300, 200,Image.SCALE_DEFAULT));
+        tableauScore=new JLabel(tabScore);
+        tableauScore.setBorder(null);
+        tableauScore.setOpaque(false);
 
     }
     public void creerFenetre()
@@ -123,10 +129,14 @@ public class FenetreMenu extends JFrame {
         JeuControlleur jc = new JeuControlleur(jeuModele);
         fondEcran.add(jc.getVue());
         this.addKeyListener(jc);
-        fondEcran.setVisible(true);
-        retourPage();
-        fondEcran.add(pRetour,BorderLayout.WEST);
+        menuJeu = new JPanel();
 
+        menuJeu.setLayout(new BoxLayout(menuJeu,BoxLayout.Y_AXIS));
+        menuJeu.add(tableauScore,BorderLayout.WEST);
+        retourPage();
+        menuJeu.setOpaque(false);
+        menuJeu.add(pRetour);
+        fondEcran.add(menuJeu,BorderLayout.WEST);
         setContentPane(fondEcran);
 
 
