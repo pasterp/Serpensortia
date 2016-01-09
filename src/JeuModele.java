@@ -19,11 +19,12 @@ public class JeuModele {
         serpents = new ArrayList<Serpent>(2);
 
         serpents.add(new Serpent(5, 5, 0, taille));
-        serpents.add(new Serpent(t - 5, t - 5, 2, taille));
+        serpents.add(new SerpentAI(t - 5, t - 5, 2, taille));
 
         fruits = new ArrayList<Fruit>();
         while(genererFruit()){
         }
+        ((SerpentAI)serpents.get(1)).getTarget(fruits);
         afficherGrille();
 
     }
@@ -113,6 +114,8 @@ public class JeuModele {
                     if (c[0] == f.getX() && c[1] == f.getY()){
                         //Miam
                         s.feedMe(f.getScore());
+                        if (s instanceof SerpentAI)
+                            ((SerpentAI)s).getTarget(fruits);
                         fruits.remove(f);
                         break;
                     }
@@ -213,4 +216,9 @@ public class JeuModele {
     public int getScore(int i){
         return serpents.get(i).score;
     }
+
+    public ArrayList<Fruit> getFruits(){
+        return fruits;
+    }
+
 }
