@@ -28,6 +28,7 @@ public class FenetreMenu extends JFrame {
     JButton bHaut,bBas,bGauche,bDroite,bPause;
     JeuModele jeuModele;
     JeuControlleur jc;
+    FenetreMenu newPartie;
 
 
 
@@ -291,5 +292,22 @@ public class FenetreMenu extends JFrame {
         jPause = new JLabel("Pause");
         bPause = new JButton();
 
+    }
+
+    public  void setControlMenu(ActionListener menu){
+        iNew.addActionListener(menu);
+        iScores.addActionListener(menu);
+    }
+
+    public void afficheScore() {
+        System.out.println("votre score!!");
+    }
+
+    public void choixMenu(int choix) throws IOException {
+        if (choix==1) {
+            System.out.println(" nouvelle partie");
+        } else {
+            afficheScore();
+        }
     }
 }
