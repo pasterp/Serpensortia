@@ -50,6 +50,7 @@ public class ControlLabelMenu implements MouseListener{
         }
         if (e.getSource()==fenetreMenu.retour){
             fenetreMenu.creerFenetre();
+            fenetreMenu.jc.pause=true;
             fenetreMenu.setVisible(true);
         }
 
