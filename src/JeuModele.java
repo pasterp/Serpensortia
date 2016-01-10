@@ -209,8 +209,10 @@ public class JeuModele {
     public boolean genererFruit(){
         if(fruits.size()<NB_FRUITS){
             int[] coord = this.getCoordLibre();
-            fruits.add(Fruit.randomFruit(coord[0],coord[1]));
-            return true;
+            if(coord[0]!=0 && coord[1]!=taille-1 && coord[0]!=taille-1 && coord[1]!=0) {
+                fruits.add(Fruit.randomFruit(coord[0], coord[1]));
+                return true;
+            }
         }
         return false;
     }
@@ -222,6 +224,7 @@ public class JeuModele {
         this.fruits.removeAll(fruits);
         while(genererFruit()){
         }
+        ((SerpentAI)serpents.get(1)).getTarget(fruits, this);
         afficherGrille();
     }
 
