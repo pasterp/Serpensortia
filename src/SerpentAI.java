@@ -43,19 +43,43 @@ public class SerpentAI extends Serpent {
             System.out.println("On a mangé un fruit bro || Notre cible a été mangé");
             getTarget(jm.getFruits(), jm);
         }
+        //System.out.println("\t Coord : x: "+coord[0]+" y:"+coord[1]+"  ---> "+g[coord[1]][coord[0]]);
 
-
-        if (targetX > coord[0] && g[coord[0]+1][coord[1]].isPassable()){
-            jm.tournerSerpent(numeroSerpent,0);
+        if (targetX > coord[0]){
+            if (!g[coord[1]][coord[0]+1].isPassable()){
+                jm.tournerSerpent(numeroSerpent,1);
+                jm.tournerSerpent(numeroSerpent,3);
+                System.out.println("                                                      Test -("+(coord[0]+1)+","+coord[1]+")-->"+g[coord[1]][coord[0]+1]);
+            }else{
+                jm.tournerSerpent(numeroSerpent,0);
+            }
         }else
-        if (targetX < coord[0] && g[coord[0]-1][coord[1]].isPassable()){
-            jm.tournerSerpent(numeroSerpent,2);
+        if (targetX < coord[0]){
+            if (!g[coord[1]][coord[0]-1].isPassable()){
+                jm.tournerSerpent(numeroSerpent,1);
+                jm.tournerSerpent(numeroSerpent,3);
+                System.out.println("                                                      Test -("+(coord[0]-1)+","+coord[1]+")-->"+g[coord[1]][coord[0]-1]);
+            }else{
+                jm.tournerSerpent(numeroSerpent,2);
+            }
         }else
-        if (targetY < coord[1] && g[coord[0]][coord[1]-1].isPassable()){
-            jm.tournerSerpent(numeroSerpent,3);
+        if (targetY < coord[1]){
+            if (!g[coord[1]-1][coord[0]].isPassable()){
+                jm.tournerSerpent(numeroSerpent,0);
+                jm.tournerSerpent(numeroSerpent,2);
+                System.out.println("                                                      Test -("+(coord[0])+","+(coord[1]-1)+")-->"+g[coord[1]-1][coord[0]]);
+            }else{
+                jm.tournerSerpent(numeroSerpent,3);
+            }
         }else
-        if (targetY > coord[1] && g[coord[0]][coord[1]+1].isPassable()){
-            jm.tournerSerpent(numeroSerpent,1);
+        if (targetY > coord[1]){
+            if (!g[coord[1]+1][coord[0]].isPassable()){
+                jm.tournerSerpent(numeroSerpent,0);
+                jm.tournerSerpent(numeroSerpent,1);
+                System.out.println("                                                      Test -("+(coord[0])+","+(coord[1]+1)+")-->"+g[coord[1]+1][coord[0]]);
+            }else{
+                jm.tournerSerpent(numeroSerpent,1);
+            }
         }
 
 
