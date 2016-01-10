@@ -1,4 +1,4 @@
-import java.awt.event.KeyListener;
+import java.awt.event.KeyEvent;
 
 /**
  * Created by pphelipo on 30/11/15.
@@ -15,67 +15,55 @@ E = 69
 
 public class MenuModele {
 
-    private int keyUp;
-    private int keyDown;
-    private int keyLeft;
-    private int keyRight;
-    private int gridSize;
-    private int keyPause;
+    private int J1keyUp;
+    private int J1keyDown;
+    private int J1keyLeft;
+    private int J1keyRight;
+    private int J2keyUp;
+    private int J2keyDown;
+    private int J2keyLeft;
+    private int J2keyRight;
 
     public MenuModele(){
-        keyUp = 90;
-        keyDown = 83;
-        keyLeft = 81;
-        keyRight = 68;
-        keyPause = 69;
-        gridSize = 50;
+        J1keyUp = KeyEvent.VK_UP;
+        J1keyDown = KeyEvent.VK_DOWN;
+        J1keyLeft = KeyEvent.VK_LEFT;
+        J1keyRight = KeyEvent.VK_RIGHT;
+        J2keyUp = KeyEvent.VK_Z;
+        J2keyDown = KeyEvent.VK_S;
+        J2keyLeft = KeyEvent.VK_Q;
+        J2keyRight = KeyEvent.VK_D;
     }
 
-    public int getKeyUp(){
-        return keyUp;
+    public int getJ1keyUp() {
+        return J1keyUp;
     }
 
-    public int getKeyDown(){
-        return keyDown;
+    public int getJ1keyDown() {
+        return J1keyDown;
     }
 
-    public int getKeyLeft(){
-        return keyLeft;
+    public int getJ1keyLeft() {
+        return J1keyLeft;
     }
 
-    public int getKeyRight(){
-        return keyRight;
+    public int getJ1keyRight() {
+        return J1keyRight;
     }
 
-    public void setKeyUp(int key){
-        keyUp = key;
+    public int getJ2keyUp() {
+        return J2keyUp;
     }
 
-    public void setKeyDown(int key) {
-        keyDown = key;
+    public int getJ2keyDown() {
+        return J2keyDown;
     }
 
-    public void setKeyLeft(int key){
-        keyLeft = key;
+    public int getJ2keyLeft() {
+        return J2keyLeft;
     }
 
-    public void setKeyRight(int key){
-        keyRight = key;
-    }
-
-    public int getGridSize(){
-        return gridSize;
-    }
-
-    public void setGridSize(int size){
-        gridSize = size;
-    }
-
-    public int getKeyPause(){
-        return keyPause;
-    }
-
-    public void setKeyPause(int key){
-        keyPause = key;
+    public int getJ2keyRight() {
+        return J2keyRight;
     }
 }

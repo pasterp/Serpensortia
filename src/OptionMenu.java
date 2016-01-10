@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyListener;
 
 /**
  * Created by lorchie on 30/11/15.
@@ -28,7 +26,6 @@ public class OptionMenu extends JFrame {
         initAttributO();
         addWidgetO();
         creerWidgetO();
-
     }
 
     public void initAttributO() {
@@ -123,11 +120,9 @@ public class OptionMenu extends JFrame {
         fondControl.add(ptout);
     }
 
-    public void setKeyListener(KeyListener kl){
-        this.addKeyListener(kl);
-    }
-
-    public void setActionListener(ActionListener al){
+    public void setActionListener(MenuControlleur al){
+        System.out.println("Listener ajouté!");
+        this.addKeyListener(al);
         up.addActionListener(al);
         down.addActionListener(al);
         left.addActionListener(al);

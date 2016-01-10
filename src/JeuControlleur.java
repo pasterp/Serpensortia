@@ -12,9 +12,11 @@ public class JeuControlleur implements KeyListener {
     JeuVue jeuVue;
     boolean pause;
     private Timer timer;
+    MenuModele config;
 
-    public JeuControlleur(JeuModele jm){
+    public JeuControlleur(JeuModele jm, MenuModele mm){
         pause = true;
+        config = mm;
         jeuModele = jm;
         jeuVue = new JeuVue(jm);
         System.out.println("Initialisation Controlleur...");
@@ -63,40 +65,35 @@ public class JeuControlleur implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent keyEvent) {
-        switch (keyEvent.getKeyCode()){
-            case KeyEvent.VK_UP:
-                jeuModele.tournerSerpent(0, 3);
-                break;
-            case KeyEvent.VK_LEFT:
-                jeuModele.tournerSerpent(0, 2);
-                break;
-            case KeyEvent.VK_DOWN:
-                jeuModele.tournerSerpent(0, 1);
-                break;
-            case KeyEvent.VK_RIGHT:
-                jeuModele.tournerSerpent(0, 0);
-                break;
-            case KeyEvent.VK_Z:
-                jeuModele.tournerSerpent(1, 3);
-                break;
-            case KeyEvent.VK_Q:
-                jeuModele.tournerSerpent(1, 2);
-                break;
-            case KeyEvent.VK_S:
-                jeuModele.tournerSerpent(1, 1);
-                break;
-            case KeyEvent.VK_D:
-                jeuModele.tournerSerpent(1, 0);
-                break;
-            case KeyEvent.VK_P:
-                pause = !pause;
-                timer.start();
-                break;
-            case KeyEvent.VK_R:
-                System.out.println("Prochain mouvement forcé");
-                jeuModele.prochainMouvement();
-                jeuVue.repaint();
-                break;
+        int i = keyEvent.getKeyCode();
+        if (i == config.getJ1keyUp()) {
+            jeuModele.tournerSerpent(0, 3);
+
+        } else if (i == config.getJ1keyLeft()) {
+            jeuModele.tournerSerpent(0, 2);
+
+        } else if (i == config.getJ1keyDown()) {
+            jeuModele.tournerSerpent(0, 1);
+
+        } else if (i == config.getJ1keyRight()) {
+            jeuModele.tournerSerpent(0, 0);
+
+        } else if (i == config.getJ2keyUp()) {
+            jeuModele.tournerSerpent(1, 3);
+
+        } else if (i == config.getJ2keyLeft()) {
+            jeuModele.tournerSerpent(1, 2);
+
+        } else if (i == config.getJ2keyDown()) {
+            jeuModele.tournerSerpent(1, 1);
+
+        } else if (i == config.getJ2keyRight()) {
+            jeuModele.tournerSerpent(1, 0);
+
+        } else if (i == KeyEvent.VK_P) {
+            pause = !pause;
+            timer.start();
+
         }
     }
 

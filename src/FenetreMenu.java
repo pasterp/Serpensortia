@@ -19,16 +19,16 @@ public class FenetreMenu extends JFrame {
     JPanel pRetour, menuJeu;
     MenuModele modelMenu;
     FondEcran fondEcran;
-    FondEcranBouton fondEcranBouton;
-    JButton bHaut,bBas,bGauche,bDroite,bPause;
     JeuModele jeuModele;
     JeuControlleur jc;
     FenetreMenu newPartie;
+    OptionMenu optionMenu;
 
 
 
-    public FenetreMenu(MenuModele modelMenu){
+    public FenetreMenu(MenuModele modelMenu, OptionMenu om){
         super();
+        optionMenu=om;
         this.modelMenu=modelMenu;
         setExtendedState(this.getExtendedState() | this.MAXIMIZED_BOTH);
         initAttribut();
@@ -76,7 +76,7 @@ public class FenetreMenu extends JFrame {
         tableauScore.setOpaque(false);
 
         jeuModele = new JeuModele(20);
-        jc = new JeuControlleur(jeuModele);
+        jc = new JeuControlleur(jeuModele, modelMenu);
         this.addKeyListener(jc);
     }
     public void creerFenetre()
@@ -214,8 +214,6 @@ public class FenetreMenu extends JFrame {
     }
 
     public void setSerpent1(){
-        MenuModele menuModele = new MenuModele();
-        OptionMenu optionMenu = new OptionMenu(menuModele);
         fondEcran = new FondEcran();
         fondEcran.setLayout(new BorderLayout());
 
@@ -237,8 +235,6 @@ public class FenetreMenu extends JFrame {
     }
 
     public void setSerpent2(){
-        MenuModele menuModele = new MenuModele();
-        OptionMenu optionMenu = new OptionMenu(menuModele);
         fondEcran = new FondEcran();
         fondEcran.setLayout(new BorderLayout());
 
@@ -267,24 +263,6 @@ public class FenetreMenu extends JFrame {
         retour.addMouseListener(label);
         serpent1.addMouseListener(label);
         serpent2.addMouseListener(label);
-
-    }
-
-    public void initFenetreOpt(){
-        jBas= new JLabel("Bas");
-        bBas = new JButton();
-
-        jHaut= new JLabel("Haut");
-        bHaut = new JButton();
-
-        jGauche= new JLabel("Gauche");
-        bGauche = new JButton();
-
-        jDroite= new JLabel("Droite");
-        bDroite = new JButton();
-
-        jPause = new JLabel("Pause");
-        bPause = new JButton();
 
     }
 
