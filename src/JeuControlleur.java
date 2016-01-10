@@ -25,7 +25,7 @@ public class JeuControlleur implements KeyListener {
                 if (!pause){
                     jeuVue.repaint();
                     if (jeuModele.prochainMouvement()){
-                        timer.setDelay((int)(timer.getDelay()*0.9));
+                        timer.setDelay((int)(timer.getDelay()*0.95));
                     }
                 }else{
                     timer.stop();
