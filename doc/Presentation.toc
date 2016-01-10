@@ -1,0 +1,18 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {french}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Interface}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Menus}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{Options}{5}{0}{2}
+\beamer@subsectionintoc {2}{3}{Scores}{6}{0}{2}
+\beamer@sectionintoc {3}{Fonctionnement}{7}{0}{3}
+\beamer@subsectionintoc {3}{1}{Grille}{7}{0}{3}
+\beamer@subsubsectionintoc {3}{1}{1}{Cases}{7}{0}{3}
+\beamer@subsubsectionintoc {3}{1}{2}{Fruits}{7}{0}{3}
+\beamer@subsectionintoc {3}{2}{Serpents}{7}{0}{3}
+\beamer@subsubsectionintoc {3}{2}{1}{Contr\IeC {\^o}les des joueurs}{7}{0}{3}
+\beamer@subsubsectionintoc {3}{2}{2}{Contr\IeC {\^o}le par l'ordinateur}{7}{0}{3}
+\beamer@subsectionintoc {3}{3}{Design}{7}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{8}{0}{4}
+\beamer@subsectionintoc {4}{1}{Possibilit\IeC {\'e}s d'am\IeC {\'e}liorations}{8}{0}{4}
+\beamer@subsectionintoc {4}{2}{Que nous a apportez ce projet}{9}{0}{4}

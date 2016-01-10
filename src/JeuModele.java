@@ -212,7 +212,7 @@ public class JeuModele {
 
     public void reinit(){
         this.serpents.removeAll(serpents);
-        this.serpents.add(new SerpentAI(5, 5, 0, taille, 0));
+        this.serpents.add(new Serpent(5, 5, 0, taille));
         this.serpents.add(new SerpentAI(taille - 5, taille - 5, 2, taille, 1));
         this.fruits.removeAll(fruits);
         while(genererFruit()){
