@@ -2,16 +2,11 @@
  * Created by mahatehotia on 07/01/16.
  */
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
-
-import javax.imageio.ImageIO;
-import javax.swing.*;
 
 public class FenetreMenu extends JFrame {
     Image imageFond = Toolkit.getDefaultToolkit().getImage("./img/porte.jpg");;
@@ -22,7 +17,7 @@ public class FenetreMenu extends JFrame {
     JMenuItem iNew, iScores;
     JLabel jouer, score, option,credit,background,retour,jBas,jHaut,jGauche,jDroite,jPause,serpent1,serpent2,tableauScore;
     JPanel pRetour, menuJeu;
-    ModelMenu modelMenu;
+    MenuModele modelMenu;
     FondEcran fondEcran;
     FondEcranBouton fondEcranBouton;
     JButton bHaut,bBas,bGauche,bDroite,bPause;
@@ -32,7 +27,7 @@ public class FenetreMenu extends JFrame {
 
 
 
-    public FenetreMenu(ModelMenu modelMenu){
+    public FenetreMenu(MenuModele modelMenu){
         super();
         this.modelMenu=modelMenu;
         setExtendedState(this.getExtendedState() | this.MAXIMIZED_BOTH);
@@ -162,7 +157,6 @@ public class FenetreMenu extends JFrame {
     }
 
     public void choixScore() throws IOException {
-        modelMenu.fichier();
         fondEcran = new FondEcran();
         fondEcran.setLayout(new BorderLayout());
         JPanel pScore = new JPanel();
@@ -207,12 +201,12 @@ public class FenetreMenu extends JFrame {
         JPanel pTout = new JPanel(new BorderLayout());
 
 
-        pTout.add(serpent1,BorderLayout.WEST);
+        pTout.add(serpent1, BorderLayout.WEST);
 
         retourPage();
         pTout.add(pRetour,BorderLayout.SOUTH);
 
-        pTout.add(serpent2,BorderLayout.EAST);
+        pTout.add(serpent2, BorderLayout.EAST);
         pTout.setOpaque(false);
 
         fondEcran.add(pTout);

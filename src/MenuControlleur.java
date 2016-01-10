@@ -9,12 +9,10 @@ import java.awt.event.KeyListener;
 public class MenuControlleur implements KeyListener, ActionListener{
 
     MenuModele modele;
-    MenuVue menuVue;
     OptionMenu optionMenu;
 
-    public MenuControlleur(MenuVue mVue, OptionMenu oVue){
+    public MenuControlleur(OptionMenu oVue){
         modele = new MenuModele();
-        menuVue = mVue;
         optionMenu = oVue;
         optionMenu.setKeyListener(this);
         optionMenu.setActionListener(this);
@@ -33,7 +31,6 @@ public class MenuControlleur implements KeyListener, ActionListener{
             @Override
             public void keyReleased(KeyEvent e) {}
         };
-        menuVue.setKeyListener(kl);
     }
 
     public void setKeyDown(){
@@ -49,7 +46,6 @@ public class MenuControlleur implements KeyListener, ActionListener{
             @Override
             public void keyReleased(KeyEvent e) {}
         };
-        menuVue.setKeyListener(kl);
     }
 
     public void setKeyRight(){
@@ -65,7 +61,6 @@ public class MenuControlleur implements KeyListener, ActionListener{
             @Override
             public void keyReleased(KeyEvent e) {}
         };
-        menuVue.setKeyListener(kl);
     }
 
     public void setKeyLeft(){
@@ -81,7 +76,6 @@ public class MenuControlleur implements KeyListener, ActionListener{
             @Override
             public void keyReleased(KeyEvent e) {}
         };
-        menuVue.setKeyListener(kl);
     }
 
     public void setKeyPause(){
@@ -97,7 +91,6 @@ public class MenuControlleur implements KeyListener, ActionListener{
             @Override
             public void keyReleased(KeyEvent e) {}
         };
-        menuVue.setKeyListener(kl);
     }
 
     public void setGridSize(int size){

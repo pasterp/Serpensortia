@@ -24,7 +24,6 @@ public class JeuModele {
         fruits = new ArrayList<Fruit>();
         while(genererFruit()){
         }
-        afficherGrille();
     }
 
     public void afficherGrille(){

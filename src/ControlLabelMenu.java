@@ -1,6 +1,4 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.IOException;
@@ -10,11 +8,11 @@ import java.io.IOException;
  */
 public class ControlLabelMenu implements MouseListener{
     FenetreMenu fenetreMenu;
-    ModelMenu modelMenu;
+    MenuModele modelMenu;
     OptionMenu optionMenu;
     JLabel jLabel1;
     MenuModele menuModele;
-    public ControlLabelMenu(FenetreMenu fenetreMenu, ModelMenu modelMenu, OptionMenu optionMenu) {
+    public ControlLabelMenu(FenetreMenu fenetreMenu, MenuModele modelMenu, OptionMenu optionMenu) {
         this.modelMenu = modelMenu;
         this.fenetreMenu=fenetreMenu;
         this.optionMenu=optionMenu;
