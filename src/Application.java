@@ -1,10 +1,8 @@
-import javax.swing.*;
-
 /**
  * Created by pphelipo on 30/11/15.
  */
 
-public class Application extends JPanel {
+public class Application{
 
  public static void main(String[] args) {
      MenuModele modelMenu = new MenuModele();
@@ -13,8 +11,8 @@ public class Application extends JPanel {
      FenetreMenu f=new FenetreMenu(modelMenu, optionMenu);
      ControlLabelMenu controlLabelMenu = new ControlLabelMenu(f, modelMenu,optionMenu);
      f.setControlLabelMenu(controlLabelMenu);
-     MenuControlleur menuControlleur = new MenuControlleur(optionMenu);
-     optionMenu.setActionListener(menuControlleur);
+     MenuControlleur menuControlleur = new MenuControlleur(menuModele, optionMenu);
+     f.addKeyListener(menuControlleur);
  }
 }
 

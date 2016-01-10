@@ -217,6 +217,9 @@ public class FenetreMenu extends JFrame {
         fondEcran = new FondEcran();
         fondEcran.setLayout(new BorderLayout());
 
+        optionMenu.menuModele.setJoueurActuel(1);
+        optionMenu.SwitchUser();
+
         JPanel pTout = new JPanel(new BorderLayout());
 
 
@@ -243,8 +246,10 @@ public class FenetreMenu extends JFrame {
         pTout.add(serpent1,BorderLayout.WEST);
 
         retourPage();
-        pTout.add(pRetour,BorderLayout.SOUTH);
+        pTout.add(pRetour, BorderLayout.SOUTH);
 
+        optionMenu.menuModele.setJoueurActuel(2);
+        optionMenu.SwitchUser();
         pTout.add(optionMenu.fondControl);
 
         pTout.add(serpent2,BorderLayout.EAST);

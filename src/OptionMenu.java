@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseListener;
 
 /**
  * Created by lorchie on 30/11/15.
@@ -7,19 +9,17 @@ import java.awt.*;
 public class OptionMenu extends JFrame {
     //public JComboBox<Integer> listeTaille;
 
-    public JButton up;
-    public JButton down;
-    public JButton left;
-    public JButton right;
-    public JButton pause;
+    MouseListener al;
+    public JLabel up;
+    public JLabel down;
+    public JLabel left;
+    public JLabel right;
     public JPanel ptout;
-    JLabel jHaut,jBas,jGauche,jDroite,jPause;
+    JLabel user,jHaut,jBas,jGauche,jDroite,jPause;
     MenuModele menuModele;
     Image imgControl = Toolkit.getDefaultToolkit().getImage("./img/parchemin.png");;
     FondControl fondControl;
     Font font;
-
-    public JButton retour;
 
     public OptionMenu(MenuModele m){
         this.menuModele=m;
@@ -48,13 +48,17 @@ public class OptionMenu extends JFrame {
     }
 
     public void addWidgetO() {
-        //listeTaille= new JComboBox<Integer>(new Integer[]{25,75,100});
-        up=new JButton("haut");
-        down=new JButton("bas");
-        left=new JButton("gauche");
-        right=new JButton("droite");
-        pause=new JButton("Pause");
-        retour=new JButton("Retour");
+        up=new JLabel(KeyEvent.getKeyText(menuModele.getJ1keyUp()));
+        down=new JLabel(KeyEvent.getKeyText(menuModele.getJ1keyDown()));
+        left=new JLabel(KeyEvent.getKeyText(menuModele.getJ1keyLeft()));
+        right=new JLabel(KeyEvent.getKeyText(menuModele.getJ1keyRight()));
+    }
+
+    public void addWidget1() {
+        up=new JLabel(KeyEvent.getKeyText(menuModele.getJ2keyUp()));
+        down=new JLabel(KeyEvent.getKeyText(menuModele.getJ2keyDown()));
+        left=new JLabel(KeyEvent.getKeyText(menuModele.getJ2keyLeft()));
+        right=new JLabel(KeyEvent.getKeyText(menuModele.getJ2keyRight()));
     }
 
     public class FondControl extends JPanel {
@@ -71,64 +75,73 @@ public class OptionMenu extends JFrame {
         fondControl = new FondControl();
         fondControl.setOpaque(false);
 
-        /*JPanel p2=new JPanel();
-        p2.add(new JLabel("Taille :"));
-        p2.add(listeTaille);*/
 
+        JPanel p2=new JPanel();
+        user = new JLabel("Joueur n°" + menuModele.getJoueurActuel());
+        user.setFont(font);
+        p2.add(user);
+        p2.setBorder(BorderFactory.createEmptyBorder(100, 100, 20, 90));
+        p2.setOpaque(false);
 
         JPanel p3=new JPanel();
         p3.add(jHaut);
 
         p3.add(up);
-        p3.setBorder(BorderFactory.createEmptyBorder(100, 100, 20,90));
+        p3.setBorder(BorderFactory.createEmptyBorder(100, 100, 20, 90));
         p3.setOpaque(false);
 
 
         JPanel p4=new JPanel();
         p4.add(jBas);
         p4.add(down);
-        p4.setBorder(BorderFactory.createEmptyBorder(0, 100, 20,90));
+        p4.setBorder(BorderFactory.createEmptyBorder(0, 100, 20, 90));
         p4.setOpaque(false);
 
         JPanel p5=new JPanel();
         p5.add(jGauche);
         p5.add(left);
-        p5.setBorder(BorderFactory.createEmptyBorder(0, 100, 20,90));
+        p5.setBorder(BorderFactory.createEmptyBorder(0, 100, 20, 90));
         p5.setOpaque(false);
 
         JPanel p6=new JPanel();
         p6.add(jDroite);
         p6.add(right);
-        p6.setBorder(BorderFactory.createEmptyBorder(0, 100, 20,90));
+        p6.setBorder(BorderFactory.createEmptyBorder(0, 100, 20, 90));
         p6.setOpaque(false);
 
-        JPanel p7=new JPanel();
-        p7.add(jPause);
-        p7.add(pause);
-        p7.setBorder(BorderFactory.createEmptyBorder(0, 100, 20,90));
-        p7.setOpaque(false);
-
         ptout=new JPanel();
-        ptout.setLayout(new BoxLayout(ptout,BoxLayout.Y_AXIS));
-        /*ptout.add(p2);*/
+        ptout.setLayout(new BoxLayout(ptout, BoxLayout.Y_AXIS));
+        ptout.add(p2);
         ptout.add(p3);
         ptout.add(p4);
         ptout.add(p5);
         ptout.add(p6);
-        ptout.add(p7);
         ptout.setOpaque(false);
         fondControl.add(ptout);
+        up.addMouseListener(al);
+        down.addMouseListener(al);
+        left.addMouseListener(al);
+        right.addMouseListener(al);
+    }
+
+    public void SwitchUser(){
+        removeAll();
+        if (menuModele.getJoueurActuel()==1){
+            addWidgetO();
+        }else{
+            addWidget1();
+        }
+        creerWidgetO();
     }
 
     public void setActionListener(MenuControlleur al){
+        this.al = al;
         System.out.println("Listener ajouté!");
         this.addKeyListener(al);
-        up.addActionListener(al);
-        down.addActionListener(al);
-        left.addActionListener(al);
-        right.addActionListener(al);
-        pause.addActionListener(al);
-        retour.addActionListener(al);
+        up.addMouseListener(al);
+        down.addMouseListener(al);
+        left.addMouseListener(al);
+        right.addMouseListener(al);
     }
 
 }
