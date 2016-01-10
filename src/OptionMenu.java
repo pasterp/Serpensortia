@@ -1,7 +1,7 @@
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.awt.event.MouseListener;
 
 /**
  * Created by lorchie on 30/11/15.
@@ -9,7 +9,6 @@ import java.awt.event.MouseListener;
 public class OptionMenu extends JFrame {
     //public JComboBox<Integer> listeTaille;
 
-    MouseListener al;
     public JLabel up;
     public JLabel down;
     public JLabel left;
@@ -45,20 +44,31 @@ public class OptionMenu extends JFrame {
 
         jPause = new JLabel("Pause : ");
         jPause.setFont(font);
+
+        Border border = BorderFactory.createEtchedBorder(Color.BLUE, Color.CYAN);
+
+        up=new JLabel();
+        up.setBorder(border);
+        down=new JLabel();
+        down.setBorder(border);
+        left=new JLabel();
+        left.setBorder(border);
+        right=new JLabel();
+        right.setBorder(border);
     }
 
     public void addWidgetO() {
-        up=new JLabel(KeyEvent.getKeyText(menuModele.getJ1keyUp()));
-        down=new JLabel(KeyEvent.getKeyText(menuModele.getJ1keyDown()));
-        left=new JLabel(KeyEvent.getKeyText(menuModele.getJ1keyLeft()));
-        right=new JLabel(KeyEvent.getKeyText(menuModele.getJ1keyRight()));
+        up.setText(KeyEvent.getKeyText(menuModele.getJ1keyUp()));
+        down.setText(KeyEvent.getKeyText(menuModele.getJ1keyDown()));
+        left.setText(KeyEvent.getKeyText(menuModele.getJ1keyLeft()));
+        right.setText(KeyEvent.getKeyText(menuModele.getJ1keyRight()));
     }
 
     public void addWidget1() {
-        up=new JLabel(KeyEvent.getKeyText(menuModele.getJ2keyUp()));
-        down=new JLabel(KeyEvent.getKeyText(menuModele.getJ2keyDown()));
-        left=new JLabel(KeyEvent.getKeyText(menuModele.getJ2keyLeft()));
-        right=new JLabel(KeyEvent.getKeyText(menuModele.getJ2keyRight()));
+        up.setText(KeyEvent.getKeyText(menuModele.getJ2keyUp()));
+        down.setText(KeyEvent.getKeyText(menuModele.getJ2keyDown()));
+        left.setText(KeyEvent.getKeyText(menuModele.getJ2keyLeft()));
+        right.setText(KeyEvent.getKeyText(menuModele.getJ2keyRight()));
     }
 
     public class FondControl extends JPanel {
@@ -118,10 +128,6 @@ public class OptionMenu extends JFrame {
         ptout.add(p6);
         ptout.setOpaque(false);
         fondControl.add(ptout);
-        up.addMouseListener(al);
-        down.addMouseListener(al);
-        left.addMouseListener(al);
-        right.addMouseListener(al);
     }
 
     public void SwitchUser(){
@@ -134,8 +140,15 @@ public class OptionMenu extends JFrame {
         creerWidgetO();
     }
 
+    public void refresh(){
+        if (menuModele.getJoueurActuel() == 1){
+            addWidgetO();
+        }else{
+            addWidget1();
+        }
+    }
+
     public void setActionListener(MenuControlleur al){
-        this.al = al;
         System.out.println("Listener ajouté!");
         this.addKeyListener(al);
         up.addMouseListener(al);

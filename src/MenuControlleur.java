@@ -18,12 +18,10 @@ public class MenuControlleur implements KeyListener, MouseListener {
 
     @Override
     public void keyTyped(KeyEvent e) {
-        System.out.println("key pressed //"+keyAEcouter);
         if (keyAEcouter != -1){
-            System.out.println("On demande à set la touche "+keyAEcouter+" du joueur "+modele.getJoueurActuel());
-            modele.setControles(keyAEcouter, e.getKeyCode());
-            System.out.println(""+e.getKeyCode()+" "+KeyEvent.getKeyText(e.getKeyCode()));
+            modele.setControles(keyAEcouter, KeyEvent.getExtendedKeyCodeForChar(e.getKeyChar()));
             keyAEcouter = -1;
+            optionMenu.refresh();
         }
     }
 
@@ -39,19 +37,19 @@ public class MenuControlleur implements KeyListener, MouseListener {
     @Override
     public void mouseClicked(MouseEvent mouseEvent) {
         if (mouseEvent.getSource() == optionMenu.up){
-            System.out.println("Appuyez sur la touche pour HAUT");
-            optionMenu.up.setText("<>");
+            optionMenu.up.setText("<Appuyer>");
             keyAEcouter = 0;
 
         }else if (mouseEvent.getSource() == optionMenu.down){
-            System.out.println("Appuyez sur la touche pour BAS");
+            optionMenu.down.setText("<Appuyer>");
+            keyAEcouter = 1;
 
         }else if (mouseEvent.getSource() == optionMenu.left){
-            System.out.println("Appuyez sur la touche pour GAUCHE");
-
+            optionMenu.left.setText("<Appuyer>");
+            keyAEcouter = 2;
         }else if (mouseEvent.getSource() == optionMenu.right){
-            System.out.println("Appuyez sur la touche pour DROITE");
-
+            optionMenu.right.setText("<Appuyer>");
+            keyAEcouter = 3;
         }
     }
 

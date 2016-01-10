@@ -11,6 +11,7 @@ public class MenuModele {
     int[][] controles;
 
     public MenuModele(){
+        joueurActuel=1;
         controles = new int[2][4];
         controles[0][0] = KeyEvent.VK_UP;
         controles[0][1] = KeyEvent.VK_DOWN;
@@ -63,6 +64,6 @@ public class MenuModele {
     }
 
     public void setControles(int key, int value){
-        controles[joueurActuel][key] = value;
+        controles[joueurActuel-1][key] = value;
     }
 }
