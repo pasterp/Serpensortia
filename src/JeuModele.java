@@ -62,26 +62,14 @@ public class JeuModele {
 
     public Case[][] getGrille(){
         Case[][] grid = grille.getGrid();
-        for (int i=0; i<taille; i++){
-            for (int j=0; j<taille; j++){
-                boolean found = false;
-                for (Serpent s : serpents){
-                    if (s.isAlive()) {
-                        for (Integer[] c : s.getCoords()) {
-                            if (j == c[0] && i == c[1]) {
-                                grid[i][j] = s.getPartie(j, i);
-                                found = false;
-                            }
-                        }
-                    }
-                }
-                if (!found) {
-                    for (Fruit f : fruits) {
-                        if (f.getX() == j && f.getY() == i) {
-                            grid[i][j] = f;
-                        }
-                    }
-                }
+
+        for (Fruit f : fruits){
+            grid[f.getY()][f.getX()] = f;
+        }
+
+        for (Serpent s : serpents){
+            for (Integer[] c : s.getCoords()){
+                grid[c[1]%taille][c[0]%taille] = s.getPartie(c[0], c[1]);
             }
         }
         return grid;
@@ -217,7 +205,7 @@ public class JeuModele {
         return false;
     }
 
-    public void réinit(){
+    public void reinit(){
         this.serpents.removeAll(serpents);
         this.serpents.add(new Serpent(5, 5, 0, taille));
         this.serpents.add(new SerpentAI(taille - 5, taille - 5, 2, taille));
