@@ -23,8 +23,10 @@ public class Application extends JPanel {
 
  public static void main(String[] args) {
  ModelMenu modelMenu = new ModelMenu();
+  MenuModele menuModele = new MenuModele();
  FenetreMenu f=new FenetreMenu(modelMenu);
- ControlLabelMenu controlLabelMenu = new ControlLabelMenu(f, modelMenu);
+ OptionMenu optionMenu = new OptionMenu(menuModele);
+ ControlLabelMenu controlLabelMenu = new ControlLabelMenu(f, modelMenu,optionMenu);
  f.setControlLabelMenu(controlLabelMenu);
  }
  }

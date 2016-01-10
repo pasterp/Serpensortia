@@ -11,10 +11,13 @@ import java.io.IOException;
 public class ControlLabelMenu implements MouseListener{
     FenetreMenu fenetreMenu;
     ModelMenu modelMenu;
+    OptionMenu optionMenu;
     JLabel jLabel1;
-    public ControlLabelMenu(FenetreMenu fenetreMenu, ModelMenu modelMenu) {
+    MenuModele menuModele;
+    public ControlLabelMenu(FenetreMenu fenetreMenu, ModelMenu modelMenu, OptionMenu optionMenu) {
         this.modelMenu = modelMenu;
         this.fenetreMenu=fenetreMenu;
+        this.optionMenu=optionMenu;
 
     }
 
@@ -51,10 +54,13 @@ public class ControlLabelMenu implements MouseListener{
         }
 
         if (e.getSource()==fenetreMenu.serpent1){
-            System.out.println("serpent1");
+            fenetreMenu.setSerpent1();
+            fenetreMenu.setVisible(true);
+
         }
         if (e.getSource()==fenetreMenu.serpent2){
-            System.out.println("serpent2");
+            fenetreMenu.setSerpent2();
+            fenetreMenu.setVisible(true);
         }
     }
 

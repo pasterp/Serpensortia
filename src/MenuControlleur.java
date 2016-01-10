@@ -118,9 +118,9 @@ public class MenuControlleur implements KeyListener, ActionListener{
         }else if (e.getSource() == optionMenu.right){
             System.out.println("Appuyez sur la touche pour DROITE");
             setKeyRight();
-        }else if (e.getSource() == optionMenu.listeTaille){
+        }/*else if (e.getSource() == optionMenu.listeTaille){
             setGridSize((Integer) optionMenu.listeTaille.getSelectedItem());
-        }
+        }*/
     }
 
     @Override

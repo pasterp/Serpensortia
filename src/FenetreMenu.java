@@ -14,9 +14,9 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 
 public class FenetreMenu extends JFrame {
-    Image imageFond = Toolkit.getDefaultToolkit().getImage("img/porte.jpg");;
-    Image imageFondOpt = Toolkit.getDefaultToolkit().getImage("img/parchemin.png");;
-    Image imageTabScore = Toolkit.getDefaultToolkit().getImage("img/tableauScore.png");;
+    Image imageFond = Toolkit.getDefaultToolkit().getImage("./img/porte.jpg");;
+    Image imageFondOpt = Toolkit.getDefaultToolkit().getImage("./img/parchemin.png");;
+    Image imageTabScore = Toolkit.getDefaultToolkit().getImage("./img/tableauScore.png");;
     JMenuBar menuBar;
     JMenu mOption;
     JMenuItem iNew, iScores;
@@ -34,7 +34,7 @@ public class FenetreMenu extends JFrame {
     public FenetreMenu(ModelMenu modelMenu){
         super();
         this.modelMenu=modelMenu;
-        setSize(800,500);
+        setExtendedState(this.getExtendedState() | this.MAXIMIZED_BOTH);
         initAttribut();
         creerFenetre();
         setVisible(true);
@@ -44,35 +44,37 @@ public class FenetreMenu extends JFrame {
 
     public void initAttribut()
     {
-        jouer= new JLabel(new ImageIcon("img/jouer.png"));
+        jouer= new JLabel(new ImageIcon("./img/jouer.png"));
         jouer.setBorder(null);
         jouer.setOpaque(false);
 
-        score=new JLabel(new ImageIcon("img/score.png"));
+        score=new JLabel(new ImageIcon("./img/score.png"));
         score.setBorder(null);
         score.setOpaque(false);
 
-        option=new JLabel(new ImageIcon("img/option.png"));
+        option=new JLabel(new ImageIcon("./img/option.png"));
         option.setBorder(null);
         option.setOpaque(false);
 
-        credit=new JLabel(new ImageIcon("img/credit.png"));
+        credit=new JLabel(new ImageIcon("./img/credit.png"));
         credit.setBorder(null);
         credit.setOpaque(false);
 
-        retour=new JLabel(new ImageIcon("img/retour.png"));
+        retour=new JLabel(new ImageIcon("./img/retour.png"));
         retour.setBorder(null);
         retour.setOpaque(false);
 
-        serpent1=new JLabel(new ImageIcon("img/serpentRouge.png"));
+        serpent1=new JLabel(new ImageIcon("./img/serpentRouge.png"));
         serpent1.setBorder(null);
+        serpent1.setSize(50,50);
         serpent1.setOpaque(false);
 
-        serpent2=new JLabel(new ImageIcon("img/serpentVert.png"));
+        serpent2=new JLabel(new ImageIcon("./img/serpentVert.png"));
         serpent2.setBorder(null);
+        serpent2.setSize(50,50);
         serpent2.setOpaque(false);
 
-        ImageIcon tabScore = new ImageIcon(new ImageIcon("img/parchemin.png").getImage().getScaledInstance(300, 200,Image.SCALE_DEFAULT));
+        ImageIcon tabScore = new ImageIcon(new ImageIcon("./img/parchemin.png").getImage().getScaledInstance(300, 200,Image.SCALE_DEFAULT));
         tableauScore=new JLabel(tabScore);
         tableauScore.setBorder(null);
         tableauScore.setOpaque(false);
@@ -216,34 +218,51 @@ public class FenetreMenu extends JFrame {
         setContentPane(fondEcran);
     }
 
-    public void initControlBouton(){
-        choixOption();
-        fondEcranBouton = new FondEcranBouton();
-        fondEcranBouton.setLayout(new BorderLayout());
-        fondEcranBouton.setOpaque(false);
-        initFenetreOpt();
-        JPanel pOpt = new JPanel();
-        pOpt.setLayout(new BoxLayout(pOpt,BoxLayout.Y_AXIS));
+    public void setSerpent1(){
+        MenuModele menuModele = new MenuModele();
+        OptionMenu optionMenu = new OptionMenu(menuModele);
+        fondEcran = new FondEcran();
+        fondEcran.setLayout(new BorderLayout());
 
-        pOpt.add(jBas);
-        pOpt.add(bBas);
+        JPanel pTout = new JPanel(new BorderLayout());
 
-        pOpt.add(jHaut);
-        pOpt.add(bHaut);
 
-        pOpt.add(jGauche);
-        pOpt.add(bGauche);
+        pTout.add(serpent1,BorderLayout.WEST);
 
-        pOpt.add(jDroite);
-        pOpt.add(bDroite);
+        retourPage();
+        pTout.add(pRetour,BorderLayout.SOUTH);
 
-        pOpt.add(jPause);
-        pOpt.add(bPause);
+        pTout.add(optionMenu.fondControl);
 
-        pOpt.setOpaque(false);
+        pTout.add(serpent2,BorderLayout.EAST);
+        pTout.setOpaque(false);
 
-        fondEcranBouton.add(pOpt,BorderLayout.CENTER);
+        fondEcran.add(pTout);
+        setContentPane(fondEcran);
     }
+
+    public void setSerpent2(){
+        MenuModele menuModele = new MenuModele();
+        OptionMenu optionMenu = new OptionMenu(menuModele);
+        fondEcran = new FondEcran();
+        fondEcran.setLayout(new BorderLayout());
+
+        JPanel pTout = new JPanel(new BorderLayout());
+
+        pTout.add(serpent1,BorderLayout.WEST);
+
+        retourPage();
+        pTout.add(pRetour,BorderLayout.SOUTH);
+
+        pTout.add(optionMenu.fondControl);
+
+        pTout.add(serpent2,BorderLayout.EAST);
+        pTout.setOpaque(false);
+
+        fondEcran.add(pTout);
+        setContentPane(fondEcran);
+    }
+
 
     public void setControlLabelMenu (MouseListener label) {
         jouer.addMouseListener(label);
