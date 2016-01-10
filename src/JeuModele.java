@@ -223,7 +223,7 @@ public class JeuModele {
     public void reinitDeux(){
         this.serpents.removeAll(serpents);
         this.serpents.add(new Serpent(5, 5, 0, taille));
-        this.serpents.add(new Serpent(taille - 5, taille - 5, 2, taille);
+        this.serpents.add(new Serpent(taille - 5, taille - 5, 2, taille));
         this.fruits.removeAll(fruits);
         while(genererFruit()){
         }
