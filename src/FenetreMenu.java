@@ -26,6 +26,10 @@ public class FenetreMenu extends JFrame {
     FondEcran fondEcran;
     FondEcranBouton fondEcranBouton;
     JButton bHaut,bBas,bGauche,bDroite,bPause;
+    JeuModele jeuModele;
+    JeuControlleur jc;
+
+
 
     public FenetreMenu(ModelMenu modelMenu){
         super();
@@ -73,6 +77,9 @@ public class FenetreMenu extends JFrame {
         tableauScore.setBorder(null);
         tableauScore.setOpaque(false);
 
+        jeuModele = new JeuModele(20);
+        jc = new JeuControlleur(jeuModele);
+        this.addKeyListener(jc);
     }
     public void creerFenetre()
     {
@@ -125,10 +132,9 @@ public class FenetreMenu extends JFrame {
         fondEcran = new FondEcran();
         fondEcran.setLayout(new BorderLayout());
         creerMenuBar();
-        JeuModele jeuModele = new JeuModele(20);
-        JeuControlleur jc = new JeuControlleur(jeuModele);
         fondEcran.add(jc.getVue());
-        this.addKeyListener(jc);
+        jeuModele.reinit();
+        jc.reset();
         menuJeu = new JPanel();
 
         menuJeu.setLayout(new BoxLayout(menuJeu,BoxLayout.Y_AXIS));

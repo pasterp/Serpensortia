@@ -4,67 +4,72 @@ public class SerpentAI extends Serpent {
 
     private int targetX;
     private int targetY;
-    private int targetDistance;
+    private double targetDistance;
+    private int numeroSerpent;
 
-    public SerpentAI(int x, int y, int dir, int t) {
+    public SerpentAI(int x, int y, int dir, int t, int n) {
         super(x, y, dir, t);
         targetX = 0;
-        targetDistance = 0;
+        targetY = 0;
         targetDistance = 99;
+        numeroSerpent=n;
 
     }
 
     public void getTarget(ArrayList<Fruit> fruits, JeuModele jm){
-        int distance;
+        double distance;
+        targetDistance=999.0;
         for (Fruit f: fruits){
-            distance = Math.abs((f.getX() - getHeadCoord()[0]) + (f.getY() - getHeadCoord()[1]));
-            if (targetDistance > distance){
+            distance = Math.sqrt( Math.pow(f.getX() - getHeadCoord()[0], 2) + Math.pow(f.getY() - getHeadCoord()[1], 2));
+            if (targetDistance > distance && distance != 0){
                 setTarget(f, distance, jm);
                 System.out.println("Target selected - x: " + targetX + ", y: " + targetY + " - Distance: " + targetDistance);
             }
         }
     }
 
-    public void setTarget(Fruit f, int d, JeuModele jm) {
+    public void setTarget(Fruit f, double d, JeuModele jm) {
         targetX = f.getX();
         targetY = f.getY();
         targetDistance = d;
-        autoSetDirection(jm);
     }
 
     public void autoSetDirection(JeuModele jm){
-        if (!(jm.getGrille()[targetX][targetY] instanceof Fruit)){
+
+        int[] coord = getHeadCoord();
+        Case[][] g = jm.getGrille();
+
+        if (coord[0] == targetX && coord[1]==targetY ||!(g[targetY][targetX] instanceof Fruit)){
+            System.out.println("On a mangé un fruit bro || Notre cible a été mangé");
             getTarget(jm.getFruits(), jm);
         }
-        if (targetX > getHeadCoord()[0] && jm.getGrille()[getHeadCoord()[0] + 1][getHeadCoord()[1]].isPassable()
-                && !jm.isSerpent(getHeadCoord()[0] + 1, getHeadCoord()[1]))
-            changerDirection(0);
-        else if (targetX < getHeadCoord()[0] && jm.getGrille()[getHeadCoord()[0] - 1][getHeadCoord()[1]].isPassable()
-                && !jm.isSerpent(getHeadCoord()[0] - 1, getHeadCoord()[1]))
-            changerDirection(2);
-        else if (targetY > getHeadCoord()[1] && jm.getGrille()[getHeadCoord()[0]][getHeadCoord()[1] + 1].isPassable()
-                && !jm.isSerpent(getHeadCoord()[0], getHeadCoord()[1] + 1))
-            changerDirection(1);
-        else if (targetY <  getHeadCoord()[1] && jm.getGrille()[getHeadCoord()[0]][getHeadCoord()[1] - 1].isPassable()
-                && !jm.isSerpent(getHeadCoord()[0], getHeadCoord()[1] - 1))
-            changerDirection(3);
-        System.out.println("Actual Target: " + targetX + ", " + targetY);
-    }
 
-    public void feedMe(int scores){
-        super.feedMe(scores);
-        resetTarget();
-    }
 
-    private void resetTarget() {
-        targetX = 0;
-        targetY = 0;
-        targetDistance = 99;
-    }
+        if (targetX > coord[0] && g[coord[0]+1][coord[1]].isPassable()){
+            jm.tournerSerpent(numeroSerpent,0);
+        }else
+        if (targetX < coord[0] && g[coord[0]-1][coord[1]].isPassable()){
+            jm.tournerSerpent(numeroSerpent,2);
+        }else
+        if (targetY < coord[1] && g[coord[0]][coord[1]-1].isPassable()){
+            jm.tournerSerpent(numeroSerpent,3);
+        }else
+        if (targetY > coord[1] && g[coord[0]][coord[1]+1].isPassable()){
+            jm.tournerSerpent(numeroSerpent,1);
+        }
 
-    @Override
-    public void avancer() {
-        super.avancer();
-        targetDistance = Math.abs((targetX - getHeadCoord()[0]) + (targetY - getHeadCoord()[1]));
+
+//        if (targetX > getHeadCoord()[0] && jm.getGrille()[getHeadCoord()[0] + 1][getHeadCoord()[1]].isPassable()
+//                && !jm.isSerpent(getHeadCoord()[0] + 1, getHeadCoord()[1]))
+//            changerDirection(0);
+//        else if (targetX < getHeadCoord()[0] && jm.getGrille()[getHeadCoord()[0] - 1][getHeadCoord()[1]].isPassable()
+//                && !jm.isSerpent(getHeadCoord()[0] - 1, getHeadCoord()[1]))
+//            changerDirection(2);
+//        else if (targetY > getHeadCoord()[1] && jm.getGrille()[getHeadCoord()[0]][getHeadCoord()[1] + 1].isPassable()
+//                && !jm.isSerpent(getHeadCoord()[0], getHeadCoord()[1] + 1))
+//            changerDirection(1);
+//        else if (targetY <  getHeadCoord()[1] && jm.getGrille()[getHeadCoord()[0]][getHeadCoord()[1] - 1].isPassable()
+//                && !jm.isSerpent(getHeadCoord()[0], getHeadCoord()[1] - 1))
+//            changerDirection(3);
     }
 }

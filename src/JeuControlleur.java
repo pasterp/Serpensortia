@@ -34,6 +34,24 @@ public class JeuControlleur implements KeyListener {
         });
     }
 
+    public void reset(){
+        pause = false;
+        timer = new Timer(500, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                if (!pause && jeuModele.isOver()){
+                    jeuVue.repaint();
+                    if (jeuModele.prochainMouvement()){
+                        timer.setDelay((int)(timer.getDelay()*0.95));
+                    }
+                }else{
+                    timer.stop();
+                }
+            }
+        });
+        timer.start();
+    }
+
     public JeuVue getVue(){
         return jeuVue;
     }
