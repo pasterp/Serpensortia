@@ -30,6 +30,11 @@
 \begin{frame}
 \frametitle{\insertsection}
 
+Dans le cadre de notre projet tutoré il nous a été demandé de développer un jeu du serpent.\\
+Nous avons donc décidé de se répartir les différentes taches de notre projet :\\
+\indent - Tiona et Guillaume => Développement du menu et son interaction avec le jeu \\
+\indent - Pascal et Geoffrey => Développement du jeu et de ses fonctionalités \\
+\indent - Quentin => Developpement de l'IA
 \end{frame}
 
 \section{Interface}
@@ -55,16 +60,70 @@
 \section{Fonctionnement}
 \subsection{Grille}
 \subsubsection{Cases}
-\subsubsection{Fruits}
+\begin{frame}
+\frametitle{\insertsubsubsection}
+\framesubtitle{\insertsubsection}
+\framesubsubtitle{\insertsection}
+Pour la réalisation de ce jeu nous avions besoins absolument d'une grille.\\
+Les cases de cette grille peuvent être :\\
+\indent - Une case libre\\
+\indent - Un mur\\
+\indent - Un fruit\\
+\indent - Une partie du serpent
 
+\end{frame}
+\subsubsection{Fruits}
+\begin{frame}
+\frametitle{\insertsubsubsection}
+\framesubtitle{\insertsubsection}
+\framesubsubtitle{\insertsection}
+Il devait être possible de generer un certain nombre de fruits et de le maintenir.\\
+De plus un fruit devait aussi être possible que le serpents la différencie des cases libres en passant dessus.\\
+De plus nous avons implémenté des fruits différents avec un gain de score différents et de taille :\\
+\indent - la pomme  (25)\\
+\indent - la poire  (35)\\
+\indent - la cerise (50)\\
+\indent - la banane (75)
+
+\end{frame}
 \subsection{Serpents}
 \subsubsection{Contrôles des joueurs}
-\subsubsection{Contrôle par l'ordinateur}
+\begin{frame}
+\frametitle{\insertsubsubsection}
+\framesubtitle{\insertsubsection}
+\framesubsubtitle{\insertsection}
+Nous générons deux serpents de manières automatique au début du jeu.\\
+Ces serpents après chaque fruits manger devait augmenter sa vitesse.\\
+Pour controler les serpents on utilise des listeners ( écouteurs ) des touches du clavier.\\
+Pour le joueur 1 :\\
+\indent - fleche haut\\
+\indent - fleche bas\\
+\indent - fleche droite\\
+\indent - fleche gauche\\
+Pour le joueur 2 :\\
+\indent - E\\
+\indent - D\\
+\indent - S\\
+\indent - F\\
 
+\end{frame}
+\subsubsection{Contrôle par l'ordinateur}
+\begin{frame}
+\frametitle{\insertsubsubsection}
+\framesubtitle{\insertsubsection}
+\framesubsubtitle{\insertsection}
+Nous voulions aussi integrer une IA contre laquelle l'utilisateur pourrait jouer.\\
+Pour cela nous devions toujours cherchez le fruit le plus proche du serpents pourqu'il s'y dirige.\\
+
+\end{frame}
 \subsection{Design}
 \begin{frame}
 \frametitle{\insertsubsection}
 \framesubtitle{\insertsection}
+Pour les parties du serpents :\\
+(images de la tête, d'une partie du corps, de la queue)\\
+Pour les fruits :\\
+(images des 4 fruits différents)
 
 \end{frame}
 
@@ -74,12 +133,19 @@
 \begin{frame}
 \frametitle{\insertsubsection}
 \framesubtitle{\insertsection}
+Les améliorations possibles :\\
+\indent - L'IA ( elle peut toujours être améliorer )\\
+\indent - Un mode multijoueur en réseau\\
+\indent - Un changement de la taille de la grille et la possibilité de la rendre rectangulaire
 
 \end{frame}
 \subsection{Que nous a apportez ce projet}
 \begin{frame}
 \frametitle{\insertsubsection}
 \framesubtitle{\insertsection}
+A l'aide de se projet nous avons appris à travailler en équipe, à nous entraider essayant partageant au maximum nos connaissances et en ne laissant jamais un membre du groupe avec ses problêmes mais en essayant de l'aider au mieux.\\
+Nous avons aussi appris à utiliser GitHub afin de mieux coordonner nos travaux et de tous pouvoir intervenir librement sur le projet.\\
+Ce projet nous a aussi permi de voir que notre organisation peut être encore améliorer afin d'être encore plus efficace.
 
 \end{frame}
 
