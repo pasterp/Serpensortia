@@ -7,8 +7,6 @@ import java.awt.image.BufferedImage;
  */
 public class Fenetre extends JPanel{
     Model model;
-    JTabbedPane vues;
-    JPanel  diapo;
     JLabel photo;
     JButton play;
     JProgressBar progDiapo;
@@ -21,8 +19,6 @@ public class Fenetre extends JPanel{
     }
 
     private void initWidgets() {
-        vues = new JTabbedPane();
-        diapo = new JPanel();
         photo = new JLabel(new ImageIcon(model.getImage().getImage().getScaledInstance(600, 600, BufferedImage.SCALE_DEFAULT)));
         play = new JButton("play");
 
@@ -42,13 +38,12 @@ public class Fenetre extends JPanel{
         centerBut.add(boutons);
         miseEnpage.add(centerBut);
         miseEnpage.add(progDiapo);
-        diapo.add(miseEnpage);
-        add(diapo);
+        add(miseEnpage);
     }
 
 
     public void changePhotoDiapo(){
-        photo.setIcon(new ImageIcon(model.getImage().getImage().getScaledInstance(600, 600, BufferedImage.SCALE_DEFAULT)));
+        photo.setIcon(new ImageIcon(model.getImage().getImage().getScaledInstance(600, 600, BufferedImage.SCALE_FAST)));
         progDiapo.setValue(model.getIndex());
     }
 

@@ -26,6 +26,7 @@ public class ControlButton implements ActionListener{
                 }
             }
         });
+        timer.start();
     }
 
     @Override

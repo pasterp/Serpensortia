@@ -16,16 +16,14 @@ public class FenetreMenu extends JFrame {
     JMenuBar menuBar;
     JMenu mOption;
     JMenuItem iNew, iScores, iQuitter;
-    JLabel jouer, score, option,credit,retour,serpent1,serpent2,tableauScore,jScoreJoueur1,jScoreJoueur2;
-    JPanel pRetour, menuJeu,jTableauScore;
+    JLabel jouer, score, option,credit,retour,serpent1,serpent2,tableauScore;
+    JPanel pRetour, menuJeu;
     MenuModele modelMenu;
     ModelScore modelScore;
     FondEcran fondEcran;
-    JButton bHaut,bBas,bGauche,bDroite,bPause;
     JeuModele jeuModele;
     JeuControlleur jc;
     OptionMenu optionMenu;
-    int scoreJoueur1,scoreJoueur2;
     FondEcranScore fondEcranScore;
 
 
@@ -82,16 +80,6 @@ public class FenetreMenu extends JFrame {
         tableauScore.setOpaque(false);
 
         jeuModele = new JeuModele(20);
-
-        scoreJoueur1 = jeuModele.getScore(0);
-        jScoreJoueur1 = new JLabel("Score Joueur 1 "+scoreJoueur1);
-        jScoreJoueur1.setBorder(null);
-        jScoreJoueur1.setOpaque(true);
-
-        scoreJoueur2 = jeuModele.getScore(1);
-        jScoreJoueur2 = new JLabel("Score Joueur 2: "+scoreJoueur2);
-        jScoreJoueur2.setBorder(null);
-        jScoreJoueur2.setOpaque(true);
 
         jc = new JeuControlleur(jeuModele, modelMenu);
         this.addKeyListener(jc);
@@ -175,8 +163,6 @@ public class FenetreMenu extends JFrame {
     }
 
     public void tableauScore(){
-        fondEcranScore.add(jScoreJoueur1);
-        fondEcranScore.add(jScoreJoueur2);
         retourPage();
         fondEcranScore.add(pRetour);
 
@@ -188,6 +174,10 @@ public class FenetreMenu extends JFrame {
         fondEcran.setLayout(new BorderLayout());
         setJMenuBar(null);
         retourPage();
+
+        Model m = new Model();
+        ControlGroup controlGroup = new ControlGroup(m);
+        fondEcran.add(controlGroup.fenetre, BorderLayout.CENTER);
         fondEcran.add(pRetour,BorderLayout.SOUTH);
         setContentPane(fondEcran);
     }

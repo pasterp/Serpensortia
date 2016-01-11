@@ -28,7 +28,6 @@ public class Model {
     }
 
     private int index_courant;
-    private ArrayList<String> noms;
 
     public Model(){
         index_courant=0;
