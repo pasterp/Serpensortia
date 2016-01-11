@@ -143,7 +143,9 @@ public class FenetreMenu extends JFrame {
         menuJeu = new JPanel();
 
         menuJeu.setLayout(new BoxLayout(menuJeu,BoxLayout.Y_AXIS));
+        tableauScore.setBorder(BorderFactory.createEmptyBorder(0, -100, 0, 50));
         menuJeu.add(tableauScore,BorderLayout.WEST);
+
 
         retourPage();
         menuJeu.setOpaque(false);
