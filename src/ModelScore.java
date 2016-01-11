@@ -9,33 +9,42 @@
         DataInputStream fichier;
 
         public ModelScore() {
-            scores = new int[3];
+            scores = new int[10];
+
+
+            System.out.println("init scoreModel");
             loadScores();
 
         }
 
         public void loadScores() {
-                scoreF = new File("scores.dat");
-                try {
-                    //on lit les scores (3 entiers)
-                    fichier = new DataInputStream(new BufferedInputStream(new FileInputStream(scoreF)));
-                    for (int i = 0; i < 3; i++) {
-                        scores[i] = fichier.readInt();
-                    }
-                } catch (IOException e) {
-                    System.out.println("Attention : les scores n'ont pas pu être chargés !");
-                    //on met à zéro les trois scores si on a pas pu les charger
-                    for (int i = 0; i < 3; i++) {
-                        scores[i] = 0;
-                    }
+            scoreF = new File("scores.dat");
+            try {
+                //on lit les scores (10 entiers)
+                fichier = new DataInputStream(new BufferedInputStream(new FileInputStream(scoreF)));
+                for (int i = 0; i < 10; i++) {
+                    this.scores[i] = fichier.readInt();
+                    System.out.println(scores[i]);
+                }
+            } catch (IOException e) {
+                System.out.println("Attention : les scores n'ont pas pu être chargés !");
+                //on met à zéro les trois scores si on a pas pu les charger
+                for (int i = 0; i < 10; i++) {
+                    this.scores[i] = 0;
                 }
             }
+        }
+        public int getScore(int i)
+        {
+            return scores[i];
+        }
         public void writeScores(){
             File scoreF =new File("scores.dat");
             try{
                 //on ecrit les 3 scores
                 DataOutputStream fichier = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(scoreF)));
                 for (int s: scores) {
+                    System.out.println("-> "+s);
                     fichier.writeInt(s);
                 }
                 fichier.flush();
@@ -46,7 +55,7 @@
             }
         }
         public  void submitScore(int tmp){
-            for (int j=0; j<3; j++){
+            for (int j=0; j<10; j++){
                 if (tmp > scores[j]){
                     int t = scores[j];
                     scores[j] = tmp;
@@ -54,9 +63,5 @@
                 }
             }
             writeScores();
-        }
-
-        public int getScore(int i){
-            return scores[i];
         }
     }
