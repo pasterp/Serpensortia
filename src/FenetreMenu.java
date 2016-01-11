@@ -14,22 +14,24 @@ public class FenetreMenu extends JFrame {
     Image imageTabScore = Toolkit.getDefaultToolkit().getImage("./img/tableauScore.png");;
     JMenuBar menuBar;
     JMenu mOption;
-    JMenuItem iNew, iScores;
+    JMenuItem iNew, iScores, iQuitter;
     JLabel jouer, score, option,credit,background,retour,jBas,jHaut,jGauche,jDroite,jPause,serpent1,serpent2,tableauScore;
     JPanel pRetour, menuJeu;
     MenuModele modelMenu;
+    ModelScore modelScore;
     FondEcran fondEcran;
+    JButton bHaut,bBas,bGauche,bDroite,bPause;
     JeuModele jeuModele;
     JeuControlleur jc;
-    FenetreMenu newPartie;
     OptionMenu optionMenu;
 
 
 
-    public FenetreMenu(MenuModele modelMenu, OptionMenu om){
+    public FenetreMenu(MenuModele modelMenu, OptionMenu om, ModelScore modelScore){
         super();
         optionMenu=om;
         this.modelMenu=modelMenu;
+        this.modelScore=modelScore;
         setExtendedState(this.getExtendedState() | this.MAXIMIZED_BOTH);
         initAttribut();
         creerFenetre();
@@ -110,20 +112,27 @@ public class FenetreMenu extends JFrame {
         setContentPane(fondEcran);
 
     }
-    public void creerMenuBar()
+    public void initMenuBar()
     {
         menuBar = new JMenuBar();
         mOption = new JMenu("Options");
 
         iNew = new JMenuItem("Nouvelle Partie");
+        iScores = new JMenuItem("Scores");
+
+        iQuitter = new JMenuItem("Quitter");
 
         mOption.add(iNew);
         iScores = new JMenuItem("Scores");
         mOption.add(iScores);
-
+        mOption.addSeparator();
+        mOption.add(iQuitter);
         menuBar.add(mOption);
-        setJMenuBar(menuBar);
 
+    }
+
+    public void creerMenuBar(){
+        setJMenuBar(menuBar);
     }
 
     public void choixJeu(){
@@ -136,7 +145,10 @@ public class FenetreMenu extends JFrame {
         menuJeu = new JPanel();
 
         menuJeu.setLayout(new BoxLayout(menuJeu,BoxLayout.Y_AXIS));
+        tableauScore.setBorder(BorderFactory.createEmptyBorder(0, -100, 0, 50));
         menuJeu.add(tableauScore,BorderLayout.WEST);
+
+
         retourPage();
         menuJeu.setOpaque(false);
         menuJeu.add(pRetour);
@@ -157,6 +169,7 @@ public class FenetreMenu extends JFrame {
     }
 
     public void choixScore() throws IOException {
+        modelScore.loadScores();
         fondEcran = new FondEcran();
         fondEcran.setLayout(new BorderLayout());
         JPanel pScore = new JPanel();
@@ -214,6 +227,8 @@ public class FenetreMenu extends JFrame {
     }
 
     public void setSerpent1(){
+        MenuModele menuModele = new MenuModele();
+        OptionMenu optionMenu = new OptionMenu(menuModele);
         fondEcran = new FondEcran();
         fondEcran.setLayout(new BorderLayout());
 
@@ -238,6 +253,8 @@ public class FenetreMenu extends JFrame {
     }
 
     public void setSerpent2(){
+        MenuModele menuModele = new MenuModele();
+        OptionMenu optionMenu = new OptionMenu(menuModele);
         fondEcran = new FondEcran();
         fondEcran.setLayout(new BorderLayout());
 
@@ -274,17 +291,28 @@ public class FenetreMenu extends JFrame {
     public  void setControlMenu(ActionListener menu){
         iNew.addActionListener(menu);
         iScores.addActionListener(menu);
-    }
-
-    public void afficheScore() {
-        System.out.println("votre score!!");
+        iQuitter.addActionListener(menu);
     }
 
     public void choixMenu(int choix) throws IOException {
         if (choix==1) {
-            System.out.println(" nouvelle partie");
-        } else {
+            nouvellePartie();
+        } else if (choix==2){
             afficheScore();
+        }else {
+            quitter();
         }
+    }
+
+    public void quitter(){
+        System.exit(0);
+    }
+    public void nouvellePartie(){
+        choixJeu();
+        setVisible(true);
+    }
+
+    public void afficheScore() {
+        System.out.println("votre score!!");
     }
 }
