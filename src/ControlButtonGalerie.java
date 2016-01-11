@@ -4,15 +4,15 @@ import java.awt.event.*;
 /**
  * Created by pphelipo on 04/12/15.
  */
-public class ControlButton implements ActionListener{
-    Model m;
-    Fenetre f;
+public class ControlButtonGalerie implements ActionListener{
+    ModelGalerie m;
+    GalerieVue f;
     Boolean diapoOn;
     private Timer timer;
 
-    public ControlButton(Model model, Fenetre fenetre){
-        m = model;
-        f = fenetre;
+    public ControlButtonGalerie(ModelGalerie modelGalerie, GalerieVue galerieVue){
+        m = modelGalerie;
+        f = galerieVue;
         f.addButtonListener(this);
         diapoOn = false;
         timer = new Timer(2000, new ActionListener() {

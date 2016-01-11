@@ -5,8 +5,9 @@ import java.util.ArrayList;
 /**
  * Created by pphelipo on 04/12/15.
  */
-public class Model {
+public class ModelGalerie {
     private ArrayList<ImageIcon> images;
+    ArrayList<String> paths;
 
     public int getIndex() {
         return index_courant;
@@ -29,18 +30,24 @@ public class Model {
 
     private int index_courant;
 
-    public Model(){
+    public ModelGalerie(){
         index_courant=0;
 
         //On initialise les images
         images = new ArrayList<ImageIcon>();
         File folder = new File("./misc/");
+        paths = new ArrayList<>();
 
         for (File f : folder.listFiles()){
             if (f.isFile() && (f.getName().contains(".png") || f.getName().contains(".jpg") || f.getName().contains(".gif"))){
                 //on a bien une image on l'ouvre et on l'ajoute dans notre liste
-                images.add(new ImageIcon("./"+f.getName()));
+                images.add(new ImageIcon("./misc/"+f.getName()));
+                paths.add("./misc/"+f.getName());
             }
         }
+    }
+
+    public String getPath() {
+        return paths.get(index_courant);
     }
 }

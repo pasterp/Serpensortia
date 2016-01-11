@@ -224,9 +224,9 @@ public class FenetreMenu extends JFrame {
         setJMenuBar(null);
         retourPage();
 
-        Model m = new Model();
-        ControlGroup controlGroup = new ControlGroup(m);
-        fondEcran.add(controlGroup.fenetre, BorderLayout.CENTER);
+        ModelGalerie m = new ModelGalerie();
+        ControlGroupGalerie controlGroupGalerie = new ControlGroupGalerie(m);
+        fondEcran.add(controlGroupGalerie.galerieVue, BorderLayout.CENTER);
         fondEcran.add(pRetour,BorderLayout.SOUTH);
         setContentPane(fondEcran);
     }

@@ -5,25 +5,25 @@ import java.awt.image.BufferedImage;
 /**
  * Created by pphelipo on 04/12/15.
  */
-public class Fenetre extends JPanel{
-    Model model;
+public class GalerieVue extends JPanel{
+    ModelGalerie modelGalerie;
     JLabel photo;
     JButton play;
     JProgressBar progDiapo;
 
-    public Fenetre(Model m){
+    public GalerieVue(ModelGalerie m){
         super();
-        model = m;
+        modelGalerie = m;
         initWidgets();
         addWidgets();
     }
 
     private void initWidgets() {
-        photo = new JLabel(new ImageIcon(model.getImage().getImage().getScaledInstance(600, 600, BufferedImage.SCALE_DEFAULT)));
+        photo = new JLabel(new ImageIcon(modelGalerie.getImage().getImage().getScaledInstance(500, 500, BufferedImage.SCALE_DEFAULT)));
         play = new JButton("play");
 
-        progDiapo = new JProgressBar(0, model.getSize()-1);
-        progDiapo.setValue(model.getIndex());
+        progDiapo = new JProgressBar(0, modelGalerie.getSize()-1);
+        progDiapo.setValue(modelGalerie.getIndex());
     }
 
     private void addWidgets() {
@@ -41,20 +41,14 @@ public class Fenetre extends JPanel{
         add(miseEnpage);
     }
 
-    public void paintComponent(Graphics g) {
-        //paint background image
-        super.paintComponent(g);
-        g.drawImage(model.getImage().getImage(), 0, 0, 300, 300, this);
-    }
-
 
     public void changePhotoDiapo(){
-        //photo.setIcon(new ImageIcon(model.getImage().getImage().getScaledInstance(600, 600, BufferedImage.SCALE_FAST)));
-        progDiapo.setValue(model.getIndex());
+        photo.setIcon(new ImageIcon(modelGalerie.getImage().getImage().getScaledInstance(500, 500, BufferedImage.SCALE_FAST)));
+        progDiapo.setValue(modelGalerie.getIndex());
     }
 
 
-    public void addButtonListener(ControlButton cb){
+    public void addButtonListener(ControlButtonGalerie cb){
         play.addActionListener(cb);
     }
 }
