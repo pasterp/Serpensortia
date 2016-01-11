@@ -5,9 +5,9 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
 import java.awt.event.MouseListener;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class FenetreMenu extends JFrame {
     Image imageFond = Toolkit.getDefaultToolkit().getImage("./img/porte.jpg");;
@@ -86,12 +86,12 @@ public class FenetreMenu extends JFrame {
         scoreJoueur1 = jeuModele.getScore(0);
         jScoreJoueur1 = new JLabel("Score Joueur 1 "+scoreJoueur1);
         jScoreJoueur1.setBorder(null);
-        jScoreJoueur1.setOpaque(false);
+        jScoreJoueur1.setOpaque(true);
 
         scoreJoueur2 = jeuModele.getScore(1);
         jScoreJoueur2 = new JLabel("Score Joueur 2: "+scoreJoueur2);
         jScoreJoueur2.setBorder(null);
-        jScoreJoueur2.setOpaque(false);
+        jScoreJoueur2.setOpaque(true);
 
         jc = new JeuControlleur(jeuModele, modelMenu);
         this.addKeyListener(jc);
@@ -125,7 +125,7 @@ public class FenetreMenu extends JFrame {
         pMenu.add(pScore);
         pMenu.add(pOption);
         pMenu.add(pCredit);
-        pMenu.setLayout(new BoxLayout(pMenu,BoxLayout.Y_AXIS));
+        pMenu.setLayout(new BoxLayout(pMenu, BoxLayout.Y_AXIS));
         pMenu.setOpaque(false);
         fondEcran.add(pMenu,BorderLayout.CENTER);
         setJMenuBar(null);
@@ -181,7 +181,7 @@ public class FenetreMenu extends JFrame {
         fondEcranScore.add(pRetour);
 
         fondEcranScore.setBorder(BorderFactory.createEmptyBorder(400, 0, 0, 0));
-        setContentPane(fondEcranScore);
+
     }
     public void choixCredit(){
         fondEcran = new FondEcran();
@@ -222,15 +222,26 @@ public class FenetreMenu extends JFrame {
         }
     }
 
-    public class FondEcranScore extends JPanel {
+    private class FondEcranScore extends JPanel {
+
 
         public void paintComponent(Graphics g) {
             //paint background image
             super.paintComponent(g);
-            g.drawImage(imageTabScore,0,30,getWidth(), 300, this);
-
+            g.drawImage(imageTabScore, 0, 30, getWidth(), 300, this);
+            g.setColor(Color.WHITE);
+            g.setFont(new Font("TimesRoman", Font.BOLD, 15));
+            g.drawString("Score Joueur 1 : " + jeuModele.getScore(0), 70, 190);
+            g.drawString("Score Joueur 2 : " + jeuModele.getScore(1), 70, 220);
+            try {
+                TimeUnit.MILLISECONDS.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            repaint();
         }
     }
+
     public void choixOption(){
         fondEcran = new FondEcran();
         fondEcran.setLayout(new BorderLayout());
