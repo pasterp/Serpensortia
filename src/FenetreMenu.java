@@ -497,7 +497,9 @@ public class FenetreMenu extends JFrame {
         setVisible(true);
     }
 
-    public void afficheScore() {
-        System.out.println("votre score!!");
+    public void afficheScore() throws IOException {
+        choixScore();
+        repaint();
+        setVisible(true);
     }
 }
