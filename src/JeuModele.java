@@ -11,11 +11,14 @@ public class JeuModele {
     private Grille grille;
     private ArrayList<Serpent> serpents;
     private ArrayList<Fruit> fruits;
+    private int mode;
 
     public JeuModele(int t){
         System.out.println("Initialisation Modèle...");
         taille = t;
         grille = new Grille(taille);
+
+        mode = 0;
 
         serpents = new ArrayList<Serpent>(2);
         serpents.add(new Serpent(5, 5, 0, taille));
@@ -209,10 +212,22 @@ public class JeuModele {
         return false;
     }
 
+    public void setMode(int mode) {
+        this.mode = mode;
+    }
+
     public void reinit(){
         this.serpents.removeAll(serpents);
-        this.serpents.add(new Serpent(5, 5, 0, taille));
-        this.serpents.add(new SerpentAI(taille - 5, taille - 5, 2, taille, 1));
+        if (mode == 0){
+            this.serpents.add(new Serpent(5, 5, 0, taille));
+            this.serpents.add(new SerpentAI(taille - 5, taille - 5, 2, taille, 1));
+        }else if (mode == 1){
+            this.serpents.add(new Serpent(5, 5, 0, taille));
+        }else{
+            this.serpents.add(new Serpent(5, 5, 0, taille));
+            this.serpents.add(new Serpent(taille - 5, taille - 5, 2, taille));
+        }
+
         this.fruits.removeAll(fruits);
         while(genererFruit()){
         }
