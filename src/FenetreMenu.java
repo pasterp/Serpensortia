@@ -16,8 +16,8 @@ public class FenetreMenu extends JFrame {
     JMenuBar menuBar;
     JMenu mOption;
     JMenuItem iNew, iScores, iQuitter;
-    JLabel jouer, score, option,credit,background,retour,jBas,jHaut,jGauche,jDroite,jPause,serpent1,serpent2,tableauScore;
-    JPanel pRetour, menuJeu;
+    JLabel jouer, score, option,credit,retour,serpent1,serpent2,tableauScore,jScoreJoueur1,jScoreJoueur2;
+    JPanel pRetour, menuJeu,jTableauScore;
     MenuModele modelMenu;
     ModelScore modelScore;
     FondEcran fondEcran;
@@ -25,6 +25,8 @@ public class FenetreMenu extends JFrame {
     JeuModele jeuModele;
     JeuControlleur jc;
     OptionMenu optionMenu;
+    int scoreJoueur1,scoreJoueur2;
+    FondEcranScore fondEcranScore;
 
 
 
@@ -80,8 +82,24 @@ public class FenetreMenu extends JFrame {
         tableauScore.setOpaque(false);
 
         jeuModele = new JeuModele(20);
+
+        scoreJoueur1 = jeuModele.getScore(0);
+        jScoreJoueur1 = new JLabel("Score Joueur 1 "+scoreJoueur1);
+        jScoreJoueur1.setBorder(null);
+        jScoreJoueur1.setOpaque(false);
+
+        scoreJoueur2 = jeuModele.getScore(1);
+        jScoreJoueur2 = new JLabel("Score Joueur 2: "+scoreJoueur2);
+        jScoreJoueur2.setBorder(null);
+        jScoreJoueur2.setOpaque(false);
+
         jc = new JeuControlleur(jeuModele, modelMenu);
         this.addKeyListener(jc);
+
+        fondEcranScore = new FondEcranScore();
+        fondEcranScore.setLayout(new BorderLayout());
+        fondEcranScore.setBorder(null);
+        fondEcranScore.setOpaque(false);
     }
     public void creerFenetre()
     {
@@ -144,15 +162,11 @@ public class FenetreMenu extends JFrame {
         jeuModele.reinit();
         jc.reset();
         menuJeu = new JPanel();
-
+        tableauScore();
         menuJeu.setLayout(new BoxLayout(menuJeu,BoxLayout.Y_AXIS));
-        tableauScore.setBorder(BorderFactory.createEmptyBorder(0, -100, 0, 50));
-        menuJeu.add(tableauScore,BorderLayout.WEST);
-
-
-        retourPage();
+        menuJeu.add(fondEcranScore);;
         menuJeu.setOpaque(false);
-        menuJeu.add(pRetour);
+
         fondEcran.add(menuJeu,BorderLayout.WEST);
         setContentPane(fondEcran);
 
@@ -160,6 +174,15 @@ public class FenetreMenu extends JFrame {
 
     }
 
+    public void tableauScore(){
+        fondEcranScore.add(jScoreJoueur1);
+        fondEcranScore.add(jScoreJoueur2);
+        retourPage();
+        fondEcranScore.add(pRetour);
+
+        fondEcranScore.setBorder(BorderFactory.createEmptyBorder(400, 0, 0, 0));
+        setContentPane(fondEcranScore);
+    }
     public void choixCredit(){
         fondEcran = new FondEcran();
         fondEcran.setLayout(new BorderLayout());
@@ -199,12 +222,12 @@ public class FenetreMenu extends JFrame {
         }
     }
 
-    public class FondEcranBouton extends JPanel {
+    public class FondEcranScore extends JPanel {
 
         public void paintComponent(Graphics g) {
             //paint background image
             super.paintComponent(g);
-            g.drawImage(imageFondOpt,0,0,getWidth(), getHeight(), this);
+            g.drawImage(imageTabScore,0,30,getWidth(), 300, this);
 
         }
     }
