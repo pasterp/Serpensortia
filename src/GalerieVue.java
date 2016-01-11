@@ -14,6 +14,7 @@ public class GalerieVue extends JPanel{
     public GalerieVue(ModelGalerie m){
         super();
         modelGalerie = m;
+        setOpaque(false);
         initWidgets();
         addWidgets();
     }
