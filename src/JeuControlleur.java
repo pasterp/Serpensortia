@@ -17,9 +17,9 @@ public class JeuControlleur implements KeyListener {
     public JeuControlleur(JeuModele jm, MenuModele mm){
         pause = true;
         config = mm;
+        System.out.println("Initialisation Controlleur...");
         jeuModele = jm;
         jeuVue = new JeuVue(jm);
-        System.out.println("Initialisation Controlleur...");
 
         timer = new Timer(500, new ActionListener() {
             @Override

@@ -41,9 +41,15 @@ public class Fenetre extends JPanel{
         add(miseEnpage);
     }
 
+    public void paintComponent(Graphics g) {
+        //paint background image
+        super.paintComponent(g);
+        g.drawImage(model.getImage().getImage(), 0, 0, 300, 300, this);
+    }
+
 
     public void changePhotoDiapo(){
-        photo.setIcon(new ImageIcon(model.getImage().getImage().getScaledInstance(600, 600, BufferedImage.SCALE_FAST)));
+        //photo.setIcon(new ImageIcon(model.getImage().getImage().getScaledInstance(600, 600, BufferedImage.SCALE_FAST)));
         progDiapo.setValue(model.getIndex());
     }
 
