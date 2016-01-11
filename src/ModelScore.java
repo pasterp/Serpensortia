@@ -10,9 +10,6 @@
 
         public ModelScore() {
             scores = new int[10];
-
-
-            System.out.println("init scoreModel");
             loadScores();
 
         }
@@ -24,7 +21,6 @@
                 fichier = new DataInputStream(new BufferedInputStream(new FileInputStream(scoreF)));
                 for (int i = 0; i < 10; i++) {
                     this.scores[i] = fichier.readInt();
-                    System.out.println(scores[i]);
                 }
             } catch (IOException e) {
                 System.out.println("Attention : les scores n'ont pas pu être chargés !");
@@ -32,6 +28,7 @@
                 for (int i = 0; i < 10; i++) {
                     this.scores[i] = 0;
                 }
+                writeScores();
             }
         }
         public int getScore(int i)
@@ -44,7 +41,6 @@
                 //on ecrit les 3 scores
                 DataOutputStream fichier = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(scoreF)));
                 for (int s: scores) {
-                    System.out.println("-> "+s);
                     fichier.writeInt(s);
                 }
                 fichier.flush();

@@ -408,8 +408,6 @@ public class FenetreMenu extends JFrame {
     }
 
     public void setSerpent1(){
-        MenuModele menuModele = new MenuModele();
-        OptionMenu optionMenu = new OptionMenu(menuModele);
         fondEcran = new FondEcran();
         fondEcran.setLayout(new BorderLayout());
 
@@ -434,8 +432,6 @@ public class FenetreMenu extends JFrame {
     }
 
     public void setSerpent2(){
-        MenuModele menuModele = new MenuModele();
-        OptionMenu optionMenu = new OptionMenu(menuModele);
         fondEcran = new FondEcran();
         fondEcran.setLayout(new BorderLayout());
 
