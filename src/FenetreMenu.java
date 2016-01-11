@@ -77,7 +77,7 @@ public class FenetreMenu extends JFrame {
 
         ImageIcon tabScore = new ImageIcon(new ImageIcon("./img/parchemin.png").getImage().getScaledInstance(300, 200,Image.SCALE_DEFAULT));
 
-        jeuModele = new JeuModele(20);
+        jeuModele = new JeuModele(20, modelScore);
 
         avecIa = new JLabel(new ImageIcon("./img/jouer1jVSia.png"));
         avecIa.setBorder(null);

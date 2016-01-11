@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="746c272b-f8b9-4e82-b0d6-709ef30b5116" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controls.dat" afterPath="$PROJECT_DIR$/controls.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scores.dat" afterPath="$PROJECT_DIR$/scores.dat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application.java" afterPath="$PROJECT_DIR$/src/Application.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FenetreMenu.java" afterPath="$PROJECT_DIR$/src/FenetreMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JeuControlleur.java" afterPath="$PROJECT_DIR$/src/JeuControlleur.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JeuModele.java" afterPath="$PROJECT_DIR$/src/JeuModele.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ModelScore.java" afterPath="$PROJECT_DIR$/src/ModelScore.java" />
     </list>
     <ignored path="Serpensortia.iws" />
@@ -35,27 +37,51 @@
         <entry file="file://$PROJECT_DIR$/src/OptionMenu.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-              <folding />
+              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControlLabelMenu.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ControlLabelMenu.java">
+      <file leaf-file-name="CaseOrientée.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CaseOrientée.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
-              <folding />
+              <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#775#776#0" expanded="false" />
+                <element signature="e#813#814#0" expanded="false" />
+                <element signature="e#851#852#0" expanded="false" />
+                <element signature="e#889#890#0" expanded="false" />
+                <element signature="e#930#931#0" expanded="false" />
+                <element signature="e#968#969#0" expanded="false" />
+                <element signature="e#1007#1008#0" expanded="false" />
+                <element signature="e#1045#1046#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FenetreMenu.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/FenetreMenu.java">
+      <file leaf-file-name="JeuVue.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JeuVue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13250883">
-              <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JeuModele.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JeuModele.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="116" column="22" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -65,18 +91,20 @@
         <entry file="file://$PROJECT_DIR$/src/ModelScore.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="70" selection-start-line="26" selection-start-column="70" selection-end-line="26" selection-end-column="70" />
+              <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JeuVue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/JeuVue.java">
+      <file leaf-file-name="JeuControlleur.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/JeuControlleur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-              <folding />
+            <state vertical-scroll-proportion="0.29151943">
+              <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,26 +113,18 @@
         <entry file="file://$PROJECT_DIR$/src/Serpent.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="109" column="28" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
+              <caret line="105" column="28" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
               <folding>
+                <element signature="e#1415#1416#0" expanded="false" />
+                <element signature="e#1447#1448#0" expanded="false" />
+                <element signature="e#1479#1480#0" expanded="false" />
                 <element signature="e#1507#1508#0" expanded="false" />
-                <element signature="e#1539#1540#0" expanded="false" />
-                <element signature="e#2667#2668#0" expanded="false" />
+                <element signature="e#2581#2582#0" expanded="false" />
+                <element signature="e#2635#2636#0" expanded="false" />
+                <element signature="e#4486#4487#0" expanded="false" />
+                <element signature="e#4529#4530#0" expanded="false" />
+                <element signature="e#4581#4582#0" expanded="false" />
                 <element signature="e#4613#4614#0" expanded="false" />
-                <marker date="1452506026161" expanded="true" signature="29:72" placeholder="/**...*/" />
-                <marker date="1452506026161" expanded="true" signature="231:1374" placeholder="{...}" />
-                <marker date="1452506026161" expanded="false" signature="1415:1425" placeholder=" { " />
-                <marker date="1452506026161" expanded="false" signature="1502:1508" placeholder=" }" />
-                <marker date="1452506026161" expanded="true" signature="1553:1853" placeholder="{...}" />
-                <marker date="1452506026161" expanded="true" signature="1893:2038" placeholder="{...}" />
-                <marker date="1452506026161" expanded="true" signature="2073:2411" placeholder="{...}" />
-                <marker date="1452506026161" expanded="true" signature="2454:2551" placeholder="{...}" />
-                <marker date="1452506026161" expanded="false" signature="2630:2636" placeholder=" }" />
-                <marker date="1452506026161" expanded="true" signature="2669:2820" placeholder="{...}" />
-                <marker date="1452506026161" expanded="true" signature="2847:4235" placeholder="{...}" />
-                <marker date="1452506026161" expanded="true" signature="4241:4336" placeholder="/**...*/" />
-                <marker date="1452506026161" expanded="true" signature="4359:4456" placeholder="{...}" />
-                <marker date="1452506026161" expanded="false" signature="4486:4496" placeholder=" { " />
               </folding>
             </state>
           </provider>
@@ -120,31 +140,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuControlleur.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MenuControlleur.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuModele.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MenuModele.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Application.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FenetreMenu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/FenetreMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="79" column="28" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -170,6 +180,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/MenuControlleur.java" />
         <option value="$PROJECT_DIR$/src/Mur.java" />
         <option value="$PROJECT_DIR$/src/Fruit.java" />
         <option value="$PROJECT_DIR$/src/TeteSerpent.java" />
@@ -178,14 +189,13 @@
         <option value="$PROJECT_DIR$/src/CaseOrientée.java" />
         <option value="$PROJECT_DIR$/src/JeuVue.java" />
         <option value="$PROJECT_DIR$/src/Case.java" />
-        <option value="$PROJECT_DIR$/src/JeuControlleur.java" />
-        <option value="$PROJECT_DIR$/src/Grille.java" />
-        <option value="$PROJECT_DIR$/src/JeuModele.java" />
-        <option value="$PROJECT_DIR$/src/Serpent.java" />
-        <option value="$PROJECT_DIR$/src/ModelScore.java" />
         <option value="$PROJECT_DIR$/src/Application.java" />
-        <option value="$PROJECT_DIR$/src/MenuControlleur.java" />
+        <option value="$PROJECT_DIR$/src/Grille.java" />
+        <option value="$PROJECT_DIR$/src/Serpent.java" />
         <option value="$PROJECT_DIR$/src/FenetreMenu.java" />
+        <option value="$PROJECT_DIR$/src/ModelScore.java" />
+        <option value="$PROJECT_DIR$/src/JeuModele.java" />
+        <option value="$PROJECT_DIR$/src/JeuControlleur.java" />
       </list>
     </option>
   </component>
@@ -277,7 +287,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -310,10 +320,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Serpensortia2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Serpensortia2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,204 +356,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/img" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Application.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/ControlLabelMenu.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/ControlMenu.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/FenetreMenu.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/JeuControlleur.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/JeuModele.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/JeuVue.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/MenuControlleur.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/MenuModele.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/OptionMenu.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/Serpent.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/.gitignore</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/dictionaries/mahatehotia.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/controls.dat</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/Presentation.aux</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/Presentation.log</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/Presentation.nav</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/Presentation.out</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/Presentation.pdf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/Presentation.snm</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/Presentation.synctex.gz</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/Presentation.tex</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/doc/Presentation.toc</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/1j.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/2j.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/credit.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/jouer.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/jouer1jVSia.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/option.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/parchemin.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/porte.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/retour.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/score.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/serpentRouge.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/serpentVert.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img/tableauScore.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/misc/0.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/misc/1.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/misc/2.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/misc/3.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/misc/4.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/misc/5.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scores.dat</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/ControlButtonGalerie.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/ControlGroupGalerie.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/GalerieVue.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/ModelGalerie.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/ModelScore.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/SerpentAI.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img3/banane.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img3/case.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img3/cerise.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img3/corps.xcf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img3/head.xcf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img3/image017.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img3/mur.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img3/mur.xcf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img3/poire.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img3/pomme.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img3/queue.xcf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img3/r.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img3/snake_head.xcf</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/img3/tete_serpent.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/Best_Score</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/credit.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/credit1.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/jouer.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/menu.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/option.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/option.zip</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/out/out.iml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/out/production/menu/porte.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/out/production/untitled/porte.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/parchemin.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/porte.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/retour.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/score.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/serpentRouge.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/serpentVert.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/src/Appli.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/src/ControlLabel.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/src/ControlMenu.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/src/Fenetre.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/src/Model.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/menu/src/porte.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/MenuVue.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/ModelMenu.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Application.Application">
     <configuration default="false" name="Fruit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -750,7 +576,8 @@
       <workItem from="1452178855967" duration="690000" />
       <workItem from="1452253773669" duration="1062000" />
       <workItem from="1452260200317" duration="124000" />
-      <workItem from="1452506006907" duration="1068000" />
+      <workItem from="1452506006907" duration="4000" />
+      <workItem from="1452507110709" duration="1102000" />
     </task>
     <task id="LOCAL-00001" summary="Application commit lol">
       <created>1448885462635</created>
@@ -846,7 +673,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53856000" />
+    <option name="totallyTimeSpent" value="53894000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -866,7 +693,6 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39819005" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -879,6 +705,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -925,12 +752,35 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/JeuModele.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="40" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CorpsSerpent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CaseOrientée.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
           <folding>
-            <element signature="e#260#261#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#775#776#0" expanded="false" />
+            <element signature="e#813#814#0" expanded="false" />
+            <element signature="e#851#852#0" expanded="false" />
+            <element signature="e#889#890#0" expanded="false" />
+            <element signature="e#930#931#0" expanded="false" />
+            <element signature="e#968#969#0" expanded="false" />
+            <element signature="e#1007#1008#0" expanded="false" />
+            <element signature="e#1045#1046#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -947,24 +797,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding>
+            <element signature="e#1415#1416#0" expanded="false" />
+            <element signature="e#1447#1448#0" expanded="false" />
+            <element signature="e#1479#1480#0" expanded="false" />
             <element signature="e#1507#1508#0" expanded="false" />
-            <element signature="e#1539#1540#0" expanded="false" />
-            <element signature="e#2667#2668#0" expanded="false" />
+            <element signature="e#2581#2582#0" expanded="false" />
+            <element signature="e#2635#2636#0" expanded="false" />
+            <element signature="e#4486#4487#0" expanded="false" />
+            <element signature="e#4529#4530#0" expanded="false" />
+            <element signature="e#4581#4582#0" expanded="false" />
             <element signature="e#4613#4614#0" expanded="false" />
-            <marker date="1452506026161" expanded="true" signature="29:72" placeholder="/**...*/" />
-            <marker date="1452506026161" expanded="true" signature="231:1374" placeholder="{...}" />
-            <marker date="1452506026161" expanded="false" signature="1415:1425" placeholder=" { " />
-            <marker date="1452506026161" expanded="false" signature="1502:1508" placeholder=" }" />
-            <marker date="1452506026161" expanded="true" signature="1553:1853" placeholder="{...}" />
-            <marker date="1452506026161" expanded="true" signature="1893:2038" placeholder="{...}" />
-            <marker date="1452506026161" expanded="true" signature="2073:2411" placeholder="{...}" />
-            <marker date="1452506026161" expanded="true" signature="2454:2551" placeholder="{...}" />
-            <marker date="1452506026161" expanded="false" signature="2630:2636" placeholder=" }" />
-            <marker date="1452506026161" expanded="true" signature="2669:2820" placeholder="{...}" />
-            <marker date="1452506026161" expanded="true" signature="2847:4235" placeholder="{...}" />
-            <marker date="1452506026161" expanded="true" signature="4241:4336" placeholder="/**...*/" />
-            <marker date="1452506026161" expanded="true" signature="4359:4456" placeholder="{...}" />
-            <marker date="1452506026161" expanded="false" signature="4486:4496" placeholder=" { " />
           </folding>
         </state>
       </provider>
@@ -983,7 +825,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="114" selection-start-line="23" selection-start-column="104" selection-end-line="23" selection-end-column="114" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1007,7 +851,15 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#260#261#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#775#776#0" expanded="false" />
+            <element signature="e#813#814#0" expanded="false" />
+            <element signature="e#851#852#0" expanded="false" />
+            <element signature="e#889#890#0" expanded="false" />
+            <element signature="e#930#931#0" expanded="false" />
+            <element signature="e#968#969#0" expanded="false" />
+            <element signature="e#1007#1008#0" expanded="false" />
+            <element signature="e#1045#1046#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1017,24 +869,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding>
+            <element signature="e#1415#1416#0" expanded="false" />
+            <element signature="e#1447#1448#0" expanded="false" />
+            <element signature="e#1479#1480#0" expanded="false" />
             <element signature="e#1507#1508#0" expanded="false" />
-            <element signature="e#1539#1540#0" expanded="false" />
-            <element signature="e#2667#2668#0" expanded="false" />
+            <element signature="e#2581#2582#0" expanded="false" />
+            <element signature="e#2635#2636#0" expanded="false" />
+            <element signature="e#4486#4487#0" expanded="false" />
+            <element signature="e#4529#4530#0" expanded="false" />
+            <element signature="e#4581#4582#0" expanded="false" />
             <element signature="e#4613#4614#0" expanded="false" />
-            <marker date="1452506026161" expanded="true" signature="29:72" placeholder="/**...*/" />
-            <marker date="1452506026161" expanded="true" signature="231:1374" placeholder="{...}" />
-            <marker date="1452506026161" expanded="false" signature="1415:1425" placeholder=" { " />
-            <marker date="1452506026161" expanded="false" signature="1502:1508" placeholder=" }" />
-            <marker date="1452506026161" expanded="true" signature="1553:1853" placeholder="{...}" />
-            <marker date="1452506026161" expanded="true" signature="1893:2038" placeholder="{...}" />
-            <marker date="1452506026161" expanded="true" signature="2073:2411" placeholder="{...}" />
-            <marker date="1452506026161" expanded="true" signature="2454:2551" placeholder="{...}" />
-            <marker date="1452506026161" expanded="false" signature="2630:2636" placeholder=" }" />
-            <marker date="1452506026161" expanded="true" signature="2669:2820" placeholder="{...}" />
-            <marker date="1452506026161" expanded="true" signature="2847:4235" placeholder="{...}" />
-            <marker date="1452506026161" expanded="true" signature="4241:4336" placeholder="/**...*/" />
-            <marker date="1452506026161" expanded="true" signature="4359:4456" placeholder="{...}" />
-            <marker date="1452506026161" expanded="false" signature="4486:4496" placeholder=" { " />
           </folding>
         </state>
       </provider>
@@ -1053,7 +897,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="114" selection-start-line="23" selection-start-column="104" selection-end-line="23" selection-end-column="114" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1115,7 +961,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1169,7 +1017,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MenuModele.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0877193">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MenuControlleur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1861702">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1236,7 +1100,15 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
           <folding>
-            <element signature="e#260#261#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#775#776#0" expanded="false" />
+            <element signature="e#813#814#0" expanded="false" />
+            <element signature="e#851#852#0" expanded="false" />
+            <element signature="e#889#890#0" expanded="false" />
+            <element signature="e#930#931#0" expanded="false" />
+            <element signature="e#968#969#0" expanded="false" />
+            <element signature="e#1007#1008#0" expanded="false" />
+            <element signature="e#1045#1046#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1245,60 +1117,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JeuControlleur.java">
+    <entry file="file://$PROJECT_DIR$/src/OptionMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JeuModele.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JeuVue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-          <folding />
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Serpent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="109" column="28" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
+          <caret line="105" column="28" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
           <folding>
+            <element signature="e#1415#1416#0" expanded="false" />
+            <element signature="e#1447#1448#0" expanded="false" />
+            <element signature="e#1479#1480#0" expanded="false" />
             <element signature="e#1507#1508#0" expanded="false" />
-            <element signature="e#1539#1540#0" expanded="false" />
-            <element signature="e#2667#2668#0" expanded="false" />
+            <element signature="e#2581#2582#0" expanded="false" />
+            <element signature="e#2635#2636#0" expanded="false" />
+            <element signature="e#4486#4487#0" expanded="false" />
+            <element signature="e#4529#4530#0" expanded="false" />
+            <element signature="e#4581#4582#0" expanded="false" />
             <element signature="e#4613#4614#0" expanded="false" />
-            <marker date="1452506026161" expanded="true" signature="29:72" placeholder="/**...*/" />
-            <marker date="1452506026161" expanded="true" signature="231:1374" placeholder="{...}" />
-            <marker date="1452506026161" expanded="false" signature="1415:1425" placeholder=" { " />
-            <marker date="1452506026161" expanded="false" signature="1502:1508" placeholder=" }" />
-            <marker date="1452506026161" expanded="true" signature="1553:1853" placeholder="{...}" />
-            <marker date="1452506026161" expanded="true" signature="1893:2038" placeholder="{...}" />
-            <marker date="1452506026161" expanded="true" signature="2073:2411" placeholder="{...}" />
-            <marker date="1452506026161" expanded="true" signature="2454:2551" placeholder="{...}" />
-            <marker date="1452506026161" expanded="false" signature="2630:2636" placeholder=" }" />
-            <marker date="1452506026161" expanded="true" signature="2669:2820" placeholder="{...}" />
-            <marker date="1452506026161" expanded="true" signature="2847:4235" placeholder="{...}" />
-            <marker date="1452506026161" expanded="true" signature="4241:4336" placeholder="/**...*/" />
-            <marker date="1452506026161" expanded="true" signature="4359:4456" placeholder="{...}" />
-            <marker date="1452506026161" expanded="false" signature="4486:4496" placeholder=" { " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13274336">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1310,10 +1175,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scores.dat">
+    <entry file="file://$PROJECT_DIR$/src/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FenetreMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="79" column="28" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1321,64 +1194,26 @@
     <entry file="file://$PROJECT_DIR$/src/ModelScore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="70" selection-start-line="26" selection-start-column="70" selection-end-line="26" selection-end-column="70" />
+          <caret line="58" column="41" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControlMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21201414">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application.java">
+    <entry file="file://$PROJECT_DIR$/src/JeuModele.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+          <caret line="116" column="22" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MenuModele.java">
+    <entry file="file://$PROJECT_DIR$/src/JeuControlleur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MenuControlleur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OptionMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ControlLabelMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FenetreMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13250883">
-          <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
-          <folding />
+        <state vertical-scroll-proportion="0.29151943">
+          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

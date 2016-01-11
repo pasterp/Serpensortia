@@ -12,11 +12,13 @@ public class JeuModele {
     private ArrayList<Serpent> serpents;
     private ArrayList<Fruit> fruits;
     private int mode;
+    private ModelScore modelScore;
 
-    public JeuModele(int t){
+    public JeuModele(int t, ModelScore modelScore){
         System.out.println("Initialisation Modèle...");
         taille = t;
         grille = new Grille(taille);
+        this.modelScore = modelScore;
 
         mode = 0;
 
@@ -113,15 +115,15 @@ public class JeuModele {
     }
 
     public boolean isOver(){
-        boolean over = false;
+        boolean over = true;
         for (Serpent s: serpents){
             if (s.isAlive())
-                over = true;
+                over = false;
         }
 
         if (over)
             for (Serpent s: serpents)
-                System.out.println("Score : " + s.score);
+                modelScore.submitScore(s.score);
 
         return over;
     }

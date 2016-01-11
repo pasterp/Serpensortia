@@ -42,7 +42,7 @@ public class JeuControlleur implements KeyListener {
         timer = new Timer(500, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                if (!pause && jeuModele.isOver()){
+                if (!pause && !jeuModele.isOver()){
                     jeuVue.repaint();
                     if (jeuModele.prochainMouvement()){
                         timer.setDelay((int)(timer.getDelay()*0.95));

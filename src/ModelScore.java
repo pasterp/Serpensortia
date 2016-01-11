@@ -35,6 +35,7 @@
         {
             return scores[i];
         }
+
         public void writeScores(){
             File scoreF =new File("scores.dat");
             try{
@@ -50,14 +51,18 @@
                 System.out.println("Attention : les scores n'ont pas pu être sauvegardés !");
             }
         }
-        public  void submitScore(int tmp){
-            for (int j=0; j<10; j++){
-                if (tmp > scores[j]){
-                    int t = scores[j];
-                    scores[j] = tmp;
-                    tmp = t;
+
+        public  void submitScore(int s){
+            int tmp = s;
+            if (s != scores[0] || s != scores[1]){
+                for (int j=0; j<10; j++){
+                    if (tmp > scores[j]){
+                        int t = scores[j];
+                        scores[j] = tmp;
+                        tmp = t;
+                    }
                 }
+                writeScores();
             }
-            writeScores();
         }
     }
