@@ -9,6 +9,7 @@ public class Application{
      ModelScore modelScore = new ModelScore();
      OptionMenu optionMenu = new OptionMenu(menuModele);
      FenetreMenu f=new FenetreMenu(menuModele, optionMenu, modelScore);
+     ControlMenu controlMenu=new ControlMenu(f);
      ControlLabelMenu controlLabelMenu = new ControlLabelMenu(f, menuModele,optionMenu);
      f.setControlLabelMenu(controlLabelMenu);
      MenuControlleur menuControlleur = new MenuControlleur(menuModele, optionMenu);

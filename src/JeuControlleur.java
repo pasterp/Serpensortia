@@ -38,6 +38,7 @@ public class JeuControlleur implements KeyListener {
 
     public void reset(){
         pause = false;
+        timer.stop();
         timer = new Timer(500, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {

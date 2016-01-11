@@ -5,6 +5,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseListener;
 import java.io.IOException;
 
@@ -34,6 +35,7 @@ public class FenetreMenu extends JFrame {
         this.modelScore=modelScore;
         setExtendedState(this.getExtendedState() | this.MAXIMIZED_BOTH);
         initAttribut();
+        initMenuBar();
         creerFenetre();
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -123,7 +125,6 @@ public class FenetreMenu extends JFrame {
         iQuitter = new JMenuItem("Quitter");
 
         mOption.add(iNew);
-        iScores = new JMenuItem("Scores");
         mOption.add(iScores);
         mOption.addSeparator();
         mOption.add(iQuitter);
