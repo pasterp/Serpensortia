@@ -245,7 +245,10 @@ public class JeuModele {
     }
 
     public int getScore(int i){
-        return serpents.get(i).score;
+        if (i < serpents.size())
+            return serpents.get(i).score;
+        else
+            return -1;
     }
 
     public ArrayList<Fruit> getFruits(){

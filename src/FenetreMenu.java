@@ -195,6 +195,7 @@ public class FenetreMenu extends JFrame {
         fondEcran.setLayout(new BorderLayout());
         creerMenuBar();
         fondEcran.add(jc.getVue());
+        jeuModele.setMode(0);
         jeuModele.reinit();
         jc.reset();
         menuJeu = new JPanel();
@@ -273,6 +274,7 @@ public class FenetreMenu extends JFrame {
         fondEcran.setLayout(new BorderLayout());
         creerMenuBar();
         fondEcran.add(jc.getVue());
+        jeuModele.setMode(1);
         jeuModele.reinit();
         jc.reset();
         menuJeu = new JPanel();
@@ -290,6 +292,7 @@ public class FenetreMenu extends JFrame {
         fondEcran.setLayout(new BorderLayout());
         creerMenuBar();
         fondEcran.add(jc.getVue());
+        jeuModele.setMode(2);
         jeuModele.reinit();
         jc.reset();
         menuJeu = new JPanel();
@@ -322,7 +325,8 @@ public class FenetreMenu extends JFrame {
             g.setColor(Color.WHITE);
             g.setFont(new Font("TimesRoman", Font.BOLD, 15));
             g.drawString("Score Joueur 1 : " + jeuModele.getScore(0), 70, 190);
-            g.drawString("Score Joueur 2 : " + jeuModele.getScore(1), 70, 220);
+            if (jeuModele.getScore(1) > -1)
+                g.drawString("Score Joueur 2 : " + jeuModele.getScore(1), 70, 220);
             try {
                 TimeUnit.MILLISECONDS.sleep(100);
             } catch (InterruptedException e) {
