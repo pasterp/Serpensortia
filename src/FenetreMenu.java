@@ -16,7 +16,7 @@ public class FenetreMenu extends JFrame {
     JMenuBar menuBar;
     JMenu mOption;
     JMenuItem iNew, iScores, iQuitter;
-    JLabel jouer, score, option,credit,retour,serpent1,serpent2,tableauScore,jScoreJoueur1,jScoreJoueur2;
+    JLabel jouer, score, option,credit,retour,serpent1,serpent2,tableauScore,jScoreJoueur1,jScoreJoueur2, avecIa, sansIa,multi;
     JPanel pRetour, menuJeu,jTableauScore;
     MenuModele modelMenu;
     ModelScore modelScore;
@@ -83,15 +83,18 @@ public class FenetreMenu extends JFrame {
 
         jeuModele = new JeuModele(20);
 
-        scoreJoueur1 = jeuModele.getScore(0);
-        jScoreJoueur1 = new JLabel("Score Joueur 1 "+scoreJoueur1);
-        jScoreJoueur1.setBorder(null);
-        jScoreJoueur1.setOpaque(true);
 
-        scoreJoueur2 = jeuModele.getScore(1);
-        jScoreJoueur2 = new JLabel("Score Joueur 2: "+scoreJoueur2);
-        jScoreJoueur2.setBorder(null);
-        jScoreJoueur2.setOpaque(true);
+        avecIa = new JLabel(new ImageIcon("./img/jouer1jVSia.png"));
+        avecIa.setBorder(null);
+        avecIa.setOpaque(false);
+
+        sansIa = new JLabel(new ImageIcon("./img/1j.png"));
+        sansIa.setBorder(null);
+        sansIa.setOpaque(false);
+
+        multi = new JLabel(new ImageIcon("./img/2j.png"));
+        multi.setBorder(null);
+        multi.setOpaque(false);
 
         jc = new JeuControlleur(jeuModele, modelMenu);
         this.addKeyListener(jc);
@@ -105,18 +108,22 @@ public class FenetreMenu extends JFrame {
     {
         fondEcran = new FondEcran();
         JPanel pJouer = new JPanel();
+        pJouer.setBorder(BorderFactory.createEmptyBorder(40,0,20,0));
         pJouer.add(jouer);
         pJouer.setOpaque(false);
 
         JPanel pScore = new JPanel();
+        pScore.setBorder(BorderFactory.createEmptyBorder(0,0,20,0));
         pScore.add(score);
         pScore.setOpaque(false);
 
         JPanel pOption = new JPanel();
+        pOption.setBorder(BorderFactory.createEmptyBorder(0,0,20,0));
         pOption.add(option);
         pOption.setOpaque(false);
 
         JPanel pCredit = new JPanel();
+        pCredit.setBorder(BorderFactory.createEmptyBorder(0,0,20,0));
         pCredit.add(credit);
         pCredit.setOpaque(false);
 
@@ -154,7 +161,42 @@ public class FenetreMenu extends JFrame {
         setJMenuBar(menuBar);
     }
 
-    public void choixJeu(){
+   public void choixIa(){
+       fondEcran = new FondEcran();
+
+       JPanel pAvecIa = new JPanel();
+       pAvecIa.setBorder(BorderFactory.createEmptyBorder(40,0,20,0));
+       pAvecIa.add(avecIa);
+       pAvecIa.setOpaque(false);
+
+       JPanel pSansIa = new JPanel();
+       pSansIa.setBorder(BorderFactory.createEmptyBorder(0,0,20,0));
+       pSansIa.add(sansIa);
+       pSansIa.setOpaque(false);
+
+       JPanel p2Joueur = new JPanel();
+       p2Joueur.setBorder(BorderFactory.createEmptyBorder(0,0,20,0));
+       p2Joueur.add(multi);
+       p2Joueur.setOpaque(false);
+
+       JPanel pChoix =new JPanel(new BorderLayout());
+       pChoix.add(pAvecIa);
+       pChoix.add(pSansIa);
+       pChoix.add(p2Joueur);
+       pChoix.setLayout(new BoxLayout(pChoix, BoxLayout.Y_AXIS));
+       pChoix.setOpaque(false);
+       fondEcran.add(pChoix,BorderLayout.CENTER);
+       setJMenuBar(null);
+       setContentPane(fondEcran);
+
+       retourPage();
+       pChoix.add(pRetour);
+
+       setContentPane(fondEcran);
+
+    }
+
+    public void choixJeuIa(){
         fondEcran = new FondEcran();
         fondEcran.setLayout(new BorderLayout());
         creerMenuBar();
@@ -193,15 +235,33 @@ public class FenetreMenu extends JFrame {
     }
 
     public void choixScore() throws IOException {
+        Font font = new Font("Impact",Font.ITALIC,30);
+        Font titreFont = new Font("Impact",Font.BOLD,70);
         modelScore.loadScores();
         fondEcran = new FondEcran();
         fondEcran.setLayout(new BorderLayout());
         JPanel pScore = new JPanel();
-        pScore.setSize(600,400);
-        pScore.setBorder(BorderFactory.createLineBorder(Color.black));
-        fondEcran.add(pScore);
+        JLabel titreScore = new JLabel((" SCORES "));
+        titreScore.setBorder(null);
+        titreScore.setForeground(new Color(255,20,20));
+        titreScore.setFont(titreFont);
+        JLabel score1 = new JLabel("Premiere place :   "+String.valueOf(modelScore.getScore(0)));
+        score1.setBorder(null);
+        score1.setFont(font);
+        JLabel score2 = new JLabel("Deuxieme place :   "+String.valueOf(modelScore.getScore(1)));
+        score2.setBorder(null);
+        score2.setFont(font);
+        JLabel score3 = new JLabel("Troisieme place :   "+String.valueOf(modelScore.getScore(2)));
+        score3.setBorder(null);
+        score3.setFont(font);
+        pScore.add(titreScore);
+        pScore.add(score1);
+        pScore.add(score2);
+        pScore.add(score3);
+        pScore.setLayout(new BoxLayout(pScore,BoxLayout.Y_AXIS));
         setJMenuBar(null);
         retourPage();
+        fondEcran.add(pScore,BorderLayout.CENTER);
         fondEcran.add(pRetour,BorderLayout.SOUTH);
         setContentPane(fondEcran);
     }
@@ -210,6 +270,40 @@ public class FenetreMenu extends JFrame {
         pRetour = new JPanel();
         pRetour.add(retour);
         pRetour.setOpaque(false);
+    }
+
+    public void choixJeuSsIa() {
+        fondEcran = new FondEcran();
+        fondEcran.setLayout(new BorderLayout());
+        creerMenuBar();
+        fondEcran.add(jc.getVue());
+        jeuModele.reinit();
+        jc.reset();
+        menuJeu = new JPanel();
+        tableauScore();
+        menuJeu.setLayout(new BoxLayout(menuJeu,BoxLayout.Y_AXIS));
+        menuJeu.add(fondEcranScore);;
+        menuJeu.setOpaque(false);
+
+        fondEcran.add(menuJeu,BorderLayout.WEST);
+        setContentPane(fondEcran);
+    }
+
+    public void choixMulti() {
+        fondEcran = new FondEcran();
+        fondEcran.setLayout(new BorderLayout());
+        creerMenuBar();
+        fondEcran.add(jc.getVue());
+        jeuModele.reinit();
+        jc.reset();
+        menuJeu = new JPanel();
+        tableauScore();
+        menuJeu.setLayout(new BoxLayout(menuJeu,BoxLayout.Y_AXIS));
+        menuJeu.add(fondEcranScore);;
+        menuJeu.setOpaque(false);
+
+        fondEcran.add(menuJeu,BorderLayout.WEST);
+        setContentPane(fondEcran);
     }
 
     public class FondEcran extends JPanel {
@@ -318,6 +412,9 @@ public class FenetreMenu extends JFrame {
         option.addMouseListener(label);
         credit.addMouseListener(label);
         retour.addMouseListener(label);
+        avecIa.addMouseListener(label);
+        sansIa.addMouseListener(label);
+        multi.addMouseListener(label);
         serpent1.addMouseListener(label);
         serpent2.addMouseListener(label);
 
@@ -343,7 +440,7 @@ public class FenetreMenu extends JFrame {
         System.exit(0);
     }
     public void nouvellePartie(){
-        choixJeu();
+        choixJeuIa();
         setVisible(true);
     }
 

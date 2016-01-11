@@ -60,4 +60,8 @@
             }
             writeScores();
         }
+
+        public int getScore(int i){
+            return scores[i];
+        }
     }
