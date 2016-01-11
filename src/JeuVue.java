@@ -13,14 +13,8 @@ public class JeuVue extends JPanel{
         modele = jm;
 
         System.out.println("Initialisation Vue...");
-        j1 = new JLabel("Score J1 : "+jm.getScore(0));
-        j1.setForeground(Color.WHITE);
-        j2 = new JLabel("Score J2 : "+jm.getScore(1));
-        j2.setForeground(Color.WHITE);
 
         setPreferredSize(new Dimension(modele.getTaille()*32, modele.getTaille()*32));
-        add(j1);
-        add(j2);
     }
 
 
