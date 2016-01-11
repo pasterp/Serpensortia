@@ -20,10 +20,16 @@ import java.io.IOException;
                 } catch (IOException e1){
                     e1.printStackTrace();
                 }
-            } else {
+            } else if (e.getSource() == fenetreMenu.iScores) {
                 try {
                     fenetreMenu.choixMenu(2);
-                } catch (IOException e1){
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+            }else {
+                try {
+                    fenetreMenu.choixMenu(3);
+                } catch (IOException e1) {
                     e1.printStackTrace();
                 }
             }

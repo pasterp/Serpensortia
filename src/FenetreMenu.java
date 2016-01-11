@@ -5,6 +5,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseListener;
 import java.io.IOException;
 
@@ -14,14 +15,13 @@ public class FenetreMenu extends JFrame {
     Image imageTabScore = Toolkit.getDefaultToolkit().getImage("./img/tableauScore.png");;
     JMenuBar menuBar;
     JMenu mOption;
-    JMenuItem iNew, iScores;
+    JMenuItem iNew, iScores, iQuitter;
     JLabel jouer, score, option,credit,background,retour,jBas,jHaut,jGauche,jDroite,jPause,serpent1,serpent2,tableauScore;
     JPanel pRetour, menuJeu;
     MenuModele modelMenu;
     FondEcran fondEcran;
     JeuModele jeuModele;
     JeuControlleur jc;
-    FenetreMenu newPartie;
     OptionMenu optionMenu;
 
 
@@ -32,6 +32,7 @@ public class FenetreMenu extends JFrame {
         this.modelMenu=modelMenu;
         setExtendedState(this.getExtendedState() | this.MAXIMIZED_BOTH);
         initAttribut();
+        initMenuBar();
         creerFenetre();
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -110,20 +111,26 @@ public class FenetreMenu extends JFrame {
         setContentPane(fondEcran);
 
     }
-    public void creerMenuBar()
+    public void initMenuBar()
     {
         menuBar = new JMenuBar();
         mOption = new JMenu("Options");
 
         iNew = new JMenuItem("Nouvelle Partie");
+        iScores = new JMenuItem("Scores");
+
+        iQuitter = new JMenuItem("Quitter");
 
         mOption.add(iNew);
-        iScores = new JMenuItem("Scores");
         mOption.add(iScores);
-
+        mOption.addSeparator();
+        mOption.add(iQuitter);
         menuBar.add(mOption);
-        setJMenuBar(menuBar);
 
+    }
+
+    public void creerMenuBar(){
+        setJMenuBar(menuBar);
     }
 
     public void choixJeu(){
@@ -274,17 +281,28 @@ public class FenetreMenu extends JFrame {
     public  void setControlMenu(ActionListener menu){
         iNew.addActionListener(menu);
         iScores.addActionListener(menu);
-    }
-
-    public void afficheScore() {
-        System.out.println("votre score!!");
+        iQuitter.addActionListener(menu);
     }
 
     public void choixMenu(int choix) throws IOException {
         if (choix==1) {
-            System.out.println(" nouvelle partie");
-        } else {
+            nouvellePartie();
+        } else if (choix==2){
             afficheScore();
+        }else {
+            quitter();
         }
+    }
+
+    public void quitter(){
+        System.exit(0);
+    }
+    public void nouvellePartie(){
+        choixJeu();
+        setVisible(true);
+    }
+
+    public void afficheScore() {
+        System.out.println("votre score!!");
     }
 }
