@@ -21,6 +21,7 @@ public class FenetreMenu extends JFrame {
     MenuModele modelMenu;
     ModelScore modelScore;
     FondEcran fondEcran;
+    FondEcranBouton fondEcranBouton;
     JeuModele jeuModele;
     JeuControlleur jc;
     OptionMenu optionMenu;
@@ -227,38 +228,79 @@ public class FenetreMenu extends JFrame {
         ModelGalerie m = new ModelGalerie();
         ControlGroupGalerie controlGroupGalerie = new ControlGroupGalerie(m);
         fondEcran.add(controlGroupGalerie.galerieVue, BorderLayout.CENTER);
+        fondEcran.setOpaque(false);
         fondEcran.add(pRetour,BorderLayout.SOUTH);
         setContentPane(fondEcran);
     }
 
     public void choixScore() throws IOException {
-        Font font = new Font("Impact",Font.ITALIC,30);
+        Font font = new Font("Impact",Font.ITALIC,20);
         Font titreFont = new Font("Impact",Font.BOLD,70);
         modelScore.loadScores();
         fondEcran = new FondEcran();
         fondEcran.setLayout(new BorderLayout());
         JPanel pScore = new JPanel();
         JLabel titreScore = new JLabel((" SCORES "));
-        titreScore.setBorder(null);
         titreScore.setForeground(new Color(255,20,20));
         titreScore.setFont(titreFont);
-        JLabel score1 = new JLabel("Premiere place :   "+String.valueOf(modelScore.getScore(0)));
-        score1.setBorder(null);
+        JLabel score1 = new JLabel("Premiere place     :   "+String.valueOf(modelScore.getScore(0)));
         score1.setFont(font);
-        JLabel score2 = new JLabel("Deuxieme place :   "+String.valueOf(modelScore.getScore(1)));
-        score2.setBorder(null);
+        score1.setBorder(BorderFactory.createEmptyBorder(0,0,20,0));
+
+        JLabel score2 = new JLabel("Deuxieme place  :   "+String.valueOf(modelScore.getScore(1)));
         score2.setFont(font);
+        score2.setBorder(BorderFactory.createEmptyBorder(0,0,20,0));
+
         JLabel score3 = new JLabel("Troisieme place :   "+String.valueOf(modelScore.getScore(2)));
-        score3.setBorder(null);
         score3.setFont(font);
+        score3.setBorder(BorderFactory.createEmptyBorder(0,0,20,0));
+        JLabel score4 = new JLabel("Quatrieme place :   "+String.valueOf(modelScore.getScore(3)));
+        score4.setFont(font);
+        score4.setBorder(BorderFactory.createEmptyBorder(0,0,20,0));
+
+        JLabel score5 = new JLabel("Cinquieme place :   "+String.valueOf(modelScore.getScore(4)));
+        score5.setFont(font);
+        score5.setBorder(BorderFactory.createEmptyBorder(0,0,20,0));
+
+        JLabel score6 = new JLabel("Sixieme place   :   "+String.valueOf(modelScore.getScore(5)));
+        score6.setFont(font);
+        score6.setBorder(BorderFactory.createEmptyBorder(0,0,20,0));
+
+        JLabel score7 = new JLabel("Septieme place  :   "+String.valueOf(modelScore.getScore(6)));
+        score7.setFont(font);
+        score7.setBorder(BorderFactory.createEmptyBorder(0,0,20,0));
+
+        JLabel score8 = new JLabel("Huitieme place  :   "+String.valueOf(modelScore.getScore(7)));
+        score8.setFont(font);
+        score8.setBorder(BorderFactory.createEmptyBorder(0,0,20,0));
+
+        JLabel score9 = new JLabel("Neuvieme place  :   "+String.valueOf(modelScore.getScore(8)));
+        score9.setFont(font);
+        score9.setBorder(BorderFactory.createEmptyBorder(0,0,20,0));
+
+        JLabel score10 = new JLabel("Dixieme place  :   "+String.valueOf(modelScore.getScore(9)));
+        score10.setFont(font);
+        score10.setBorder(BorderFactory.createEmptyBorder(0,0,20,0));
+
         pScore.add(titreScore);
         pScore.add(score1);
         pScore.add(score2);
         pScore.add(score3);
+        pScore.add(score4);
+        pScore.add(score5);
+        pScore.add(score6);
+        pScore.add(score7);
+        pScore.add(score8);
+        pScore.add(score9);
+        pScore.add(score10);
+        pScore.setOpaque(false);
         pScore.setLayout(new BoxLayout(pScore,BoxLayout.Y_AXIS));
         setJMenuBar(null);
         retourPage();
-        fondEcran.add(pScore,BorderLayout.CENTER);
+        fondEcranBouton = new FondEcranBouton();
+        fondEcranBouton.add(pScore);
+        fondEcranBouton.setOpaque(false);
+        fondEcran.add(fondEcranBouton);
         fondEcran.add(pRetour,BorderLayout.SOUTH);
         setContentPane(fondEcran);
     }
@@ -311,6 +353,16 @@ public class FenetreMenu extends JFrame {
             //paint background image
             super.paintComponent(g);
             g.drawImage(imageFond, 0, 0,getWidth(), getHeight(), this);
+
+        }
+    }
+
+    public class FondEcranBouton extends JPanel {
+
+        public void paintComponent(Graphics g) {
+            //paint background image
+            super.paintComponent(g);
+            g.drawImage(imageFondOpt,0,0,getWidth(), getHeight(), this);
 
         }
     }
@@ -440,7 +492,8 @@ public class FenetreMenu extends JFrame {
         System.exit(0);
     }
     public void nouvellePartie(){
-        choixJeuIa();
+        choixIa();
+        repaint();
         setVisible(true);
     }
 

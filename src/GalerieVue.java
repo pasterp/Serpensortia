@@ -22,8 +22,11 @@ public class GalerieVue extends JPanel{
         photo = new JLabel(new ImageIcon(modelGalerie.getImage().getImage().getScaledInstance(500, 500, BufferedImage.SCALE_DEFAULT)));
         play = new JButton("play");
 
+        photo.setOpaque(false);
+
         progDiapo = new JProgressBar(0, modelGalerie.getSize()-1);
         progDiapo.setValue(modelGalerie.getIndex());
+        progDiapo.setOpaque(false);
     }
 
     private void addWidgets() {
@@ -31,11 +34,19 @@ public class GalerieVue extends JPanel{
         JPanel miseEnpage = new JPanel();
         miseEnpage.setLayout(new BoxLayout(miseEnpage, BoxLayout.Y_AXIS));
         miseEnpage.add(new JPanel(new FlowLayout(FlowLayout.CENTER)).add(photo));
+        miseEnpage.setOpaque(false);
+
         JPanel centerBut = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        centerBut.setOpaque(false);
+
         JPanel boutons = new JPanel();
         boutons.setLayout(new BoxLayout(boutons, BoxLayout.X_AXIS));
         boutons.add(play);
+        boutons.setOpaque(false);
+
         centerBut.add(boutons);
+        centerBut.setOpaque(false);
+
         miseEnpage.add(centerBut);
         miseEnpage.add(progDiapo);
         add(miseEnpage);
@@ -45,6 +56,7 @@ public class GalerieVue extends JPanel{
     public void changePhotoDiapo(){
         photo.setIcon(new ImageIcon(modelGalerie.getImage().getImage().getScaledInstance(500, 500, BufferedImage.SCALE_FAST)));
         progDiapo.setValue(modelGalerie.getIndex());
+        progDiapo.setOpaque(false);
     }
 
 
