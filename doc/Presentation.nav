@@ -8,51 +8,54 @@
 \headcommand {\beamer@subsectionpages {1}{2}}
 \headcommand {\slideentry {1}{0}{1}{3/3}{}{0}}
 \headcommand {\beamer@framepages {3}{3}}
-\headcommand {\sectionentry {2}{Interface}{4}{Interface}{0}}
-\headcommand {\beamer@sectionpages {3}{3}}
-\headcommand {\beamer@subsectionpages {3}{3}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{4}{Menus}}\headcommand {\beamer@subsectionpages {4}{3}}
-\headcommand {\slideentry {2}{1}{1}{4/4}{Menus}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{4}{Repr\IeC {\'e}sentation UML}}\headcommand {\beamer@subsectionpages {3}{3}}
+\headcommand {\slideentry {1}{1}{1}{4/4}{Repr\IeC {\'e}sentation UML}{0}}
 \headcommand {\beamer@framepages {4}{4}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{5}{Options}}\headcommand {\beamer@subsectionpages {4}{4}}
-\headcommand {\slideentry {2}{2}{1}{5/5}{Options}{0}}
+\headcommand {\sectionentry {2}{Interface}{5}{Interface}{0}}
+\headcommand {\beamer@sectionpages {3}{4}}
+\headcommand {\beamer@subsectionpages {4}{4}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{5}{Menus}}\headcommand {\beamer@subsectionpages {5}{4}}
+\headcommand {\slideentry {2}{1}{1}{5/5}{Menus}{0}}
 \headcommand {\beamer@framepages {5}{5}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{6}{Scores}}\headcommand {\beamer@subsectionpages {5}{5}}
-\headcommand {\slideentry {2}{3}{1}{6/6}{Scores}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{6}{Options}}\headcommand {\beamer@subsectionpages {5}{5}}
+\headcommand {\slideentry {2}{2}{1}{6/6}{Options}{0}}
 \headcommand {\beamer@framepages {6}{6}}
-\headcommand {\sectionentry {3}{Fonctionnement}{7}{Fonctionnement}{0}}
-\headcommand {\beamer@sectionpages {4}{6}}
-\headcommand {\beamer@subsectionpages {6}{6}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{7}{Grille}}\headcommand {\beamer@subsectionpages {7}{6}}
-\headcommand {\beamer@subsubsectionentry {0}{3}{1}{1}{7}{Cases}}
-\headcommand {\slideentry {3}{1}{1}{7/7}{Grille}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{7}{Scores}}\headcommand {\beamer@subsectionpages {6}{6}}
+\headcommand {\slideentry {2}{3}{1}{7/7}{Scores}{0}}
 \headcommand {\beamer@framepages {7}{7}}
-\headcommand {\beamer@subsubsectionentry {0}{3}{1}{2}{8}{Fruits}}
-\headcommand {\slideentry {3}{1}{2}{8/8}{Grille}{0}}
+\headcommand {\sectionentry {3}{Fonctionnement}{8}{Fonctionnement}{0}}
+\headcommand {\beamer@sectionpages {5}{7}}
+\headcommand {\beamer@subsectionpages {7}{7}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{8}{Grille}}\headcommand {\beamer@subsectionpages {8}{7}}
+\headcommand {\beamer@subsubsectionentry {0}{3}{1}{1}{8}{Cases}}
+\headcommand {\slideentry {3}{1}{1}{8/8}{Grille}{0}}
 \headcommand {\beamer@framepages {8}{8}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{9}{Serpents}}\headcommand {\beamer@subsectionpages {7}{8}}
-\headcommand {\beamer@subsubsectionentry {0}{3}{2}{1}{9}{Contr\IeC {\^o}les des joueurs}}
-\headcommand {\slideentry {3}{2}{1}{9/11}{Serpents}{0}}
-\headcommand {\beamer@framepages {9}{11}}
-\headcommand {\beamer@subsubsectionentry {0}{3}{2}{2}{12}{Contr\IeC {\^o}le par l'ordinateur}}
-\headcommand {\slideentry {3}{2}{2}{12/12}{Serpents}{0}}
-\headcommand {\beamer@framepages {12}{12}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{13}{Design}}\headcommand {\beamer@subsectionpages {9}{12}}
-\headcommand {\slideentry {3}{3}{1}{13/13}{Design}{0}}
+\headcommand {\beamer@subsubsectionentry {0}{3}{1}{2}{9}{Fruits}}
+\headcommand {\slideentry {3}{1}{2}{9/9}{Grille}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{10}{Serpents}}\headcommand {\beamer@subsectionpages {8}{9}}
+\headcommand {\beamer@subsubsectionentry {0}{3}{2}{1}{10}{Contr\IeC {\^o}les des joueurs}}
+\headcommand {\slideentry {3}{2}{1}{10/12}{Serpents}{0}}
+\headcommand {\beamer@framepages {10}{12}}
+\headcommand {\beamer@subsubsectionentry {0}{3}{2}{2}{13}{Contr\IeC {\^o}le par l'ordinateur}}
+\headcommand {\slideentry {3}{2}{2}{13/13}{Serpents}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\sectionentry {4}{Conclusion}{14}{Conclusion}{0}}
-\headcommand {\beamer@sectionpages {7}{13}}
-\headcommand {\beamer@subsectionpages {13}{13}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{14}{Possibilit\IeC {\'e}s d'am\IeC {\'e}liorations}}\headcommand {\beamer@subsectionpages {14}{13}}
-\headcommand {\slideentry {4}{1}{1}{14/14}{Possibilit\IeC {\'e}s d'am\IeC {\'e}liorations}{0}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{14}{Design}}\headcommand {\beamer@subsectionpages {10}{13}}
+\headcommand {\slideentry {3}{3}{1}{14/14}{Design}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\beamer@subsectionentry {0}{4}{2}{15}{Que nous a apportez ce projet}}\headcommand {\beamer@subsectionpages {14}{14}}
-\headcommand {\slideentry {4}{2}{1}{15/15}{Que nous a apportez ce projet}{0}}
+\headcommand {\sectionentry {4}{Conclusion}{15}{Conclusion}{0}}
+\headcommand {\beamer@sectionpages {8}{14}}
+\headcommand {\beamer@subsectionpages {14}{14}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{15}{Possibilit\IeC {\'e}s d'am\IeC {\'e}liorations}}\headcommand {\beamer@subsectionpages {15}{14}}
+\headcommand {\slideentry {4}{1}{1}{15/15}{Possibilit\IeC {\'e}s d'am\IeC {\'e}liorations}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\slideentry {4}{2}{2}{16/16}{Que nous a apportez ce projet}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{16}{Que nous a apportez ce projet}}\headcommand {\beamer@subsectionpages {15}{15}}
+\headcommand {\slideentry {4}{2}{1}{16/16}{Que nous a apportez ce projet}{0}}
 \headcommand {\beamer@framepages {16}{16}}
-\headcommand {\beamer@partpages {1}{16}}
-\headcommand {\beamer@subsectionpages {15}{16}}
-\headcommand {\beamer@sectionpages {14}{16}}
-\headcommand {\beamer@documentpages {16}}
-\headcommand {\def \inserttotalframenumber {14}}
+\headcommand {\slideentry {4}{2}{2}{17/17}{Que nous a apportez ce projet}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\beamer@partpages {1}{17}}
+\headcommand {\beamer@subsectionpages {16}{17}}
+\headcommand {\beamer@sectionpages {15}{17}}
+\headcommand {\beamer@documentpages {17}}
+\headcommand {\def \inserttotalframenumber {15}}

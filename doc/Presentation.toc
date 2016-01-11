@@ -1,18 +1,19 @@
 \beamer@endinputifotherversion {3.36pt}
 \select@language {french}
 \beamer@sectionintoc {1}{Introduction}{3}{0}{1}
-\beamer@sectionintoc {2}{Interface}{4}{0}{2}
-\beamer@subsectionintoc {2}{1}{Menus}{4}{0}{2}
-\beamer@subsectionintoc {2}{2}{Options}{5}{0}{2}
-\beamer@subsectionintoc {2}{3}{Scores}{6}{0}{2}
-\beamer@sectionintoc {3}{Fonctionnement}{7}{0}{3}
-\beamer@subsectionintoc {3}{1}{Grille}{7}{0}{3}
-\beamer@subsubsectionintoc {3}{1}{1}{Cases}{7}{0}{3}
-\beamer@subsubsectionintoc {3}{1}{2}{Fruits}{8}{0}{3}
-\beamer@subsectionintoc {3}{2}{Serpents}{9}{0}{3}
-\beamer@subsubsectionintoc {3}{2}{1}{Contr\IeC {\^o}les des joueurs}{9}{0}{3}
-\beamer@subsubsectionintoc {3}{2}{2}{Contr\IeC {\^o}le par l'ordinateur}{12}{0}{3}
-\beamer@subsectionintoc {3}{3}{Design}{13}{0}{3}
-\beamer@sectionintoc {4}{Conclusion}{14}{0}{4}
-\beamer@subsectionintoc {4}{1}{Possibilit\IeC {\'e}s d'am\IeC {\'e}liorations}{14}{0}{4}
-\beamer@subsectionintoc {4}{2}{Que nous a apportez ce projet}{15}{0}{4}
+\beamer@subsectionintoc {1}{1}{Repr\IeC {\'e}sentation UML}{4}{0}{1}
+\beamer@sectionintoc {2}{Interface}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{Menus}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{Options}{6}{0}{2}
+\beamer@subsectionintoc {2}{3}{Scores}{7}{0}{2}
+\beamer@sectionintoc {3}{Fonctionnement}{8}{0}{3}
+\beamer@subsectionintoc {3}{1}{Grille}{8}{0}{3}
+\beamer@subsubsectionintoc {3}{1}{1}{Cases}{8}{0}{3}
+\beamer@subsubsectionintoc {3}{1}{2}{Fruits}{9}{0}{3}
+\beamer@subsectionintoc {3}{2}{Serpents}{10}{0}{3}
+\beamer@subsubsectionintoc {3}{2}{1}{Contr\IeC {\^o}les des joueurs}{10}{0}{3}
+\beamer@subsubsectionintoc {3}{2}{2}{Contr\IeC {\^o}le par l'ordinateur}{13}{0}{3}
+\beamer@subsectionintoc {3}{3}{Design}{14}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{15}{0}{4}
+\beamer@subsectionintoc {4}{1}{Possibilit\IeC {\'e}s d'am\IeC {\'e}liorations}{15}{0}{4}
+\beamer@subsectionintoc {4}{2}{Que nous a apportez ce projet}{16}{0}{4}
