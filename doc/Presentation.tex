@@ -30,11 +30,12 @@
 \begin{frame}
 \frametitle{\insertsection}
 
-Dans le cadre de notre projet tutoré il nous a été demandé de développer un jeu du serpent.\\
-Nous avons donc décidé de se répartir les différentes taches de notre projet :\\
-\indent - Tiona et Guillaume => Développement du menu et son interaction avec le jeu \\
-\indent - Pascal et Geoffrey => Développement du jeu et de ses fonctionalités \\
-\indent - Quentin => Developpement de l'IA
+Répartition des tâches :
+\begin{itemize}
+\item Tiona et Guillaume : Développement menu et scores
+\item Pascal et Geoffrey : Développement du jeu et des fonctionnalités
+\item Quentin : Développement de l'IA 
+\end{itemize}
 \end{frame}
 
 \section{Interface}
@@ -63,27 +64,27 @@ Nous avons donc décidé de se répartir les différentes taches de notre projet
 \begin{frame}
 \frametitle{\insertsubsubsection}
 \framesubtitle{\insertsubsection}
-\framesubsubtitle{\insertsection}
-Pour la réalisation de ce jeu nous avions besoins absolument d'une grille.\\
 Les cases de cette grille peuvent être :\\
-\indent - Une case libre\\
-\indent - Un mur\\
-\indent - Un fruit\\
-\indent - Une partie du serpent
-
+\begin{itemize}
+\item Une case libre
+\item Un mur
+\item Un fruit
+\item Une partie de serpent
+\end{itemize}
 \end{frame}
+
 \subsubsection{Fruits}
 \begin{frame}
 \frametitle{\insertsubsubsection}
 \framesubtitle{\insertsubsection}
-\framesubsubtitle{\insertsection}
-Il devait être possible de generer un certain nombre de fruits et de le maintenir.\\
-De plus un fruit devait aussi être possible que le serpents la différencie des cases libres en passant dessus.\\
-De plus nous avons implémenté des fruits différents avec un gain de score différents et de taille :\\
-\indent - la pomme  (25)\\
-\indent - la poire  (35)\\
-\indent - la cerise (50)\\
-\indent - la banane (75)
+Le jeu génère un nombre défini de fruits sur la grille, ils sont placés aléatoirement.\\
+De plus nous avons implémenté des fruits différents avec un gain de score différents et de taille :
+\begin{itemize}
+\item Pomme (25)
+\item Poire (35)
+\item Cerise (50)
+\item Banane (75)
+\end{itemize}
 
 \end{frame}
 \subsection{Serpents}
@@ -91,40 +92,41 @@ De plus nous avons implémenté des fruits différents avec un gain de score dif
 \begin{frame}
 \frametitle{\insertsubsubsection}
 \framesubtitle{\insertsubsection}
-\framesubsubtitle{\insertsection}
-Nous générons deux serpents de manières automatique au début du jeu.\\
-Ces serpents après chaque fruits manger devait augmenter sa vitesse.\\
-Pour controler les serpents on utilise des listeners ( écouteurs ) des touches du clavier.\\
-Pour le joueur 1 :\\
-\indent - fleche haut\\
-\indent - fleche bas\\
-\indent - fleche droite\\
-\indent - fleche gauche\\
-Pour le joueur 2 :\\
-\indent - E\\
-\indent - D\\
-\indent - S\\
-\indent - F\\
+\begin{itemize}[<+->]
+\item Nous générons deux serpents de manières automatique au début du jeu.\\
+\item Manger agrandit le serpent et accélère le jeu.\\
+\item KeyListener pour écouter les touches avec les contrôles définies par les options.\\
+\end{itemize}
 
 \end{frame}
 \subsubsection{Contrôle par l'ordinateur}
 \begin{frame}
 \frametitle{\insertsubsubsection}
 \framesubtitle{\insertsubsection}
-\framesubsubtitle{\insertsection}
-Nous voulions aussi integrer une IA contre laquelle l'utilisateur pourrait jouer.\\
-Pour cela nous devions toujours cherchez le fruit le plus proche du serpents pourqu'il s'y dirige.\\
+\begin{itemize}
+\item Nous voulions aussi intégrer une IA contre laquelle l'utilisateur pourrait jouer.
+\item Pour cela elle dois cherchez le fruit le plus proche du serpents pour qu'il s'y dirige.
+\end{itemize}
+
 
 \end{frame}
 \subsection{Design}
 \begin{frame}
 \frametitle{\insertsubsection}
 \framesubtitle{\insertsection}
-Pour les parties du serpents :\\
-(images de la tête, d'une partie du corps, de la queue)\\
-Pour les fruits :\\
-(images des 4 fruits différents)
-
+Pour les parties du serpents :
+\begin{itemize}
+\item Image de tête pour chaque direction  
+\item Image de corps 
+\item Image de queue pour chaque direction
+\end{itemize}
+\includegraphics[width=1cm, height=1cm]{../img/snake_queue_right.png}\includegraphics[width=1cm, height=1cm]{../img/corps.png}\includegraphics[width=1cm, height=1cm]{../img/corps.png}\includegraphics[width=1cm, height=1cm]{../img/snake_head_right.png}
+\\
+Pour les fruits :
+\begin{itemize}
+\item Image pour chaque fruit 
+\end{itemize}
+\includegraphics[width=1cm, height=1cm]{../img/pomme.png}\includegraphics[width=1cm, height=1cm]{../img/poire.png}\includegraphics[width=1cm, height=1cm]{../img/banane.png}\includegraphics[width=1cm, height=1cm]{../img/cerise.png}
 \end{frame}
 
 
@@ -133,10 +135,12 @@ Pour les fruits :\\
 \begin{frame}
 \frametitle{\insertsubsection}
 \framesubtitle{\insertsection}
-Les améliorations possibles :\\
-\indent - L'IA ( elle peut toujours être améliorer )\\
-\indent - Un mode multijoueur en réseau\\
-\indent - Un changement de la taille de la grille et la possibilité de la rendre rectangulaire
+\begin{itemize}
+\item L'IA ( elle peut toujours être améliorée )
+\item Un mode multijoueur en réseau
+\item Un changement de la taille de la grille et la possibilité de la rendre rectangulaire
+\item Un système de trophées pour récompenser les joueurs
+\end{itemize}
 
 \end{frame}
 \subsection{Que nous a apportez ce projet}
