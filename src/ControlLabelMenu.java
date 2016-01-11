@@ -10,7 +10,6 @@ public class ControlLabelMenu implements MouseListener{
     FenetreMenu fenetreMenu;
     MenuModele modelMenu;
     OptionMenu optionMenu;
-    JLabel jLabel1;
     MenuModele menuModele;
     public ControlLabelMenu(FenetreMenu fenetreMenu, MenuModele modelMenu, OptionMenu optionMenu) {
         this.modelMenu = modelMenu;
@@ -23,7 +22,21 @@ public class ControlLabelMenu implements MouseListener{
     public void mouseClicked(MouseEvent e) {
 
         if (e.getSource()== fenetreMenu.jouer) {
-            fenetreMenu.choixJeu();
+            fenetreMenu.choixIa();
+            fenetreMenu.setVisible(true);
+        }
+
+        if (e.getSource()==fenetreMenu.avecIa){
+            fenetreMenu.choixJeuIa();
+            fenetreMenu.setVisible(true);
+        }
+
+        if (e.getSource()==fenetreMenu.sansIa){
+            fenetreMenu.choixJeuSsIa();
+            fenetreMenu.setVisible(true);
+        }
+        if (e.getSource()==fenetreMenu.multi){
+            fenetreMenu.choixMulti();
             fenetreMenu.setVisible(true);
         }
 

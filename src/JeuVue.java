@@ -25,8 +25,6 @@ public class JeuVue extends JPanel{
 
 
     public void paintComponent(Graphics g) {
-        j1.setText("Score J1 : " + modele.getScore(0));
-        j2.setText("Score J2 : "+modele.getScore(1));
         Case[][] grid = modele.getGrille();
         for (int i=0; i < grid.length; i++){
             for (int j=0; j < grid.length; j++){
