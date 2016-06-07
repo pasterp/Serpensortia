@@ -11,7 +11,7 @@ public class Serpent {
     public Serpent(int x, int y, int dir, int t){
         score = 0;
         tailleGrille = t;
-        unSerpent = new ArrayList();
+        unSerpent = new ArrayList<CaseOrientée>();
         unSerpent.add(new TeteSerpent(x,y,dir));
 
         for (int i=1; i<3;i++){
